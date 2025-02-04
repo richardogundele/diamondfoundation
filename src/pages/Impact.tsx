@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import ImpactStats from "../components/Impact";
-import { GraduationCap, Heart, BookOpen, Users, HandHelpingIcon, World } from "lucide-react";
+import { GraduationCap, Heart, BookOpen, Users, HandHelpingIcon, Globe } from "lucide-react";
 
 const ImpactPage = () => {
   const initiatives = [
@@ -30,7 +30,7 @@ const ImpactPage = () => {
       description: "Conducting regular orphanage visits, food relief programs, and donation drives.",
     },
     {
-      icon: World,
+      icon: Globe,
       title: "Sustainable Development",
       description: "Implementing long-term strategies to ensure lasting community impact and growth.",
     },
