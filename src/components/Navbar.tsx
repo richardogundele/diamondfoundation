@@ -7,8 +7,10 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Our Work", path: "/our-work" },
+    { name: "About", path: "/about" },
     { name: "Team", path: "/team" },
+    { name: "Impact", path: "/impact" },
+    { name: "Volunteer", path: "/volunteer" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -17,8 +19,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              Diamond Foundation
+            <Link to="/" className="flex items-center gap-2">
+              <img src="/lovable-uploads/0e8e87f4-a80c-4066-b2a2-f333c416a9bd.png" alt="Diamond Foundation Logo" className="h-8 w-8" />
+              <span className="text-2xl font-bold text-primary">Diamond Foundation</span>
             </Link>
           </div>
 
