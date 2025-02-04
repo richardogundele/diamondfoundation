@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import { Heart, BookOpen, Users, MessageSquare } from "lucide-react";
+import volunteerImage from '../images/Volunteer.jpg?url'
+
 
 const Volunteer = () => {
   const opportunities = [
@@ -36,6 +38,11 @@ const Volunteer = () => {
             <p className="text-lg text-textSecondary max-w-3xl mx-auto">
               Become part of something bigger—volunteer with Diamond Foundation. Whether you want to donate your time, skills, or resources, you can help transform lives.
             </p>
+            <img 
+              src={volunteerImage} 
+              alt="Volunteer" 
+              className="mx-auto my-8 bg-gradient-to-b from-primary/5 to-white rounded-lg" 
+            />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
             {opportunities.map((opportunity, index) => (
