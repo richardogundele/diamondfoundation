@@ -24,7 +24,7 @@ const Footer = () => {
     },
     { 
       icon: Mail, 
-      href: "mailto:contact@diamondfoundation.org", 
+      href: "mailto:thediamondfoundation2020@gmail.com", 
       label: "Email" 
     }
   ];

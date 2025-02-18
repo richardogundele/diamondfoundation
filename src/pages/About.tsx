@@ -12,16 +12,16 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-blue-600">
       <Navbar />
       <div className="pt-24 pb-16 bg-gradient-to-b from-blue-600/5 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Introduction */}
           <div className="text-center mb-16 animate-fade-up">
-            <h1 className="text-4xl font-bold text-textPrimary mb-6">About Diamond Foundation</h1>
+            <h1 className="text-4xl font-bold text-textPrimary mb-6">About Us</h1>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-lg text-textSecondary max-w-3xl mx-auto">
-              Diamond Foundation is dedicated to transforming lives through acts of love and compassion. We focus on empowering communities, providing educational support, and creating sustainable impact across Africa.
+            <p className="text-lg text-black max-w-3xl mx-auto">
+              Diamond Foundation is dedicated to transforming lives through acts of love and compassion. We focus on providing educational support, digital literacy, and creating sustainable impact across Africa.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ const About = () => {
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h2 className="text-2xl font-semibold text-blue-600 mb-4">Our Mission</h2>
               <p className="text-textSecondary">
-                To transform lives through love and compassion, creating lasting positive change in communities across Africa through education, healthcare, and spiritual empowerment.
+                To transform lives through love and compassion, creating lasting positive change in communities across Africa through education, digital literacy, and spiritual empowerment.
               </p>
             </div>
 
@@ -38,7 +38,7 @@ const About = () => {
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h2 className="text-2xl font-semibold text-blue-600 mb-4">Our Vision</h2>
               <p className="text-textSecondary">
-                To be a leading force in creating self-sustaining communities where every individual has access to quality education, healthcare, and opportunities for personal growth.
+                To be a leading force in creating self-sustaining communities where every individual has access to quality education, digital skills, and opportunities for personal growth.
               </p>
             </div>
 
