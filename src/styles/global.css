@@ -1,0 +1,19 @@
+/* Assuming the header color is defined as a CSS variable or a specific color */
+:root {
+  --header-color: hsl(0, 0%, 100%); /* Replace with your actual header color */
+}
+
+body {
+  background-color: #ffffff; /* Pure white */
+  /* Add other styles as needed */
+}
+
+.about-section {
+  background-color: #0aa2df; /* Sky blue */
+  padding: 4rem 0; /* Adjust padding as needed */
+}
+
+.team-section {
+  background-color: #1382ae; /* Sky blue */
+  padding: 4rem 0; /* Adjust padding as needed */
+} 

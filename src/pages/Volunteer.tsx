@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import { Heart, BookOpen, Users, MessageSquare } from "lucide-react";
+import volunteerImage from '../images/Volunteer.jpg?url'
+
 
 const Volunteer = () => {
   const opportunities = [
@@ -26,15 +28,25 @@ const Volunteer = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-blue-600">
       <Navbar />
-      <div className="pt-24 pb-16 bg-gradient-to-b from-primary/5 to-white">
+      <div className="pt-24 pb-16 bg-gradient-to-b from-blue-600/5 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-textPrimary mb-6">Volunteer With Us</h1>
-            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             <p className="text-lg text-textSecondary max-w-3xl mx-auto">
-              Become part of something bigger—volunteer with Diamond Foundation. Whether you want to donate your time, skills, or resources, you can help transform lives.
+              Join our mission and help make a difference in the lives of those who need it most.
+            </p>
+            <img 
+              src={volunteerImage} 
+              alt="Volunteer" 
+              className="w-full" 
+            />
+          </div>
+          <div className="text-center mb-12">
+            <p className="text-lg text-textSecondary max-w-3xl mx-auto">
+              We are in need of content creators, fundraising manager, head of education, website manager, project managers, representatives from African countries.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
