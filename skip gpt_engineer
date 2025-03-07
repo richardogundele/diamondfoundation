@@ -1,0 +1,51 @@
+[33mcommit 709f4b475aea50d55a36ead0fbfff61eb34abab6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Tue Feb 4 09:13:34 2025 +0000
+
+    Fix export error for 'World'
+    
+    Resolved the issue where the 'World' export was not found in the 'lucide-react' module. Updated the import statement in src/pages/Impact.tsx to use the correct export.
+    [skip gpt_engineer]
+
+[33mcommit 73067c2b8b047cad47a20f281350870356d2003e[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Tue Feb 4 09:13:04 2025 +0000
+
+    Update codebase as requested
+    
+    This commit implements the changes as per the user's prompt.
+    [skip gpt_engineer]
+
+[33mcommit 786b7f6b0f1b9e72b8436af40034ea3afe6c2b1a[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Tue Feb 4 09:11:17 2025 +0000
+
+    Add content for Diamond Foundation
+    
+    Incorporated content for the Diamond Foundation website, including sections for Home, About, Team, Impact, Volunteer, Donate, and Contact Us. Updated the messaging to reflect the foundation's mission and initiatives aimed at uplifting underprivileged children and communities in Africa.
+    [skip gpt_engineer]
+
+[33mcommit 5dc962f084c0e9d1795aa11b15c3a085b1b3d84d[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Sat Feb 1 06:37:57 2025 +0000
+
+    Fix missing border class
+    
+    Resolved the error indicating that the `border-border` class does not exist in the `src/index.css` file. Ensured that custom classes are defined within a `@layer` directive as required by Tailwind CSS.
+    [skip gpt_engineer]
+
+[33mcommit 73993c058691dd0f0e663f5b7892f63441d6fced[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Sat Feb 1 06:37:21 2025 +0000
+
+    Create Diamond Foundation website structure
+    
+    Initial setup for the Diamond Foundation website, including the introduction, mission and vision statements, long-term goals, objectives, operational framework, and 2025 goals. This commit establishes the foundational content and structure for further development of the website.
+    [skip gpt_engineer]
+
+[33mcommit 9c1e909492f35dd0431296003acae68a8747eea6[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Sat Feb 1 06:35:52 2025 +0000
+
+    Use tech stack vite_react_shadcn_ts
+    [skip gpt_engineer]
