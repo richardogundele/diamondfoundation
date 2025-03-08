@@ -1,13 +1,14 @@
+
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import previewImage from "../images/1.png";
-import projectImage from "../images/Project.png";
-import volunteerImage from "../images/Volunteer.JPG";
+import projectImage from "../images/Project.png"; // Corrected capitalization
+import volunteerImage from "../images/Volunteer.JPG"; // Corrected capitalization and extension
 import dpImage from "../images/DP.png";
-import donateImage from "../images/Donate.JPG";
-import logoImage from "../images/LOGO.jpeg";
+import donateImage from "../images/Donate.JPG"; // Corrected capitalization and extension
+import logoImage from "../images/LOGO.jpeg"; // Corrected capitalization
 
 const PreviewSection = ({ title, description, link, image }: {
   title: string;
