@@ -4,6 +4,7 @@ import { Heart, BookOpen, Users, MessageSquare, Clock, Star, Award, Zap } from "
 import { useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const Volunteer = () => {
   const { toast } = useToast();
@@ -48,24 +49,28 @@ const Volunteer = () => {
       title: "Mentoring",
       description: "Guide and support children and young adults in their personal development",
       commitment: "4-6 hours/week",
+      color: "bg-blue-100 text-blue-600"
     },
     {
       icon: Users,
       title: "Community Outreach",
       description: "Support our programs and events in local communities",
       commitment: "Flexible hours",
+      color: "bg-green-100 text-green-600"
     },
     {
       icon: BookOpen,
       title: "Professional Expertise",
       description: "Contribute your skills in education, healthcare, or fundraising",
       commitment: "Project-based",
+      color: "bg-purple-100 text-purple-600"
     },
     {
       icon: MessageSquare,
       title: "Advocacy",
       description: "Spread awareness about our cause through social media and networking",
       commitment: "2-3 hours/week",
+      color: "bg-amber-100 text-amber-600"
     },
   ];
   
@@ -74,21 +79,25 @@ const Volunteer = () => {
       title: "Content Creator",
       skills: ["Writing", "Design", "Social Media"],
       icon: Zap,
+      color: "bg-blue-600"
     },
     {
       title: "Fundraising Manager",
       skills: ["Fundraising", "Communication", "Networking"],
       icon: Star,
+      color: "bg-green-500"
     },
     {
       title: "Head of Education",
       skills: ["Teaching", "Curriculum Development", "Leadership"],
       icon: BookOpen,
+      color: "bg-red-500"
     },
     {
       title: "Website Manager",
       skills: ["Web Development", "Design", "Content Management"],
       icon: Award,
+      color: "bg-purple-500"
     },
   ];
 
@@ -97,16 +106,27 @@ const Volunteer = () => {
       <Navbar />
       <div className="pt-24 pb-16 bg-gradient-to-b from-blue-600/5 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 fade-in-section">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 fade-in-section"
+          >
             <h1 className="text-4xl font-bold text-textPrimary mb-6">Volunteer With Us</h1>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             <p className="text-lg text-textSecondary max-w-3xl mx-auto">
               Join our mission and help make a difference in the lives of those who need it most. 
               Your time and talents can create lasting impact.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="relative rounded-xl overflow-hidden mb-16 fade-in-section">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative rounded-xl overflow-hidden mb-16 fade-in-section"
+          >
             <img 
               src={volunteerImagePath} 
               alt="Volunteer" 
@@ -127,49 +147,71 @@ const Volunteer = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="mb-20 fade-in-section">
-            <h2 className="text-2xl font-semibold text-textPrimary text-center mb-8">How You Can Help</h2>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-20 fade-in-section"
+          >
+            <h2 className="text-3xl font-semibold text-primary text-center mb-8">How You Can Help</h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {opportunities.map((opportunity, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover-card"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-accent2 bg-opacity-50 p-6 rounded-lg shadow-md hover:shadow-lg hover:bg-opacity-70 transition-all duration-300 transform hover:-translate-y-2"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                      <opportunity.icon className="text-blue-600" size={28} />
+                    <div className={`w-16 h-16 rounded-full ${opportunity.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <opportunity.icon size={28} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{opportunity.title}</h3>
+                    <h3 className="text-xl font-semibold text-primary mb-3">{opportunity.title}</h3>
                     <p className="text-textSecondary mb-4">{opportunity.description}</p>
                     <div className="flex items-center text-sm text-blue-600">
                       <Clock size={16} className="mr-1" />
                       <span>{opportunity.commitment}</span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
           
-          <div className="mb-16 fade-in-section">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16 fade-in-section"
+          >
             <div className="bg-blue-50 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-textPrimary text-center mb-8">Open Positions</h2>
+              <h2 className="text-2xl font-semibold text-primary text-center mb-4">Open Positions</h2>
+              <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-center text-textSecondary mb-8">
                 We are currently looking for dedicated individuals to fill these important roles:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {volunteerPositions.map((position, index) => (
-                  <div
+                  <motion.div
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-sm hover-card"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
                   >
                     <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                        <position.icon className="text-blue-600" size={20} />
+                      <div className={`w-10 h-10 rounded-full ${position.color} text-white flex items-center justify-center mr-3`}>
+                        <position.icon size={20} />
                       </div>
-                      <h3 className="text-lg font-semibold">{position.title}</h3>
+                      <h3 className="text-lg font-semibold text-primary">{position.title}</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {position.skills.map((skill, i) => (
@@ -184,13 +226,19 @@ const Volunteer = () => {
                     >
                       Apply
                     </button>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="text-center fade-in-section">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center fade-in-section"
+          >
             <p className="text-lg text-textSecondary max-w-3xl mx-auto mb-8">
               We are also in need of project managers and representatives from African countries to help us expand our reach and impact.
             </p>
@@ -200,7 +248,7 @@ const Volunteer = () => {
             >
               Join Our Team Today
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
