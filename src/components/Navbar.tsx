@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -19,8 +20,11 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-              <img src="/lovable-uploads/0e8e87f4-a80c-4066-b2a2-f333c416a9bd.png" alt="Diamond Foundation Logo" className="h-8 w-8" />
-              <span className="text-2xl font-bold text-primary">Diamond Foundation</span>
+              <img src="/lovable-uploads/7d53621f-7c4c-42e4-8365-472adf38f92e.png" alt="Diamond Foundation Logo" className="h-10 w-10" />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-gray-800 leading-tight">THE DIAMOND</span>
+                <span className="text-xl font-bold text-primary leading-tight">FOUNDATION</span>
+              </div>
             </Link>
           </div>
 
