@@ -1,6 +1,9 @@
+
 /* Assuming the header color is defined as a CSS variable or a specific color */
 :root {
   --header-color: hsl(0, 0%, 100%); /* Replace with your actual header color */
+  --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #5CB9FF 100%);
+  --secondary-gradient: linear-gradient(135deg, #0051be 0%, #4A90E2 100%);
 }
 
 body {
@@ -16,4 +19,57 @@ body {
 .team-section {
   background-color: #1382ae; /* Sky blue */
   padding: 4rem 0; /* Adjust padding as needed */
-} 
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button effects */
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.animated-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.animated-button:hover:before {
+  left: 100%;
+}
+
+/* Section animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
