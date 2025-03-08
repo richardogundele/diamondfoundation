@@ -3,11 +3,11 @@ import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import previewImage from "../images/1.png";
-import projectImage from "../images/project.png";
-import volunteerImage from "../images/volunteer.jpg";
+import projectImage from "../images/Project.png";
+import volunteerImage from "../images/Volunteer.JPG";
 import dpImage from "../images/DP.png";
-import donateImage from "../images/donate.jpg";
-import logoImage from "../images/logo.jpeg";
+import donateImage from "../images/Donate.JPG";
+import logoImage from "../images/LOGO.jpeg";
 
 const PreviewSection = ({ title, description, link, image }: {
   title: string;
@@ -78,7 +78,6 @@ const Index = () => {
       <Navbar />
       <Hero />
       
-      {/* Preview Sections - reduced padding and gap */}
       <div className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">

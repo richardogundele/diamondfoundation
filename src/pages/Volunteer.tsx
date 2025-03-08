@@ -1,8 +1,6 @@
-
 import Navbar from "../components/Navbar";
 import { Heart, BookOpen, Users, MessageSquare } from "lucide-react";
-import volunteerImage from '../images/Volunteer.JPG'
-
+import volunteerImage from '../images/Volunteer.JPG';
 
 const Volunteer = () => {
   const opportunities = [

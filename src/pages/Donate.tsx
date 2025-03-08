@@ -1,6 +1,6 @@
 
 import Navbar from "../components/Navbar";
-import donateImage from "../images/Donate.JPG";
+import donateImage from "../images/Donate.JPG"; // Fixed capitalization
 
 const Donate = () => {
   return (
