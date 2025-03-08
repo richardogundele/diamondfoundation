@@ -1,5 +1,6 @@
+
 import Navbar from "../components/Navbar";
-import donateImage from "../images/Donate.jpg?url";
+import donateImage from "../images/Donate.JPG";
 
 const Donate = () => {
   return (
@@ -51,4 +52,4 @@ const Donate = () => {
   );
 };
 
-export default Donate; 
+export default Donate;

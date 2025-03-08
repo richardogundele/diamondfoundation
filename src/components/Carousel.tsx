@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 
 interface CarouselProps {
@@ -32,4 +33,4 @@ const Carousel = ({ images }: CarouselProps) => {
   );
 };
 
-export default Carousel; 
+export default Carousel;

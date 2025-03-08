@@ -1,6 +1,7 @@
+
 import Navbar from "../components/Navbar";
 import { Heart, BookOpen, Users, MessageSquare } from "lucide-react";
-import volunteerImage from '../images/Volunteer.jpg?url'
+import volunteerImage from '../images/Volunteer.JPG'
 
 
 const Volunteer = () => {
@@ -41,7 +42,7 @@ const Volunteer = () => {
             <img 
               src={volunteerImage} 
               alt="Volunteer" 
-              className="w-full" 
+              className="w-full mt-6 rounded-lg shadow-lg" 
             />
           </div>
           <div className="text-center mb-12">
