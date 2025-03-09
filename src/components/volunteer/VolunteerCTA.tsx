@@ -5,11 +5,15 @@ import { motion } from "framer-motion";
 
 const VolunteerCTA = () => {
   const { toast } = useToast();
+  const volunteerFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeR9DNBg8o8yabMU7r8P0UUhEEgZG5H9pllyRmurXZwIf2wGw/viewform?usp=header";
 
   const handleVolunteerClick = () => {
+    // Open the Google Form in a new tab
+    window.open(volunteerFormLink, "_blank");
+    
     toast({
-      title: "Thank you for your interest!",
-      description: "We'll be in touch with you soon about volunteering opportunities.",
+      title: "Opening application form",
+      description: "You're being redirected to our volunteer application form.",
     });
   };
 
