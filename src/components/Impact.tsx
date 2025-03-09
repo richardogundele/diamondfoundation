@@ -59,7 +59,7 @@ const Impact = () => {
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-6">Our Impact in Numbers</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">2024 Outreach Report</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-textSecondary max-w-3xl mx-auto">
             We measure our success through the lives we transform. Every statistic represents real children and communities receiving support, education, and hope.
