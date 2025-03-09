@@ -1,5 +1,5 @@
 
-import { BookOpen, Star, Award, Zap } from "lucide-react";
+import { BookOpen, Star, Award, Zap, Settings, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import PositionCard from "./PositionCard";
 
@@ -29,6 +29,18 @@ const OpenPositionsSection = () => {
       icon: Award,
       color: "bg-purple-500"
     },
+    {
+      title: "Project Manager",
+      skills: ["Organization", "Leadership", "Strategic Planning"],
+      icon: Settings,
+      color: "bg-amber-500"
+    },
+    {
+      title: "Country Representative",
+      skills: ["Local Knowledge", "Communication", "Community Engagement"],
+      icon: Globe,
+      color: "bg-teal-500"
+    },
   ];
 
   return (
@@ -45,7 +57,7 @@ const OpenPositionsSection = () => {
         <p className="text-center text-textSecondary mb-8">
           We are currently looking for dedicated individuals to fill these important roles:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {volunteerPositions.map((position, index) => (
             <PositionCard
               key={index}
