@@ -1,3 +1,4 @@
+
 import { Users, BookOpen, Heart, Globe, Trophy, Target, Star, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -8,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import OutreachReport from "./OutreachReport";
 
 const Impact = () => {
   const [selectedOutreach, setSelectedOutreach] = useState("December Outreach 2024");
@@ -109,6 +111,53 @@ const Impact = () => {
           ))}
         </div>
         
+        <div className="mt-16 mb-6">
+          <div className="flex flex-col items-center justify-center">
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-2xl font-bold text-textPrimary mb-6"
+            >
+              Select an Outreach Report
+            </motion.h3>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="w-full max-w-md"
+            >
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="w-full flex items-center justify-between gap-2 bg-white border-primary text-primary hover:bg-primary hover:text-white py-6">
+                    {selectedOutreach}
+                    <ChevronDown className="h-5 w-5" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-full max-w-md bg-white shadow-lg rounded-md border border-gray-200">
+                  {outreachOptions.map((option, index) => (
+                    <DropdownMenuItem 
+                      key={index}
+                      className="cursor-pointer py-3 px-4 hover:bg-blue-50 w-full"
+                      onClick={() => setSelectedOutreach(option)}
+                    >
+                      {option}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </motion.div>
+          </div>
+        </div>
+        
+        {/* Display selected outreach report */}
+        <div className="mt-8">
+          <OutreachReport selectedOutreach={selectedOutreach} />
+        </div>
+        
         <div className="mt-12">
           <div className="flex flex-wrap justify-between items-center mb-8">
             <motion.h3
@@ -118,35 +167,8 @@ const Impact = () => {
               viewport={{ once: true }}
               className="text-2xl font-bold text-textPrimary"
             >
-              Historical Reports
+              Impact Statistics
             </motion.h3>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="flex items-center gap-2 bg-white border-primary text-primary hover:bg-primary hover:text-white">
-                    {selectedOutreach}
-                    <ChevronDown className="h-4 w-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 w-56">
-                  {outreachOptions.map((option, index) => (
-                    <DropdownMenuItem 
-                      key={index}
-                      className="cursor-pointer py-2 px-4 hover:bg-blue-50"
-                      onClick={() => setSelectedOutreach(option)}
-                    >
-                      {option}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </motion.div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">

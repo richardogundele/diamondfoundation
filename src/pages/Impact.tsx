@@ -1,7 +1,6 @@
 
 import Navbar from "../components/Navbar";
-import ImpactStats from "../components/Impact";
-import OutreachReport from "../components/OutreachReport";
+import Impact from "../components/Impact";
 import { GraduationCap, Heart, BookOpen, Users, Target, Globe, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -71,7 +70,9 @@ const ImpactPage = () => {
             </Button>
           </motion.div>
           
-          <ImpactStats />
+          <div id="outreach-report">
+            <Impact />
+          </div>
           
           <div className="mt-24">
             <motion.h2 
@@ -105,11 +106,6 @@ const ImpactPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* Outreach Report Section */}
-      <div id="outreach-report" className="pt-10">
-        <OutreachReport />
       </div>
       
       {/* CTA Section */}

@@ -5,7 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import ImageCarousel from "./ImageCarousel";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
-const OutreachReport = () => {
+interface OutreachReportProps {
+  selectedOutreach: string;
+}
+
+const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
   const [activeTab, setActiveTab] = useState("overview");
   
   const outreachImages = [
@@ -42,11 +46,28 @@ const OutreachReport = () => {
     { name: 'Raised', value: financialData.raised },
   ];
   
+  // Currently we only have data for December Outreach 2024
+  // For other outreaches, display a placeholder message
+  if (selectedOutreach !== "December Outreach 2024") {
+    return (
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center p-10 bg-blue-50 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold text-primary mb-4">{selectedOutreach}</h3>
+            <p className="text-lg text-textSecondary">
+              Report for this outreach is coming soon. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
   return (
-    <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 bg-white">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-6">2023 Outreach Report</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">{selectedOutreach}</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-textSecondary max-w-3xl mx-auto">
             Last year's outreach reached 8 orphanages across 6 geopolitical zones in Nigeria, 
