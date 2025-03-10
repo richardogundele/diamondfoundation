@@ -1,8 +1,18 @@
 
-import { Users, BookOpen, Heart, Globe, Trophy, Target, Star } from "lucide-react";
+import { Users, BookOpen, Heart, Globe, Trophy, Target, Star, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 const Impact = () => {
+  const [selectedOutreach, setSelectedOutreach] = useState("2024 Outreach Report");
+  
   const stats = [
     {
       icon: Users,
@@ -55,6 +65,15 @@ const Impact = () => {
     },
   ];
 
+  const outreachOptions = [
+    "2024 Outreach Report",
+    "Mega Outreach 2024",
+    "December Outreach 2024",
+    "November Outreach 2023",
+    "November Outreach 2022",
+    "November Outreach 2020"
+  ];
+
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,30 +111,71 @@ const Impact = () => {
           ))}
         </div>
         
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {stats.slice(4).map((stat, index) => (
-            <motion.div
-              key={index + 4}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: (index + 4) * 0.1 }}
+        <div className="mt-12">
+          <div className="flex flex-wrap justify-between items-center mb-8">
+            <motion.h3
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden group"
+              className="text-2xl font-bold text-textPrimary"
             >
-              <div className="text-center p-6 rounded-lg bg-accent2 bg-opacity-50 hover:bg-opacity-70 transition-all duration-300 transform hover:-translate-y-2 shadow-md hover:shadow-lg">
-                <div className={`inline-block p-3 ${stat.color} rounded-full text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon size={24} />
-                </div>
-                <h3 className="text-3xl font-bold text-primary mb-2 group-hover:text-blue-700 transition-colors">
-                  {stat.number}
-                </h3>
-                <p className="text-lg font-semibold text-textPrimary mb-1">
-                  {stat.label}
-                </p>
-                <p className="text-textSecondary">{stat.description}</p>
-              </div>
+              Historical Reports
+            </motion.h3>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="flex items-center gap-2 bg-white border-primary text-primary hover:bg-primary hover:text-white">
+                    {selectedOutreach}
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 w-56">
+                  {outreachOptions.map((option, index) => (
+                    <DropdownMenuItem 
+                      key={index}
+                      className="cursor-pointer py-2 px-4 hover:bg-blue-50"
+                      onClick={() => setSelectedOutreach(option)}
+                    >
+                      {option}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </motion.div>
-          ))}
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {stats.slice(4).map((stat, index) => (
+              <motion.div
+                key={index + 4}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: (index + 4) * 0.1 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden group"
+              >
+                <div className="text-center p-6 rounded-lg bg-accent2 bg-opacity-50 hover:bg-opacity-70 transition-all duration-300 transform hover:-translate-y-2 shadow-md hover:shadow-lg">
+                  <div className={`inline-block p-3 ${stat.color} rounded-full text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <stat.icon size={24} />
+                  </div>
+                  <h3 className="text-3xl font-bold text-primary mb-2 group-hover:text-blue-700 transition-colors">
+                    {stat.number}
+                  </h3>
+                  <p className="text-lg font-semibold text-textPrimary mb-1">
+                    {stat.label}
+                  </p>
+                  <p className="text-textSecondary">{stat.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
