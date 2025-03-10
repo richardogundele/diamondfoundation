@@ -86,32 +86,6 @@ const Donate = () => {
             </p>
           </div>
 
-          {/* GoFundMe Section */}
-          <div className="my-12 fade-in-section">
-            <Card className="bg-gradient-to-r from-blue-50 to-blue-100 border-blue-200">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div className="text-center md:text-left">
-                    <h2 className="text-2xl font-bold text-blue-700 mb-3">Support Our GoFundMe Campaign</h2>
-                    <p className="text-blue-600 mb-4">Help us reach more children and communities through our crowdfunding campaign.</p>
-                    <Button className="bg-blue-700 hover:bg-blue-800" size="lg" asChild>
-                      <a href="https://gofund.me/50d855ef" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Donate on GoFundMe <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  </div>
-                  <div className="hidden md:block">
-                    <img 
-                      src={donateImagePath} 
-                      alt="Children benefiting from donations" 
-                      className="h-48 w-auto rounded-lg shadow-md"
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 fade-in-section">
               <img
@@ -180,6 +154,32 @@ const Donate = () => {
                 </div>
               ))}
             </div>
+          </div>
+          
+          {/* GoFundMe Section - Moved here as requested */}
+          <div className="my-12 fade-in-section">
+            <Card className="bg-gradient-to-r from-blue-50 to-blue-100 border-blue-200">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="text-center md:text-left">
+                    <h2 className="text-2xl font-bold text-blue-700 mb-3">Support Our GoFundMe Campaign</h2>
+                    <p className="text-blue-600 mb-4">Help us reach more children and communities through our crowdfunding campaign.</p>
+                    <Button className="bg-blue-700 hover:bg-blue-800" size="lg" asChild>
+                      <a href="https://gofund.me/50d855ef" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Donate on GoFundMe <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                  <div className="hidden md:block">
+                    <img 
+                      src={donateImagePath} 
+                      alt="Children benefiting from donations" 
+                      className="h-48 w-auto rounded-lg shadow-md"
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           
           <div className="text-center mt-16 fade-in-section">
