@@ -1,10 +1,10 @@
-
 import { useState } from 'react';
 import ImageCarousel from "./ImageCarousel";
 import MegaOutreach from './outreach/MegaOutreach';
 import UpcomingOutreach from './outreach/UpcomingOutreach';
 import OutreachStats from './outreach/OutreachStats';
 import OutreachDetailTabs from './outreach/OutreachDetailTabs';
+import FirstOutreach from './outreach/FirstOutreach';
 
 interface OutreachReportProps {
   selectedOutreach: string;
@@ -24,6 +24,7 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
   ];
   
   const megaOutreachImage = "/lovable-uploads/7fa8b40c-d370-4fb9-9665-0d98c125ae91.png";
+  const firstOutreachImage = "/lovable-uploads/5157c3be-67c1-416b-b8a7-09aa555ab73c.png";
   
   const stateData = [
     { name: "North Central (Kwara)", children: 45, amount: 220361 },
@@ -51,6 +52,10 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
   
   if (selectedOutreach === "Mega Outreach 2024") {
     return <MegaOutreach title={selectedOutreach} imageSrc={megaOutreachImage} />;
+  }
+  
+  if (selectedOutreach === "November Outreach 2020") {
+    return <FirstOutreach title={selectedOutreach} imageSrc={firstOutreachImage} />;
   }
   
   if (selectedOutreach !== "December Outreach 2024") {
