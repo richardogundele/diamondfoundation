@@ -9,7 +9,7 @@ const UpcomingOutreach = ({ title }: UpcomingOutreachProps) => {
   // Message based on the outreach title
   const getMessage = () => {
     if (title.includes("2022") || title.includes("2023")) {
-      return "Report for this outreach is currently being compiled. Please check back later.";
+      return "For this outreach, Diamond Foundation focused solely on cash donations to support orphanages across Nigeria. These funds were used to provide essential supplies, educational materials, and support for daily operations. Detailed reports are currently being compiled.";
     }
     return "Report for this outreach is coming soon. Please check back later.";
   };
