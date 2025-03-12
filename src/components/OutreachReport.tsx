@@ -20,7 +20,10 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
     "/lovable-uploads/e5c8ad4c-044e-4b93-adc7-b5ffb2461de7.png",
     "/lovable-uploads/2259d445-c196-4b42-98b7-e5a0a2d02aee.png",
     "/lovable-uploads/1677421e-6072-4f0d-8e68-bbbdda9002dc.png",
-    "/lovable-uploads/fd3b25bf-364e-441e-8941-e1f39a572347.png"
+    "/lovable-uploads/fd3b25bf-364e-441e-8941-e1f39a572347.png",
+    "/lovable-uploads/ee2f541f-04ca-4f47-95a8-639911395629.png",
+    "/lovable-uploads/a58379e3-1bb5-43b3-a5ba-4dfa05a5a62c.png",
+    "/lovable-uploads/2db47a69-8efb-4a10-9470-d1cd1e723988.png"
   ];
   
   const megaOutreachImage = "/lovable-uploads/7fa8b40c-d370-4fb9-9665-0d98c125ae91.png";
