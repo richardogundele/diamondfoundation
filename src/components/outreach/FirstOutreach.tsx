@@ -1,12 +1,19 @@
 
 import React from 'react';
+import ImageCarousel from '../ImageCarousel';
 
 interface FirstOutreachProps {
   title: string;
   imageSrc: string;
 }
 
-const FirstOutreach = ({ title, imageSrc }: FirstOutreachProps) => {
+const FirstOutreach = ({ title }: FirstOutreachProps) => {
+  const carouselImages = [
+    "/lovable-uploads/5157c3be-67c1-416b-b8a7-09aa555ab73c.png", // Original first outreach image
+    "/lovable-uploads/962bb112-3a7c-40ae-96b5-07928ab6a2f3.png", // Team with donations and supplies
+    "/lovable-uploads/a071ffa0-3f81-4ddd-b75f-3ddbecc5213c.png", // Three team members holding banner
+  ];
+
   return (
     <div className="py-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -15,16 +22,15 @@ const FirstOutreach = ({ title, imageSrc }: FirstOutreachProps) => {
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
         </div>
         
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-          <div className="lg:w-1/2">
-            <img 
-              src={imageSrc} 
-              alt="First Ever Premier Outreach 2020" 
-              className="w-full h-auto rounded-lg shadow-lg"
+        <div className="flex flex-col items-center justify-center">
+          <div className="max-w-4xl w-full mb-8 h-[500px]">
+            <ImageCarousel 
+              images={carouselImages}
+              className="rounded-lg shadow-lg"
             />
           </div>
           
-          <div className="lg:w-1/2 bg-blue-50 p-8 rounded-lg shadow-lg">
+          <div className="lg:w-full bg-blue-50 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-textPrimary mb-4">The Birth of Diamond Foundation</h3>
             <div className="space-y-4 text-textSecondary">
               <p className="font-semibold text-lg text-primary">
