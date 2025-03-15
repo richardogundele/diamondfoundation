@@ -1,69 +1,67 @@
-# Welcome to your Lovable project
+# Diamond Foundation Project
 
-## Project info
+A modern web application foundation built with cutting-edge technologies, providing a robust starting point for React-based applications.
 
-**URL**: https://lovable.dev/projects/233c3c6f-8244-44f8-96ba-65bf12b9c60a
+## Project Overview
 
-## How can I edit this code?
+This is a foundational project template that combines several powerful modern web technologies:
 
-There are several ways of editing your application.
+- **Vite**: A next-generation frontend tooling that offers extremely fast development server and build capabilities
+- **TypeScript**: Adds static typing to JavaScript, enhancing code quality and developer experience
+- **React**: A popular JavaScript library for building user interfaces
+- **shadcn-ui**: A collection of re-usable components built with Radix UI and Tailwind CSS
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/233c3c6f-8244-44f8-96ba-65bf12b9c60a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
+```
 
-# Step 2: Navigate to the project directory.
+2. Navigate to project directory:
+```sh
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
+3. Install dependencies:
+```sh
 npm i
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Development Options
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### GitHub Integration
+You can work with this project directly through GitHub:
 
-**Use GitHub Codespaces**
+1. **Direct File Editing**
+   - Navigate to any file
+   - Use the pencil icon to edit
+   - Commit changes directly in the browser
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **GitHub Codespaces**
+   - Access from the "Code" button
+   - Launch a new Codespace for a full development environment
+   - Edit, commit, and push changes in an integrated environment
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with .
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Custom Domain Deployment
+- Currently, direct custom domain support is not available
+- For custom domain deployment, use Netlify
+- Refer to [Custom domains documentation](https://docs.lovable.dev/tips-tricks/custom-domain/) for detailed instructions
 
-## How can I deploy this project?
+## Architecture
 
-Simply open [Lovable](https://lovable.dev/projects/233c3c6f-8244-44f8-96ba-65bf12b9c60a) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project follows modern web development best practices with:
+- Type-safe development using TypeScript
+- Component-based architecture with React
+- Utility-first styling approach with Tailwind CSS
+- Pre-built, accessible UI components from shadcn-ui
+- Fast development experience powered by Vite

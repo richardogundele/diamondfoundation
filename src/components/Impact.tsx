@@ -1,10 +1,8 @@
-
 import { useState } from "react";
 import OutreachReport from "./OutreachReport";
 import ImpactHeader from "./impact/ImpactHeader";
 import OutreachSelector from "./impact/OutreachSelector";
 import Stats, { stats } from "./impact/Stats";
-import ImpactStats from "./impact/ImpactStats";
 
 const Impact = () => {
   const [selectedOutreach, setSelectedOutreach] = useState("December Outreach 2024");
@@ -25,8 +23,6 @@ const Impact = () => {
         <div className="mt-8">
           <OutreachReport selectedOutreach={selectedOutreach} />
         </div>
-        
-        <ImpactStats />
       </div>
     </div>
   );

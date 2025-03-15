@@ -1,42 +1,20 @@
-
 import Navbar from "../components/Navbar";
-import { Heart, DollarSign, Coffee, Gift, ExternalLink } from "lucide-react";
-import { useEffect } from "react";
+import { Heart, DollarSign, Coffee, Gift, ExternalLink, ArrowRight, Check } from "lucide-react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const Donate = () => {
   const { toast } = useToast();
+  const [selectedDonation, setSelectedDonation] = useState<number | null>(null);
   
   // For demonstration purposes, we'll load an image from public folder
   const donateImagePath = "/lovable-uploads/0e8e87f4-a80c-4066-b2a2-f333c416a9bd.png";
   
-  useEffect(() => {
-    // Initialize animation for sections with class "fade-in-section"
-    const observerOptions = {
-      threshold: 0.1,
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        }
-      });
-    }, observerOptions);
-    
-    const sections = document.querySelectorAll('.fade-in-section');
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-    
-    return () => {
-      sections.forEach(section => observer.unobserve(section));
-    };
-  }, []);
-  
-  const handleDonateClick = (amount: string) => {
+  const handleDonateClick = (amount: string, index: number) => {
+    setSelectedDonation(index);
     toast({
       title: "Thank you for your generosity!",
       description: `Your donation of ${amount} will help us make a difference.`,
@@ -50,123 +28,211 @@ const Donate = () => {
       title: "Basic Support",
       description: "Provides educational materials for one child",
       icon: Coffee,
+      benefits: ["Educational supplies", "Books for one child", "Art supplies"]
     },
     {
       amount: "$50",
       title: "Friend of the Foundation",
       description: "Supports a community outreach program for a week",
       icon: Heart,
+      benefits: ["Community outreach", "Meals for 10 children", "Educational workshop"]
     },
     {
       amount: "$100",
       title: "Community Champion",
       description: "Funds a scholarship for a deserving student",
       icon: Gift,
+      benefits: ["Full scholarship", "School supplies", "Mentorship program"]
     },
     {
       amount: "Custom",
       title: "Your Choice",
       description: "Make a donation of any amount you choose",
       icon: DollarSign,
+      benefits: ["Flexible support", "Directed to greatest need", "Custom recognition"]
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const impactStats = [
+    { value: "2,500+", label: "Children Supported" },
+    { value: "15+", label: "Communities Reached" },
+    { value: "95%", label: "Funds to Programs" },
+    { value: "8+", label: "Years of Impact" }
+  ];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-blue-600 to-blue-400">
       <Navbar />
       <div className="pt-24 pb-16 bg-gradient-to-b from-blue-600/5 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 fade-in-section">
-            <h1 className="text-4xl font-bold text-textPrimary mb-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-textPrimary mb-6">
               Make a Difference Today
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-lg text-textSecondary max-w-3xl mx-auto">
+            <p className="text-xl text-textSecondary max-w-3xl mx-auto">
               Your donation helps us continue our mission to transform lives through love and compassion in communities across Africa.
             </p>
-          </div>
+          </motion.div>
+
+          {/* Impact Stats */}
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
+          >
+            {impactStats.map((stat, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300"
+              >
+                <p className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</p>
+                <p className="text-gray-600">{stat.label}</p>
+              </motion.div>
+            ))}
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6 fade-in-section">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
               <img
                 src={donateImagePath}
                 alt="Donation Impact"
-                className="rounded-lg shadow-lg w-full hover-card"
+                className="rounded-xl shadow-xl w-full object-cover h-[400px]"
               />
-            </div>
+            </motion.div>
 
-            <div className="space-y-6 fade-in-section">
-              <h2 className="text-2xl font-semibold text-textPrimary">Your Donation Makes an Impact</h2>
-              <p className="text-textSecondary">
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <h2 className="text-3xl font-semibold text-textPrimary">Your Donation Makes an Impact</h2>
+              <p className="text-lg text-textSecondary">
                 Every contribution, regardless of size, helps us make a meaningful difference in the lives of children and communities in need.
               </p>
-              <ul className="space-y-3 text-textSecondary">
-                <li className="flex items-start">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 mr-3 mt-1">
-                    <DollarSign size={14} />
-                  </span>
-                  Provide educational resources to underprivileged children
-                </li>
-                <li className="flex items-start">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 mr-3 mt-1">
-                    <DollarSign size={14} />
-                  </span>
-                  Support community development programs
-                </li>
-                <li className="flex items-start">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 mr-3 mt-1">
-                    <DollarSign size={14} />
-                  </span>
-                  Fund healthcare initiatives for those in need
-                </li>
-                <li className="flex items-start">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 mr-3 mt-1">
-                    <DollarSign size={14} />
-                  </span>
-                  Create sustainable empowerment opportunities
-                </li>
+              <ul className="space-y-4 text-textSecondary">
+                {[
+                  "Provide educational resources to underprivileged children",
+                  "Support community development programs",
+                  "Fund healthcare initiatives for those in need",
+                  "Create sustainable empowerment opportunities"
+                ].map((item, index) => (
+                  <motion.li 
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="flex items-start"
+                  >
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 mr-3 mt-1">
+                      <Check size={14} />
+                    </span>
+                    <span className="text-lg">{item}</span>
+                  </motion.li>
+                ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
           
-          <div className="fade-in-section">
-            <h2 className="text-2xl font-semibold text-textPrimary text-center mb-8">Choose Your Donation</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-semibold text-textPrimary text-center mb-10">Choose Your Donation</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {donationOptions.map((option, index) => (
-                <div 
+                <motion.div 
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover-card"
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2 }}
+                  className={`bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-2 ${
+                    selectedDonation === index ? 'border-blue-600' : 'border-transparent'
+                  }`}
                 >
                   <div className="flex flex-col items-center text-center">
                     <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                       <option.icon className="text-blue-600" size={28} />
                     </div>
                     <h3 className="text-xl font-semibold mb-1">{option.title}</h3>
-                    <p className="text-3xl font-bold text-blue-600 mb-2">{option.amount}</p>
-                    <p className="text-textSecondary mb-4">{option.description}</p>
-                    <button 
-                      onClick={() => handleDonateClick(option.amount)}
-                      className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors animated-button"
+                    <p className="text-3xl font-bold text-blue-600 mb-4">{option.amount}</p>
+                    <p className="text-gray-600 mb-4">{option.description}</p>
+                    
+                    <div className="w-full mb-6 space-y-2">
+                      {option.benefits.map((benefit, i) => (
+                        <div key={i} className="flex items-center text-left">
+                          <Check size={16} className="text-blue-600 mr-2 flex-shrink-0" />
+                          <span className="text-sm text-gray-600">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <Button 
+                      onClick={() => handleDonateClick(option.amount, index)}
+                      className={`w-full py-6 h-auto text-lg font-medium ${
+                        selectedDonation === index 
+                          ? 'bg-blue-700 hover:bg-blue-800' 
+                          : 'bg-blue-600 hover:bg-blue-700'
+                      } transition-colors`}
                     >
-                      Donate Now
-                    </button>
+                      Donate Now <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
           
-          {/* GoFundMe Section - Moved here as requested */}
-          <div className="my-12 fade-in-section">
-            <Card className="bg-gradient-to-r from-blue-50 to-blue-100 border-blue-200">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* GoFundMe Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="my-16"
+          >
+            <Card className="bg-gradient-to-r from-blue-600 to-blue-400 border-none overflow-hidden rounded-xl shadow-xl">
+              <CardContent className="p-10">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                   <div className="text-center md:text-left">
-                    <h2 className="text-2xl font-bold text-blue-700 mb-3">Support Our GoFundMe Campaign</h2>
-                    <p className="text-blue-600 mb-4">Help us reach more children and communities through our crowdfunding campaign.</p>
-                    <Button className="bg-blue-700 hover:bg-blue-800" size="lg" asChild>
+                    <h2 className="text-3xl font-bold text-white mb-4">Support Our GoFundMe Campaign</h2>
+                    <p className="text-white/90 text-lg mb-6">Help us reach more children and communities through our crowdfunding campaign.</p>
+                    <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-6 py-6 h-auto font-semibold" size="lg" asChild>
                       <a href="https://gofund.me/50d855ef" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Donate on GoFundMe <ExternalLink className="ml-2 h-4 w-4" />
+                        Donate on GoFundMe <ExternalLink className="ml-2 h-5 w-5" />
                       </a>
                     </Button>
                   </div>
@@ -174,19 +240,25 @@ const Donate = () => {
                     <img 
                       src={donateImagePath} 
                       alt="Children benefiting from donations" 
-                      className="h-48 w-auto rounded-lg shadow-md"
+                      className="h-64 w-auto rounded-xl shadow-lg border-4 border-white/20"
                     />
                   </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
           
-          <div className="text-center mt-16 fade-in-section">
-            <p className="text-textSecondary max-w-3xl mx-auto mb-6">
-              For corporate donations or other inquiries, please contact us at <a href="mailto:thediamondfoundation2020@gmail.com" className="text-blue-600 hover:underline">thediamondfoundation2020@gmail.com</a>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mt-16"
+          >
+            <p className="text-lg text-textSecondary max-w-3xl mx-auto mb-6">
+              For corporate donations or other inquiries, please contact us at <a href="mailto:thediamondfoundation2020@gmail.com" className="text-blue-600 hover:underline font-medium">thediamondfoundation2020@gmail.com</a>
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

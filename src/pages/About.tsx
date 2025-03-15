@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 
 const About = () => {
   const visionPoints = [
@@ -24,6 +25,26 @@ const About = () => {
               Diamond Foundation is dedicated to transforming lives through acts of love and compassion. We focus on providing educational support, digital literacy, and creating sustainable impact across Africa.
             </p>
           </div>
+
+          {/* Founder Video Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl font-semibold text-textPrimary text-center mb-8">Meet Our Founder</h2>
+            <div className="w-full max-w-5xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe 
+                src="https://www.youtube.com/embed/InPxKkrAD5o" 
+                title="Diamond Foundation Founder" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 mb-16 animate-fade-up delay-100">
             {/* Mission Statement */}

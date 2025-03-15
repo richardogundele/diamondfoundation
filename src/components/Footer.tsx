@@ -56,9 +56,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-white">Contact Us</h3>
             <p className="text-white/80">
-              123 Charity Lane<br />
-              Compassion City, CC 12345<br />
-              contact@diamondfoundation.org
+              Ilorin Kwara state Nigeria<br />
+              thediamondfoundation2020@gmail.com
             </p>
           </div>
         </div>
