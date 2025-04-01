@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ImageCarouselProps {
   images: string[];
@@ -11,10 +12,11 @@ interface ImageCarouselProps {
 
 const ImageCarousel = ({ 
   images, 
-  autoSlideInterval = 5000,
+  autoSlideInterval = 6000,
   className 
 }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -27,44 +29,61 @@ const ImageCarousel = ({
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, autoSlideInterval);
-    return () => clearInterval(interval);
-  }, [autoSlideInterval]);
+    // Only auto-slide when not hovering
+    if (!isHovering) {
+      const interval = setInterval(nextSlide, autoSlideInterval);
+      return () => clearInterval(interval);
+    }
+    return undefined;
+  }, [isHovering, autoSlideInterval]);
 
   return (
-    <div className={cn("relative w-full h-full overflow-hidden rounded-lg", className)}>
+    <div 
+      className={cn("relative w-full h-full overflow-hidden rounded-lg", className)}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       {/* Images */}
-      {images.map((src, index) => (
-        <div
-          key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out ${
-            index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.7 }}
+          className="absolute top-0 left-0 w-full h-full"
         >
           <img
-            src={src}
-            alt={`Slide ${index + 1}`}
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
             className="object-cover w-full h-full"
           />
-        </div>
-      ))}
+        </motion.div>
+      </AnimatePresence>
+      
+      {/* Overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       
       {/* Navigation arrows */}
-      <div className="absolute inset-0 flex items-center justify-between p-4 z-20">
-        <button 
+      <div className="absolute inset-0 flex items-center justify-between p-4 z-20 opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <motion.button 
           onClick={prevSlide}
-          className="p-1 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
+          className="p-2 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
           aria-label="Previous slide"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <ChevronLeft size={20} />
-        </button>
-        <button 
+          <ChevronLeft size={24} />
+        </motion.button>
+        <motion.button 
           onClick={nextSlide}
-          className="p-1 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
+          className="p-2 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
           aria-label="Next slide"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <ChevronRight size={20} />
-        </button>
+          <ChevronRight size={24} />
+        </motion.button>
       </div>
       
       {/* Indicators */}
@@ -73,8 +92,8 @@ const ImageCarousel = ({
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-white' : 'bg-white/50'
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex ? 'w-6 bg-white' : 'bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

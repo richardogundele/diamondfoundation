@@ -1,66 +1,119 @@
+
 import { ArrowRight } from "lucide-react";
 import Carousel from "./Carousel";
 import Counter from "./Counter";
+import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import image1 from "../images/1.png";
 import image2 from "../images/2.png";
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const carouselImages = [image1, image2];
+  
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
 
   return (
     <div className="relative min-h-screen">
-      <div className="relative min-h-[600px] bg-gradient-to-b from-blue-600/10 to-white pt-24 pb-16">
+      <div className="relative min-h-[650px] bg-gradient-to-b from-blue-600/10 to-white pt-28 pb-16">
         <Carousel images={carouselImages} />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-textPrimary mb-12 animate-fade-up">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold text-textPrimary mb-8 leading-tight"
+              variants={itemVariants}
+            >
               Transforming Lives Through
-              <span className="text-blue-600 hover:text-opacity-80 transition-colors duration-300"> Love & Compassion</span>
-            </h1>
+              <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent hover:from-blue-500 hover:to-blue-300 transition-all duration-300"> Love & Compassion</span>
+            </motion.h1>
 
-            {/* Single button */}
-            <div className="flex justify-center mb-16 animate-fade-up delay-100">
+            <motion.p
+              className="text-lg md:text-xl text-textSecondary max-w-2xl mx-auto mb-8"
+              variants={itemVariants}
+            >
+              Empowering underprivileged children across Africa with education, healthcare, and opportunities to thrive.
+            </motion.p>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
+              variants={itemVariants}
+            >
               <Link to="/about">
-                <button className="group bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-opacity-90 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                <button className="group bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
                   Support Our Mission
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </Link>
-            </div>
-          </div>
+              <Link to="/volunteer">
+                <button className="group bg-white border border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 hover:shadow-md transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
+                  Volunteer With Us
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </Link>
+            </motion.div>
+          </motion.div>
 
           {/* Impact Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 animate-fade-up delay-200">
-            <div className="text-center">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center transform hover:scale-105 transition-transform">
               <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700">
                 <Counter end={1000} suffix="+" duration={2500} />
               </h3>
               <p className="text-base md:text-lg font-semibold text-gray-800 mt-2">Children Impacted</p>
               <p className="text-sm md:text-base text-gray-600">Target impact over 10 years</p>
             </div>
-            <div className="text-center">
+            
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center transform hover:scale-105 transition-transform">
               <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700">
                 <Counter end={30} suffix="+" duration={2000} />
               </h3>
               <p className="text-base md:text-lg font-semibold text-gray-800 mt-2">States Reached</p>
               <p className="text-sm md:text-base text-gray-600">Across Nigeria</p>
             </div>
-            <div className="text-center">
+            
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center transform hover:scale-105 transition-transform">
               <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700">
                 <Counter end={7} suffix="+" duration={1500} />
               </h3>
               <p className="text-base md:text-lg font-semibold text-gray-800 mt-2">Core Objectives</p>
               <p className="text-sm md:text-base text-gray-600">Focused on holistic development</p>
             </div>
-            <div className="text-center">
+            
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center transform hover:scale-105 transition-transform">
               <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700">
                 <Counter end={6} suffix="+" duration={1500} />
               </h3>
               <p className="text-base md:text-lg font-semibold text-gray-800 mt-2">Countries</p>
               <p className="text-sm md:text-base text-gray-600">Expanding across Africa</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

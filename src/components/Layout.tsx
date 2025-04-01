@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const pageVariants = {
@@ -13,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       animate="animate"
       exit="exit"
       variants={pageVariants}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       className="container mx-auto px-4 py-8"
     >
       {children}
@@ -21,4 +22,4 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Layout; 
+export default Layout;
