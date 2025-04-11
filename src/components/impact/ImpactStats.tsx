@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import Stats, { stats } from "./Stats";
+import Counter from "../Counter";
 
 const ImpactStats = () => {
   return (
@@ -11,7 +12,7 @@ const ImpactStats = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold text-textPrimary"
+          className="text-3xl font-bold text-textPrimary"
         >
           Impact Statistics
         </motion.h3>

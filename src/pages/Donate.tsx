@@ -1,3 +1,4 @@
+
 import Navbar from "../components/Navbar";
 import { Heart, DollarSign, Coffee, Gift, ExternalLink, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
@@ -68,11 +69,12 @@ const Donate = () => {
     visible: { opacity: 1, y: 0 }
   };
 
+  // Updated impact stats with the requested changes
   const impactStats = [
-    { value: "2,500+", label: "Children Supported" },
+    { value: "500+", label: "Children Supported" },
     { value: "15+", label: "Communities Reached" },
     { value: "95%", label: "Funds to Programs" },
-    { value: "8+", label: "Years of Impact" }
+    { value: "4+", label: "Years of Impact" }
   ];
 
   return (
@@ -95,21 +97,21 @@ const Donate = () => {
             </p>
           </motion.div>
 
-          {/* Impact Stats */}
+          {/* Impact Stats - Updated UI with larger text and improved visual appeal */}
           <motion.div 
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           >
             {impactStats.map((stat, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <p className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</p>
-                <p className="text-gray-600">{stat.label}</p>
+                <p className="text-4xl md:text-5xl font-bold text-blue-600 mb-3">{stat.value}</p>
+                <p className="text-lg text-gray-600">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -165,6 +167,7 @@ const Donate = () => {
             </motion.div>
           </div>
           
+          {/* Improved donation options section with better spacing and animations */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -177,7 +180,7 @@ const Donate = () => {
               {donationOptions.map((option, index) => (
                 <motion.div 
                   key={index}
-                  whileHover={{ y: -5 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                   className={`bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-2 ${
                     selectedDonation === index ? 'border-blue-600' : 'border-transparent'
@@ -216,7 +219,7 @@ const Donate = () => {
             </div>
           </motion.div>
           
-          {/* GoFundMe Section */}
+          {/* Enhanced GoFundMe Section with better contrast and visual appeal */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -224,13 +227,13 @@ const Donate = () => {
             transition={{ duration: 0.6 }}
             className="my-16"
           >
-            <Card className="bg-gradient-to-r from-blue-600 to-blue-400 border-none overflow-hidden rounded-xl shadow-xl">
+            <Card className="bg-gradient-to-r from-blue-700 to-blue-500 border-none overflow-hidden rounded-xl shadow-xl">
               <CardContent className="p-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                   <div className="text-center md:text-left">
                     <h2 className="text-3xl font-bold text-white mb-4">Support Our GoFundMe Campaign</h2>
                     <p className="text-white/90 text-lg mb-6">Help us reach more children and communities through our crowdfunding campaign.</p>
-                    <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-6 py-6 h-auto font-semibold" size="lg" asChild>
+                    <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-6 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
                       <a href="https://gofund.me/50d855ef" target="_blank" rel="noopener noreferrer" className="flex items-center">
                         Donate on GoFundMe <ExternalLink className="ml-2 h-5 w-5" />
                       </a>
@@ -240,7 +243,7 @@ const Donate = () => {
                     <img 
                       src={donateImagePath} 
                       alt="Children benefiting from donations" 
-                      className="h-64 w-auto rounded-xl shadow-lg border-4 border-white/20"
+                      className="h-64 w-auto rounded-xl shadow-lg border-4 border-white/20 hover:border-white/40 transition-all duration-300"
                     />
                   </div>
                 </div>
