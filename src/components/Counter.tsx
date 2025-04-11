@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -37,10 +38,10 @@ const Counter = ({ end, duration = 2000, suffix = '' }: CounterProps) => {
   }, [end, duration, inView]);
 
   return (
-    <span ref={ref} className="font-bold text-4xl md:text-5xl">
+    <span ref={ref} className="font-bold text-4xl md:text-5xl inline-flex justify-center min-w-[100px]">
       {count.toLocaleString()}{suffix}
     </span>
   );
 };
 
-export default Counter; 
+export default Counter;

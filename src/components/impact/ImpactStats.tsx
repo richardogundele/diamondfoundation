@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import Stats, { stats } from "./Stats";
-import Counter from "../Counter";
 
 const ImpactStats = () => {
   return (

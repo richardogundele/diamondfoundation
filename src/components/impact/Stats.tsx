@@ -29,7 +29,7 @@ const StatItem = ({ icon: Icon, number, label, description, color, index }: Stat
         <div className={`inline-block p-3 ${color} rounded-full text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
           <Icon size={28} />
         </div>
-        <h3 className="text-4xl font-bold text-primary mb-2 group-hover:text-blue-700 transition-colors">
+        <h3 className="text-4xl font-bold text-primary mb-2 flex justify-center items-center h-16 group-hover:text-blue-700 transition-colors">
           {numericValue > 0 ? <Counter end={numericValue} suffix={suffix} /> : number}
         </h3>
         <p className="text-lg font-semibold text-textPrimary mb-1">
