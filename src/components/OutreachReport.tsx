@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import ImageCarousel from "./ImageCarousel";
 import MegaOutreach from './outreach/MegaOutreach';
@@ -16,7 +17,8 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
   const outreachImages = [
     "/lovable-uploads/ee2f541f-04ca-4f47-95a8-639911395629.png",
     "/lovable-uploads/a58379e3-1bb5-43b3-a5ba-4dfa05a5a62c.png",
-    "/lovable-uploads/2db47a69-8efb-4a10-9470-d1cd1e723988.png"
+    "/lovable-uploads/2db47a69-8efb-4a10-9470-d1cd1e723988.png",
+    "/lovable-uploads/a3208aad-45ff-4f26-8956-f840a9408f3b.png" // Added the new Bayelsa outreach image
   ];
   
   const megaOutreachImage = "/lovable-uploads/7fa8b40c-d370-4fb9-9665-0d98c125ae91.png";
