@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 
@@ -45,6 +44,22 @@ const Team = () => {
           description: "Provides spiritual support and intercession for our mission"
         },
         team: ["Prayer Coordinators", "Spiritual Support Team"]
+      },
+      {
+        head: {
+          title: "Legal Adviser",
+          name: "Lawrence Ogundele",
+          description: "Provides legal guidance and ensures compliance"
+        },
+        team: ["Legal Consultants", "Compliance Specialists"]
+      },
+      {
+        head: {
+          title: "Head of Finances",
+          name: "To be appointed",
+          description: "Manages financial planning and resource allocation"
+        },
+        team: ["Financial Analysts", "Accounting Specialists"]
       }
     ]
   };
