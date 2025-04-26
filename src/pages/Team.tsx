@@ -1,67 +1,54 @@
+
 import Navbar from "../components/Navbar";
 import { Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Team = () => {
-  const leadershipTeam = [
-    {
+  const organizationData = {
+    founder: {
       title: "CEO & Founder",
       name: "Richard Ogundele",
       description: "Visionary leader who established the foundation with a passion for transforming lives through education and compassion.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    }
-  ];
-
-  const teamMembers = [
-    {
-      title: "Head of Volunteers",
-      name: "Blessing Adeoye",
-      description: "Manages recruitment, training, and engagement of volunteers",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
     },
-    {
-      title: "Head of Social Media/Publicity",
-      name: "Ololade Gbadamosi",
-      description: "Promotes the foundation's work through digital channels",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-    {
-      title: "Head of Prayer Team",
-      name: "Oluwaseun Asonibare",
-      description: "Provides spiritual support and intercession for our mission",
-      image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-    {
-      title: "Head of Finance Team",
-      name: "Miracle Aina",
-      description: "Ensures financial sustainability and transparency",
-      image: "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-    {
-      title: "Head of Legal Team",
-      name: "Lawrence Ogundele",
-      description: "Handles legal compliance and governance matters",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-    {
-      title: "Head of Education",
-      name: "Kehinde Afolabi",
-      description: "Develops training programs, scholarships, and mentorship initiatives",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-    {
-      title: "Head of Fundraising Team",
-      name: "Clement Ogundele",
-      description: "Secures grants, sponsorships, and donations",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-    {
-      title: "Head of Operations & Evaluation",
-      name: "Kehinde Afolabi",
-      description: "Monitors impact and ensures accountability",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-    },
-  ];
+    directors: [
+      {
+        title: "Director, Africa",
+        name: "Lawrence Ogundele",
+        description: "Handles legal compliance and governance matters",
+        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      }
+    ],
+    departments: [
+      {
+        head: {
+          title: "Head of Social Media/Publicity",
+          name: "Ololade Gbadamosi",
+          description: "Promotes the foundation's work through digital channels",
+          image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        },
+        team: ["Graphic Designers", "Social Media Managers", "Content Creators"]
+      },
+      {
+        head: {
+          title: "Head of Volunteers",
+          name: "Blessing Adeoye",
+          description: "Manages recruitment, training, and engagement of volunteers",
+          image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        },
+        team: ["Volunteer Coordinators", "Training Specialists"]
+      },
+      {
+        head: {
+          title: "Head of Prayer Team",
+          name: "Oluwaseun Asonibare",
+          description: "Provides spiritual support and intercession for our mission",
+          image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        },
+        team: ["Prayer Coordinators", "Spiritual Support Team"]
+      }
+    ]
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,71 +83,79 @@ const Team = () => {
             </p>
           </motion.div>
 
-          {/* Leadership Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-semibold text-textPrimary text-center mb-8">Leadership</h2>
-            <div className="max-w-3xl mx-auto">
-              {leadershipTeam.map((leader, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col md:flex-row items-center gap-8"
-                >
-                  <div className="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-100">
-                    <img 
-                      src={leader.image} 
-                      alt={leader.name} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-blue-600 mb-2">{leader.name}</h3>
-                    <p className="text-lg font-medium text-gray-700 mb-4">{leader.title}</p>
-                    <p className="text-gray-600">{leader.description}</p>
-                  </div>
+          {/* Organizational Chart */}
+          <div className="mt-16 flex flex-col items-center">
+            {/* Founder Level */}
+            <motion.div
+              variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              className="mb-16"
+            >
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-72 text-center relative">
+                <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full h-8 w-0.5 bg-blue-600"></div>
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-blue-100 mb-4">
+                  <img src={organizationData.founder.image} alt={organizationData.founder.name} className="w-full h-full object-cover" />
                 </div>
-              ))}
-            </div>
-          </motion.div>
+                <h3 className="text-xl font-bold text-blue-600">{organizationData.founder.name}</h3>
+                <p className="text-gray-600 font-medium mt-1">{organizationData.founder.title}</p>
+              </div>
+            </motion.div>
 
-          {/* Team Members Section */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="mt-16"
-          >
-            <h2 className="text-3xl font-semibold text-textPrimary text-center mb-8">Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
+            {/* Directors Level */}
+            <motion.div
+              variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              className="mb-16"
+            >
+              <div className="relative">
+                <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full h-8 w-0.5 bg-blue-600"></div>
+                {organizationData.directors.map((director, index) => (
+                  <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-64 text-center">
+                    <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 mb-4">
+                      <img src={director.image} alt={director.name} className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-lg font-bold text-blue-600">{director.name}</h3>
+                    <p className="text-gray-600 font-medium mt-1">{director.title}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Department Heads Level */}
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 relative"
+            >
+              {organizationData.departments.map((dept, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className="bg-white rounded-xl shadow-md overflow-hidden"
+                  className="flex flex-col items-center"
                 >
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                    />
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-64 text-center">
+                    <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 mb-4">
+                      <img src={dept.head.image} alt={dept.head.name} className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-lg font-bold text-blue-600">{dept.head.name}</h3>
+                    <p className="text-gray-600 font-medium mt-1">{dept.head.title}</p>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-textPrimary mb-2">
-                      {member.name}
-                    </h3>
-                    <p className="text-blue-600 font-medium mb-3">{member.title}</p>
-                    <p className="text-gray-600">{member.description}</p>
+                  
+                  {/* Team Members */}
+                  <div className="mt-8 bg-gray-50 p-4 rounded-lg w-full">
+                    <ul className="space-y-2">
+                      {dept.team.map((member, idx) => (
+                        <li key={idx} className="text-gray-600 text-sm text-center">{member}</li>
+                      ))}
+                    </ul>
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
