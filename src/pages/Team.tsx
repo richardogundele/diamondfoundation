@@ -1,3 +1,4 @@
+
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 
@@ -106,7 +107,7 @@ const Team = () => {
               animate="visible"
               className="flex justify-center"
             >
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-72 text-center relative mb-12">
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-72 text-center relative mb-16">
                 <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full h-8 w-0.5 bg-blue-600"></div>
                 <h3 className="text-xl font-bold text-blue-600">{organizationData.founder.name}</h3>
                 <p className="text-gray-600 font-medium mt-1">{organizationData.founder.title}</p>
@@ -118,7 +119,7 @@ const Team = () => {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-2 gap-8 justify-items-center mt-12 relative"
+              className="grid grid-cols-2 gap-8 justify-items-center mt-12 mb-16 relative"
             >
               <div className="absolute top-0 left-1/4 right-1/4 h-0.5 bg-blue-600"></div>
               {organizationData.directors.map((director, index) => (
@@ -128,7 +129,8 @@ const Team = () => {
                   className="relative"
                 >
                   <div className="absolute top-0 left-1/2 h-8 w-0.5 bg-blue-600 -translate-x-1/2 -translate-y-full"></div>
-                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-64 text-center">
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-64 text-center relative">
+                    <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full h-8 w-0.5 bg-blue-600"></div>
                     <h3 className="text-lg font-bold text-blue-600">{director.name}</h3>
                     <p className="text-gray-600 font-medium mt-1">{director.title}</p>
                   </div>
@@ -141,7 +143,7 @@ const Team = () => {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-3 gap-8 mt-16 relative"
+              className="grid grid-cols-5 gap-4 mt-16 relative"
             >
               <div className="absolute top-0 left-[10%] right-[10%] h-0.5 bg-blue-600"></div>
               {organizationData.departments.map((dept, index) => (
@@ -152,19 +154,22 @@ const Team = () => {
                 >
                   <div className="relative">
                     <div className="absolute top-0 left-1/2 h-8 w-0.5 bg-blue-600 -translate-x-1/2 -translate-y-full"></div>
-                    <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-64 text-center mb-8">
-                      <h3 className="text-lg font-bold text-blue-600">{dept.head.name}</h3>
-                      <p className="text-gray-600 font-medium mt-1">{dept.head.title}</p>
+                    <div className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow w-56 text-center mb-8">
+                      <h3 className="text-sm font-bold text-blue-600">{dept.head.name}</h3>
+                      <p className="text-xs text-gray-600 font-medium mt-1">{dept.head.title}</p>
                     </div>
-                  </div>
-                  
-                  {/* Team Members */}
-                  <div className="bg-gray-50 p-4 rounded-lg w-full">
-                    <ul className="space-y-2">
-                      {dept.team.map((member, idx) => (
-                        <li key={idx} className="text-gray-600 text-sm">{member}</li>
-                      ))}
-                    </ul>
+                    
+                    {/* Team Members Box */}
+                    <div className="relative">
+                      <div className="absolute top-0 left-1/2 h-8 w-0.5 bg-blue-600 -translate-x-1/2 -translate-y-full"></div>
+                      <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm w-56">
+                        <ul className="space-y-2">
+                          {dept.team.map((member, idx) => (
+                            <li key={idx} className="text-gray-600 text-xs">{member}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               ))}
