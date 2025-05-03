@@ -1,3 +1,4 @@
+
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -38,6 +39,9 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-white">Diamond Foundation</h3>
             <p className="text-white/80">
               Transforming lives through love, compassion, and empowerment.
+            </p>
+            <p className="text-white/80 text-sm">
+              Our Certificate of Incorporation Name is THE DIAMOND CHILDREN FOUNDATION INITIATIVE and Registration Number is 8324538
             </p>
           </div>
 

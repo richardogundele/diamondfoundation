@@ -7,6 +7,9 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import previewImage from "../images/1.png";
 import dpImage from "../images/DP.png";
+import volunteerImage from "../images/Volunteer.JPG";
+import donateImage from "../images/Donate.JPG";
+import projectImage from "../images/Project.png";
 
 const PreviewSection = ({ title, description, link, image, index }: {
   title: string;
@@ -89,19 +92,19 @@ const Index = () => {
       title: "Our Impact",
       description: "Discover how we're making a difference in education, healthcare, and community development.",
       link: "/impact",
-      image: previewImage
+      image: projectImage
     },
     {
       title: "Volunteer",
       description: "Join our mission and help make a difference in the lives of those who need it most.",
       link: "/volunteer",
-      image: previewImage
+      image: volunteerImage
     },
     {
       title: "Donate",
       description: "Support our cause and help us continue our mission of transforming lives through love and compassion.",
       link: "/donate",
-      image: previewImage
+      image: donateImage
     },
     {
       title: "Contact Us",

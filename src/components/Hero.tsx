@@ -84,15 +84,14 @@ const Hero = () => {
           >
             <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center transform hover:scale-105 transition-transform">
               <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700">
-                <Counter end={1000} suffix="+" duration={2500} />
+                <Counter end={500} suffix="+" duration={2500} />
               </h3>
               <p className="text-base md:text-lg font-semibold text-gray-800 mt-2">Children Impacted</p>
-              <p className="text-sm md:text-base text-gray-600">Target impact over 10 years</p>
             </div>
             
             <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center transform hover:scale-105 transition-transform">
               <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700">
-                <Counter end={30} suffix="+" duration={2000} />
+                <Counter end={10} suffix="+" duration={2000} />
               </h3>
               <p className="text-base md:text-lg font-semibold text-gray-800 mt-2">States Reached</p>
               <p className="text-sm md:text-base text-gray-600">Across Nigeria</p>
