@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { School, ArrowRight, Calendar, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -52,7 +51,7 @@ const NewsFlash = () => {
                     </div>
                     <div className="flex items-center gap-2 text-white">
                       <DollarSign size={20} className="text-blue-200" />
-                      <span className="font-semibold">₦20M Goal</span>
+                      <span className="font-semibold">₦50M Goal</span>
                     </div>
                   </div>
 

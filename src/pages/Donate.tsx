@@ -120,7 +120,6 @@ const Donate = () => {
             </p>
           </motion.div>
 
-          {/* Impact Stats - Updated UI with larger text and improved visual appeal */}
           <motion.div 
             variants={containerVariants}
             initial="hidden"
@@ -190,7 +189,6 @@ const Donate = () => {
             </motion.div>
           </div>
           
-          {/* Improved donation options section with better spacing and animations */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +240,6 @@ const Donate = () => {
             </div>
           </motion.div>
           
-          {/* Enhanced Rebuild 10 Project Section */}
           <motion.div 
             id="rebuild10"
             initial={{ opacity: 0, y: 20 }}
@@ -303,7 +300,7 @@ const Donate = () => {
                         <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
                           <DollarSign className="text-white" size={24} />
                         </div>
-                        <div className="text-2xl font-bold text-white">₦20M</div>
+                        <div className="text-2xl font-bold text-white">₦50M</div>
                         <div className="text-white/80">Total Budget</div>
                       </div>
                       <div className="text-center">
