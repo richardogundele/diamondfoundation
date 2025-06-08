@@ -1,6 +1,5 @@
-
 import Navbar from "../components/Navbar";
-import { Heart, DollarSign, Coffee, Gift, ExternalLink, ArrowRight, Check } from "lucide-react";
+import { Heart, DollarSign, Coffee, Gift, ExternalLink, ArrowRight, Check, School, Building, Users, Calendar } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -75,6 +74,30 @@ const Donate = () => {
     { value: "15+", label: "Communities Reached" },
     { value: "95%", label: "Funds to Programs" },
     { value: "4+", label: "Years of Impact" }
+  ];
+
+  const rebuild10Projects = [
+    {
+      amount: "₦2M",
+      title: "Full School Renovation",
+      description: "Completely renovate one entire school",
+      icon: Building,
+      benefits: ["Complete renovation", "Classrooms & roofs", "Windows & furniture", "Whiteboards included"]
+    },
+    {
+      amount: "₦500K",
+      title: "School Furniture Package",
+      description: "Furnish a school with essential learning materials",
+      icon: School,
+      benefits: ["Desks for all students", "Bookshelves", "Whiteboards", "Teacher's furniture"]
+    },
+    {
+      amount: "₦100K",
+      title: "Essential Repairs",
+      description: "Basic improvements for better learning environment",
+      icon: Users,
+      benefits: ["Paint classrooms", "Repair windows", "Install ceiling fans", "Basic maintenance"]
+    }
   ];
 
   return (
@@ -219,32 +242,160 @@ const Donate = () => {
             </div>
           </motion.div>
           
-          {/* Enhanced GoFundMe Section with better contrast and visual appeal */}
+          {/* Enhanced Rebuild 10 Project Section */}
           <motion.div 
+            id="rebuild10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="my-16"
+            className="my-20"
           >
-            <Card className="bg-gradient-to-r from-blue-700 to-blue-500 border-none overflow-hidden rounded-xl shadow-xl">
-              <CardContent className="p-10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                  <div className="text-center md:text-left">
-                    <h2 className="text-3xl font-bold text-white mb-4">Support Our GoFundMe Campaign</h2>
-                    <p className="text-white/90 text-lg mb-6">Help us reach more children and communities through our crowdfunding campaign.</p>
-                    <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-6 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
-                      <a href="https://gofund.me/50d855ef" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Donate on GoFundMe <ExternalLink className="ml-2 h-5 w-5" />
-                      </a>
-                    </Button>
+            <Card className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 border-none overflow-hidden rounded-2xl shadow-2xl">
+              <CardContent className="p-0">
+                <div className="relative">
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white/20"></div>
+                    <div className="absolute top-32 right-20 w-16 h-16 rounded-full bg-white/15"></div>
+                    <div className="absolute bottom-20 left-1/3 w-12 h-12 rounded-full bg-white/10"></div>
                   </div>
-                  <div className="hidden md:block">
-                    <img 
-                      src={donateImagePath} 
-                      alt="Children benefiting from donations" 
-                      className="h-64 w-auto rounded-xl shadow-lg border-4 border-white/20 hover:border-white/40 transition-all duration-300"
-                    />
+                  
+                  <div className="relative z-10 p-12">
+                    {/* Header */}
+                    <div className="text-center mb-12">
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"
+                      >
+                        <School className="text-white" size={24} />
+                        <span className="text-white font-semibold">NEW PROJECT 2025</span>
+                      </motion.div>
+                      
+                      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Rebuild 10: A Vision to Renovate 10 Schools
+                      </h2>
+                      <p className="text-white/90 text-xl max-w-3xl mx-auto">
+                        Restore dignity to education, improve learning environments, and let children see Jesus through love in action.
+                      </p>
+                    </div>
+
+                    {/* Project Stats */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <School className="text-white" size={24} />
+                        </div>
+                        <div className="text-3xl font-bold text-white">10</div>
+                        <div className="text-white/80">Schools</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Calendar className="text-white" size={24} />
+                        </div>
+                        <div className="text-3xl font-bold text-white">Aug</div>
+                        <div className="text-white/80">2025</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <DollarSign className="text-white" size={24} />
+                        </div>
+                        <div className="text-2xl font-bold text-white">₦20M</div>
+                        <div className="text-white/80">Total Budget</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Users className="text-white" size={24} />
+                        </div>
+                        <div className="text-3xl font-bold text-white">1000+</div>
+                        <div className="text-white/80">Children</div>
+                      </div>
+                    </div>
+
+                    {/* Partnership Options */}
+                    <div className="mb-12">
+                      <h3 className="text-2xl font-bold text-white text-center mb-8">Partnership Opportunities</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {rebuild10Projects.map((project, index) => (
+                          <motion.div
+                            key={index}
+                            whileHover={{ y: -5 }}
+                            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                          >
+                            <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                              <project.icon className="text-white" size={24} />
+                            </div>
+                            <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+                            <p className="text-2xl font-bold text-blue-200 mb-3">{project.amount}</p>
+                            <p className="text-white/80 mb-4">{project.description}</p>
+                            <ul className="space-y-2">
+                              {project.benefits.map((benefit, i) => (
+                                <li key={i} className="flex items-center text-white/90">
+                                  <Check size={16} className="text-blue-200 mr-2 flex-shrink-0" />
+                                  <span className="text-sm">{benefit}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Benefits */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-4">Why Partner with Us?</h3>
+                        <ul className="space-y-3">
+                          {[
+                            "Receive CSR recognition",
+                            "Gain brand exposure across our media platforms",
+                            "Impact lives and transform futures",
+                            "Transparent reporting and project visibility"
+                          ].map((benefit, index) => (
+                            <li key={index} className="flex items-center text-white/90">
+                              <Check size={20} className="text-blue-200 mr-3 flex-shrink-0" />
+                              <span>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-4">Project Focus</h3>
+                        <ul className="space-y-3">
+                          {[
+                            "Classrooms renovation",
+                            "Roof repairs and replacements",
+                            "Windows and furniture installation",
+                            "Whiteboards and learning materials"
+                          ].map((focus, index) => (
+                            <li key={index} className="flex items-center text-white/90">
+                              <Building size={20} className="text-blue-200 mr-3 flex-shrink-0" />
+                              <span>{focus}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="text-center">
+                      <p className="text-white/90 mb-6">Ready to transform education and touch lives?</p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
+                          <a href="mailto:hello@diamondfoundation.org" className="flex items-center">
+                            Partner With Us <ArrowRight className="ml-2 h-5 w-5" />
+                          </a>
+                        </Button>
+                        <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-800 text-lg px-8 py-6 h-auto font-semibold transition-all duration-300" size="lg" asChild>
+                          <a href="https://thediamondfoundation.org" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                            Learn More <ExternalLink className="ml-2 h-5 w-5" />
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
