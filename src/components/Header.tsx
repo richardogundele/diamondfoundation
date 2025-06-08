@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -8,6 +9,7 @@ const Header = () => {
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/impact", label: "Impact" },
+    { path: "/project-2025", label: "Project 2025" },
     { path: "/about", label: "About" },
     { path: "/team", label: "Team" },
     { path: "/volunteer", label: "Volunteer" },
@@ -64,4 +66,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
