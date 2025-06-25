@@ -1,94 +1,174 @@
+
 import { motion } from "framer-motion";
-import { School, ArrowRight, Calendar, DollarSign } from "lucide-react";
+import { School, ArrowRight, Calendar, DollarSign, Star, Users, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const NewsFlash = () => {
   return (
-    <div className="py-16 bg-gradient-to-r from-blue-50 to-blue-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
         >
-          <Card className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 border-none overflow-hidden shadow-2xl">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col lg:flex-row items-center gap-8">
-                <div className="flex-1">
-                  {/* News Badge */}
+          <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border-white/20 overflow-hidden shadow-2xl">
+            <CardContent className="p-8 md:p-16">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="flex-1 text-white">
+                  {/* Enhanced News Badge */}
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
+                    transition={{ duration: 0.6 }}
+                    className="inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-full px-6 py-3 mb-8 shadow-lg"
                   >
-                    <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                    <span className="text-white text-sm font-semibold">BREAKING NEWS</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                      <Star className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-white text-sm font-bold tracking-wide">BREAKING: PROJECT 2025</span>
                   </motion.div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Rebuild 10: Our Biggest Project Yet!
-                  </h2>
+                  <motion.h2 
+                    className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                      Rebuild 10:
+                    </span>
+                    <br />
+                    <span className="text-white">
+                      Our Most Ambitious Mission
+                    </span>
+                  </motion.h2>
                   
-                  <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                    We're launching an ambitious mission to renovate 10 underserved schools across Nigeria in 2025. 
-                    Join us in restoring dignity to education and transforming thousands of young lives.
-                  </p>
+                  <motion.p 
+                    className="text-white/90 text-xl mb-8 leading-relaxed"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                  >
+                    We're launching the most comprehensive school restoration project in Nigeria's history. 
+                    Join us in rebuilding hope, restoring dignity, and transforming the educational landscape 
+                    for thousands of children across 10 underserved communities.
+                  </motion.p>
 
-                  {/* Quick Stats */}
-                  <div className="flex flex-wrap gap-6 mb-8">
-                    <div className="flex items-center gap-2 text-white">
-                      <School size={20} className="text-blue-200" />
-                      <span className="font-semibold">10 Schools</span>
+                  {/* Enhanced Quick Stats */}
+                  <motion.div 
+                    className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                  >
+                    <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <School className="w-6 h-6 text-yellow-300" />
+                      <div>
+                        <div className="font-bold text-lg">10 Schools</div>
+                        <div className="text-white/70 text-sm">Complete Rebuild</div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-white">
-                      <Calendar size={20} className="text-blue-200" />
-                      <span className="font-semibold">August 2025</span>
+                    <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <Users className="w-6 h-6 text-green-300" />
+                      <div>
+                        <div className="font-bold text-lg">5,000+</div>
+                        <div className="text-white/70 text-sm">Students</div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-white">
-                      <DollarSign size={20} className="text-blue-200" />
-                      <span className="font-semibold">₦50M Goal</span>
+                    <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <MapPin className="w-6 h-6 text-blue-300" />
+                      <div>
+                        <div className="font-bold text-lg">10 States</div>
+                        <div className="text-white/70 text-sm">Across Nigeria</div>
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <Link to="/donate#rebuild10">
-                    <Button className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 py-6 h-auto text-lg group transition-all duration-300 hover:scale-105">
-                      Read More
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                  >
+                    <Link to="/project-2025">
+                      <Button className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold px-10 py-6 h-auto text-xl group transition-all duration-300 hover:scale-105 shadow-2xl">
+                        <span className="flex items-center gap-3">
+                          Discover Project 2025
+                          <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Button>
+                    </Link>
+                  </motion.div>
                 </div>
 
-                <div className="lg:w-80">
+                <div className="lg:w-96">
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.05, rotateY: 5 }}
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                      <div className="grid grid-cols-2 gap-4 text-center">
-                        <div className="bg-white/10 rounded-xl p-4">
-                          <div className="text-2xl font-bold text-white">1000+</div>
-                          <div className="text-white/80 text-sm">Students</div>
+                    <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl">
+                      <div className="text-center mb-6">
+                        <div className="text-3xl font-bold text-white mb-2">₦50,000,000</div>
+                        <div className="text-white/80">Fundraising Goal</div>
+                      </div>
+                      
+                      <div className="space-y-4">
+                        <div className="bg-white/10 rounded-2xl p-6 text-center">
+                          <div className="text-2xl font-bold text-yellow-300 mb-1">August 2025</div>
+                          <div className="text-white/80 text-sm">Launch Date</div>
                         </div>
-                        <div className="bg-white/10 rounded-xl p-4">
-                          <div className="text-2xl font-bold text-white">10</div>
-                          <div className="text-white/80 text-sm">Communities</div>
+                        
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-white/10 rounded-xl p-4 text-center">
+                            <div className="text-xl font-bold text-green-300">1000+</div>
+                            <div className="text-white/70 text-xs">Students</div>
+                          </div>
+                          <div className="bg-white/10 rounded-xl p-4 text-center">
+                            <div className="text-xl font-bold text-blue-300">50+</div>
+                            <div className="text-white/70 text-xs">Classrooms</div>
+                          </div>
                         </div>
-                        <div className="bg-white/10 rounded-xl p-4 col-span-2">
-                          <div className="text-xl font-bold text-white">Complete Transformation</div>
-                          <div className="text-white/80 text-sm">Classrooms • Roofs • Furniture</div>
+                        
+                        <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl p-4 text-center border border-green-400/30">
+                          <div className="text-lg font-bold text-white">Complete Transformation</div>
+                          <div className="text-white/80 text-sm">Infrastructure • Furniture • Technology</div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Floating elements */}
-                    <div className="absolute -top-3 -right-3 w-6 h-6 bg-blue-200 rounded-full animate-pulse"></div>
-                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-white/30 rounded-full animate-pulse delay-1000"></div>
+                    {/* Enhanced floating elements */}
+                    <motion.div 
+                      className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full shadow-lg"
+                      animate={{ y: [-5, 5, -5], rotate: [0, 180, 360] }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                    ></motion.div>
+                    <motion.div 
+                      className="absolute -bottom-3 -left-3 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-400 rounded-full shadow-lg"
+                      animate={{ y: [5, -5, 5], rotate: [360, 180, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                    ></motion.div>
+                    <motion.div 
+                      className="absolute top-1/2 -right-2 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full shadow-lg"
+                      animate={{ x: [-3, 3, -3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 2 }}
+                    ></motion.div>
                   </motion.div>
                 </div>
               </div>

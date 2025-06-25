@@ -5,6 +5,7 @@ import ExploreSection from "../components/home/ExploreSection";
 import CommitmentSection from "../components/home/CommitmentSection";
 import AnimationObserver from "../components/home/AnimationObserver";
 import NewsFlash from "../components/home/NewsFlash";
+import TestimonialSection from "../components/home/TestimonialSection";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <AnimationObserver />
       <NewsFlash />
       <ExploreSection />
+      <TestimonialSection />
       <CommitmentSection />
     </div>
   );
