@@ -13,6 +13,7 @@ import Project2025 from "./pages/Project2025";
 import Volunteer from "./pages/Volunteer";
 import NotFound from "./pages/NotFound";
 import Donate from "./pages/Donate";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/project-2025" element={<Project2025 />} />
               <Route path="/volunteer" element={<Volunteer />} />
               <Route path="/donate" element={<Donate />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
