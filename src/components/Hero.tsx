@@ -31,8 +31,8 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
-      <div className="relative min-h-[650px] bg-gradient-to-b from-blue-600/10 to-white pt-28 pb-16">
+    <div className="relative">
+      <div className="relative bg-gradient-to-b from-blue-600/10 to-white pt-20 pb-8">
         <Carousel images={carouselImages} />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -42,7 +42,7 @@ const Hero = () => {
             animate="visible"
           >
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold text-textPrimary mb-8 leading-tight"
+              className="text-4xl md:text-6xl font-bold text-textPrimary mb-6 leading-tight"
               variants={itemVariants}
             >
               Transforming Lives Through
@@ -50,14 +50,14 @@ const Hero = () => {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-textSecondary max-w-2xl mx-auto mb-8"
+              className="text-lg md:text-xl text-textSecondary max-w-2xl mx-auto mb-6"
               variants={itemVariants}
             >
               Empowering underprivileged children across Africa with education, healthcare, and opportunities to thrive.
             </motion.p>
 
             <motion.div 
-              className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
+              className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
               variants={itemVariants}
             >
               <Link to="/about">
@@ -77,7 +77,7 @@ const Hero = () => {
 
           {/* Impact Statistics */}
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
