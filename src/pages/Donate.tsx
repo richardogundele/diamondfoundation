@@ -1,6 +1,7 @@
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Heart, DollarSign, Coffee, Gift, ExternalLink, ArrowRight, Check, School, Building, Users, Calendar, Star, Shield, Zap, Award, Globe, Target } from "lucide-react";
+import { Heart, DollarSign, Coffee, Gift, ArrowRight, Check, Shield, Star, Award } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -57,34 +58,10 @@ const Donate = () => {
   ];
 
   const impactStats = [
-    { value: "2,500+", label: "Children Supported", icon: Users, color: "from-blue-500 to-cyan-600" },
-    { value: "100+", label: "Communities Reached", icon: Globe, color: "from-green-500 to-emerald-600" },
-    { value: "95%", label: "Funds to Programs", icon: Target, color: "from-purple-500 to-violet-600" },
-    { value: "5+", label: "Years of Impact", icon: Award, color: "from-rose-500 to-pink-600" }
-  ];
-
-  const rebuild10Projects = [
-    {
-      amount: "₦2M",
-      title: "Full School Renovation",
-      description: "Completely renovate one entire school with classrooms, roofs, windows, furniture, and whiteboards",
-      icon: Building,
-      color: "from-blue-600 to-cyan-600"
-    },
-    {
-      amount: "₦500K",
-      title: "School Furniture Package",
-      description: "Furnish a school with desks, bookshelves, whiteboards, and teacher's furniture",
-      icon: School,
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      amount: "₦100K",
-      title: "Essential Repairs",
-      description: "Paint classrooms, repair windows, install ceiling fans, and basic maintenance",
-      icon: Users,
-      color: "from-purple-500 to-violet-600"
-    }
+    { value: "2,500+", label: "Children Supported", icon: Heart, color: "from-blue-500 to-cyan-600" },
+    { value: "100+", label: "Communities Reached", icon: Gift, color: "from-green-500 to-emerald-600" },
+    { value: "95%", label: "Funds to Programs", icon: Award, color: "from-purple-500 to-violet-600" },
+    { value: "5+", label: "Years of Impact", icon: Star, color: "from-rose-500 to-pink-600" }
   ];
 
   const trustIndicators = [
@@ -311,87 +288,6 @@ const Donate = () => {
               </div>
             ))}
           </motion.div>
-        </div>
-      </div>
-      
-      {/* Project 2025 Section - Reduced to 3 columns */}
-      <div id="rebuild10" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-transparent border-none overflow-hidden">
-            <CardContent className="p-0">
-              <div className="relative">
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white/20"></div>
-                  <div className="absolute top-32 right-20 w-16 h-16 rounded-full bg-white/15"></div>
-                  <div className="absolute bottom-20 left-1/3 w-12 h-12 rounded-full bg-white/10"></div>
-                </div>
-                
-                <div className="relative z-10 p-12 text-white">
-                  <div className="text-center mb-12">
-                    <motion.div
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5 }}
-                      className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"
-                    >
-                      <School className="text-white" size={24} />
-                      <span className="text-white font-semibold">PROJECT 2025</span>
-                    </motion.div>
-                    
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                      Rebuild 10: Transform Education
-                    </h2>
-                    <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
-                      Join our mission to renovate 10 schools across Nigeria, transforming education for over 1,000 children.
-                    </p>
-                  </div>
-
-                  <div className="mb-12">
-                    <h3 className="text-2xl font-bold text-center mb-8">Partnership Opportunities</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                      {rebuild10Projects.map((project, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                          <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
-                            <CardContent className="p-6">
-                              <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-lg flex items-center justify-center mb-4 shadow-lg`}>
-                                <project.icon className="text-white" size={24} />
-                              </div>
-                              <h4 className="text-xl font-bold mb-2">{project.title}</h4>
-                              <p className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent mb-3`}>{project.amount}</p>
-                              <p className="text-white/80 mb-4">{project.description}</p>
-                            </CardContent>
-                          </Card>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <p className="text-white/90 mb-6 text-lg">Ready to transform education and touch lives?</p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
-                        <a href="mailto:hello@diamondfoundation.org" className="flex items-center">
-                          Partner With Us <ArrowRight className="ml-2 h-5 w-5" />
-                        </a>
-                      </Button>
-                      <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-800 text-lg px-8 py-6 h-auto font-semibold transition-all duration-300" size="lg" asChild>
-                        <a href="/project-2025" className="flex items-center">
-                          Learn More <ExternalLink className="ml-2 h-5 w-5" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
       

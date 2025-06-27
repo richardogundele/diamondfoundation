@@ -1,7 +1,8 @@
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { motion } from "framer-motion";
-import { User, Users, Mail, Globe, Award, Briefcase, Heart, Shield, Star, Target } from "lucide-react";
+import { User, Users, Heart, Shield, Star, Target, Globe, Award, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -89,13 +90,6 @@ const Team = () => {
     ]
   };
 
-  const teamStats = [
-    { icon: Users, value: "50+", label: "Team Members" },
-    { icon: Globe, value: "5", label: "Countries" },
-    { icon: Award, value: "15+", label: "Departments" },
-    { icon: Heart, value: "100%", label: "Dedication" }
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -153,32 +147,6 @@ const Team = () => {
               </a>
             </Button>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Team Stats */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {teamStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="text-white" size={32} />
-                </div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
-                  {stat.value}
-                </div>
-                <div className="text-gray-600 font-medium text-lg">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -311,35 +279,7 @@ const Team = () => {
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Want to Join Our Amazing Team?</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-              We're always looking for passionate individuals who want to make a difference in the world. Join us in our mission to transform lives.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
-                <a href="/volunteer">
-                  Apply to Volunteer <Users className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6 h-auto font-semibold transition-all duration-300" size="lg" asChild>
-                <a href="/contact">
-                  Contact Us <Mail className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
