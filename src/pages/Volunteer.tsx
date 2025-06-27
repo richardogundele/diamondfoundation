@@ -4,12 +4,11 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowRight, Heart, Users, Calendar, Handshake, Star, Award, Zap, BookOpen, Settings, Globe, MessageSquare, Clock, CheckCircle, Mail, Phone } from "lucide-react";
+import { ArrowRight, Heart, Users, Calendar, Handshake, Star, Award, Zap, BookOpen, Settings, Globe, MessageSquare, Clock, CheckCircle, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Volunteer = () => {
   const { toast } = useToast();
-  const volunteerImagePath = "/lovable-uploads/0e8e87f4-a80c-4066-b2a2-f333c416a9bd.png";
   const volunteerFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeR9DNBg8o8yabMU7r8P0UUhEEgZG5H9pllyRmurXZwIf2wGw/viewform?usp=header";
   const outreachFormLink = "https://forms.gle/eL8srxPPKymywvtk8";
 
@@ -141,6 +140,34 @@ const Volunteer = () => {
     { icon: Heart, title: "Impact", description: "See the direct result of your efforts in communities" }
   ];
 
+  const socialLinks = [
+    { 
+      icon: Facebook, 
+      href: "https://www.facebook.com/tdiamondfoundation", 
+      label: "Facebook" 
+    },
+    { 
+      icon: Twitter, 
+      href: "https://x.com/tdfoundation_", 
+      label: "Twitter" 
+    },
+    { 
+      icon: Instagram, 
+      href: "https://www.instagram.com/diamondfoundation_/", 
+      label: "Instagram" 
+    },
+    { 
+      icon: Linkedin, 
+      href: "https://www.linkedin.com/company/diamond-foundation/", 
+      label: "LinkedIn" 
+    },
+    { 
+      icon: Mail, 
+      href: "mailto:thediamondfoundation2020@gmail.com", 
+      label: "Email" 
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -209,55 +236,6 @@ const Volunteer = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Hero Image Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative rounded-2xl overflow-hidden mb-8 shadow-2xl"
-          >
-            <img 
-              src={volunteerImagePath} 
-              alt="Volunteer" 
-              className="w-full h-[500px] object-cover" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-600/80 to-transparent flex items-center">
-              <div className="text-white p-12 max-w-2xl">
-                <motion.h2 
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
-                  className="text-4xl font-bold mb-6"
-                >
-                  Your Impact Starts Here
-                </motion.h2>
-                <motion.p 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4, duration: 0.5 }}
-                  className="text-white/90 text-lg mb-8 leading-relaxed"
-                >
-                  Every volunteer brings unique skills and perspectives that strengthen our mission. 
-                  Whether you have 2 hours a week or 20, whether you're a student or a professional, 
-                  there's a meaningful way for you to contribute to transforming lives across Africa.
-                </motion.p>
-                <Button 
-                  onClick={handleVolunteerClick}
-                  className="bg-white text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 text-lg px-6 py-6 h-auto font-semibold"
-                >
-                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -414,51 +392,86 @@ const Volunteer = () => {
         </div>
       </div>
 
-      {/* Host an Outreach */}
-      <div className="py-20 bg-white">
+      {/* Host an Outreach - Made Bigger */}
+      <div className="py-32 bg-gradient-to-br from-green-600 via-teal-600 to-cyan-700 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-white/10 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/20 blur-3xl animate-pulse"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center text-white"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 mb-12"
+            >
+              <Handshake className="text-white" size={32} />
+              <span className="text-white font-semibold text-xl">Community Partnership</span>
+            </motion.div>
+
+            <h2 className="text-5xl md:text-6xl font-bold mb-8">
+              Host an <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Outreach Event</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Bring the transformative power of Diamond Foundation directly to your community. Partner with us to 
+              organize outreach events that will touch lives and create lasting change in your local area.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="text-white" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Community Impact</h3>
+                <p className="text-white/90">Directly serve children and families in your neighborhood</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-white" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Local Leadership</h3>
+                <p className="text-white/90">Take the lead in bringing positive change to your area</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="text-white" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Network Building</h3>
+                <p className="text-white/90">Connect with other changemakers and expand our reach</p>
+              </div>
+            </div>
+
+            <Button 
+              onClick={handleOutreachClick}
+              className="bg-white text-green-600 hover:bg-green-50 text-xl px-12 py-8 h-auto font-semibold hover:scale-105 transition-all duration-300 shadow-2xl"
+              size="lg"
+            >
+              Host an Outreach Event <ArrowRight className="ml-3 h-6 w-6" />
+            </Button>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Final CTA with Footer Content */}
+      <div className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center text-white mb-16"
           >
-            <Card className="bg-gradient-to-r from-green-500 to-teal-600 border-none shadow-2xl overflow-hidden">
-              <CardContent className="p-12 text-white">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="bg-white/20 p-6 rounded-full">
-                    <Handshake size={48} className="text-white" />
-                  </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-3xl font-bold mb-4">Bring Change to Your Community</h3>
-                    <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                      Host a Diamond Foundation outreach event in your area. Connect us with your local community 
-                      and help us extend our impact to reach more children who need our support.
-                    </p>
-                    <Button 
-                      onClick={handleOutreachClick}
-                      className="bg-white text-green-600 hover:bg-green-50 text-lg px-8 py-3 font-semibold hover:scale-105 transition-all duration-300"
-                    >
-                      Host an Outreach
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Final CTA */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Make Your Mark?</h2>
+            <h2 className="text-4xl font-bold mb-6">Ready to Make Your Mark?</h2>
             <p className="text-white/90 text-xl mb-8 max-w-3xl mx-auto">
               Join hundreds of volunteers who are already transforming lives across Africa. 
               Your journey of impact starts with a single step.
@@ -484,7 +497,7 @@ const Volunteer = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/90">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/90 mb-16">
               <div className="flex items-center justify-center gap-3">
                 <CheckCircle size={24} className="text-green-300" />
                 <span className="text-lg">Flexible Commitment</span>
@@ -499,6 +512,63 @@ const Volunteer = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* Footer Content */}
+          <div className="border-t border-white/20 pt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* About Section */}
+              <div className="space-y-4 text-center md:text-left">
+                <h3 className="text-xl font-semibold text-white">Diamond Foundation</h3>
+                <p className="text-white/80">
+                  Transforming lives through love, compassion, and empowerment.
+                </p>
+                <p className="text-white/80 text-sm">
+                  Our Certificate of Incorporation Name is THE DIAMOND CHILDREN FOUNDATION INITIATIVE and Registration Number is 8324538
+                </p>
+              </div>
+
+              {/* Quick Links */}
+              <div className="space-y-4 text-center md:text-left">
+                <h3 className="text-xl font-semibold text-white">Quick Links</h3>
+                <ul className="space-y-2">
+                  <li><a href="/about" className="text-white/80 hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="/impact" className="text-white/80 hover:text-white transition-colors">Our Impact</a></li>
+                  <li><a href="/volunteer" className="text-white/80 hover:text-white transition-colors">Volunteer</a></li>
+                  <li><a href="/team" className="text-white/80 hover:text-white transition-colors">Our Team</a></li>
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-4 text-center md:text-left">
+                <h3 className="text-xl font-semibold text-white">Contact Us</h3>
+                <p className="text-white/80">
+                  Ilorin Kwara state Nigeria<br />
+                  thediamondfoundation2020@gmail.com
+                </p>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex justify-center space-x-6 mb-8">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon size={24} />
+                </a>
+              ))}
+            </div>
+
+            {/* Copyright */}
+            <div className="text-center text-white/80 border-t border-white/10 pt-8">
+              <p>© {new Date().getFullYear()} Diamond Foundation. All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

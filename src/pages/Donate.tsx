@@ -1,5 +1,5 @@
-
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Heart, DollarSign, Coffee, Gift, ExternalLink, ArrowRight, Check, School, Building, Users, Calendar, Star, Shield, Zap, Award, Globe, Target } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -67,25 +67,22 @@ const Donate = () => {
     {
       amount: "₦2M",
       title: "Full School Renovation",
-      description: "Completely renovate one entire school",
+      description: "Completely renovate one entire school with classrooms, roofs, windows, furniture, and whiteboards",
       icon: Building,
-      benefits: ["Complete renovation", "Classrooms & roofs", "Windows & furniture", "Whiteboards included"],
       color: "from-blue-600 to-cyan-600"
     },
     {
       amount: "₦500K",
       title: "School Furniture Package",
-      description: "Furnish a school with essential learning materials",
+      description: "Furnish a school with desks, bookshelves, whiteboards, and teacher's furniture",
       icon: School,
-      benefits: ["Desks for all students", "Bookshelves", "Whiteboards", "Teacher's furniture"],
       color: "from-green-500 to-emerald-600"
     },
     {
       amount: "₦100K",
       title: "Essential Repairs",
-      description: "Basic improvements for better learning environment",
+      description: "Paint classrooms, repair windows, install ceiling fans, and basic maintenance",
       icon: Users,
-      benefits: ["Paint classrooms", "Repair windows", "Install ceiling fans", "Basic maintenance"],
       color: "from-purple-500 to-violet-600"
     }
   ];
@@ -317,7 +314,7 @@ const Donate = () => {
         </div>
       </div>
       
-      {/* Project 2025 Section */}
+      {/* Project 2025 Section - Reduced to 3 columns */}
       <div id="rebuild10" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="bg-transparent border-none overflow-hidden">
@@ -346,44 +343,13 @@ const Donate = () => {
                       Rebuild 10: Transform Education
                     </h2>
                     <p className="text-white/90 text-xl max-w-3xl mx-auto mb-8">
-                      Join our ambitious mission to renovate 10 schools across Nigeria, restoring dignity to education and transforming the lives of over 1,000 children.
+                      Join our mission to renovate 10 schools across Nigeria, transforming education for over 1,000 children.
                     </p>
-                  </div>
-
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <School className="text-white" size={24} />
-                      </div>
-                      <div className="text-3xl font-bold text-white">10</div>
-                      <div className="text-white/80">Schools</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Calendar className="text-white" size={24} />
-                      </div>
-                      <div className="text-3xl font-bold text-white">Aug</div>
-                      <div className="text-white/80">2025</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <DollarSign className="text-white" size={24} />
-                      </div>
-                      <div className="text-2xl font-bold text-white">₦50M</div>
-                      <div className="text-white/80">Budget</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Users className="text-white" size={24} />
-                      </div>
-                      <div className="text-3xl font-bold text-white">1000+</div>
-                      <div className="text-white/80">Children</div>
-                    </div>
                   </div>
 
                   <div className="mb-12">
                     <h3 className="text-2xl font-bold text-center mb-8">Partnership Opportunities</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {rebuild10Projects.map((project, index) => (
                         <motion.div
                           key={index}
@@ -400,14 +366,6 @@ const Donate = () => {
                               <h4 className="text-xl font-bold mb-2">{project.title}</h4>
                               <p className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent mb-3`}>{project.amount}</p>
                               <p className="text-white/80 mb-4">{project.description}</p>
-                              <ul className="space-y-2">
-                                {project.benefits.map((benefit, i) => (
-                                  <li key={i} className="flex items-center text-white/90">
-                                    <Check size={16} className="text-green-300 mr-2 flex-shrink-0" />
-                                    <span className="text-sm">{benefit}</span>
-                                  </li>
-                                ))}
-                              </ul>
                             </CardContent>
                           </Card>
                         </motion.div>
@@ -464,6 +422,8 @@ const Donate = () => {
           </motion.div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
