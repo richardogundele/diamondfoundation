@@ -46,69 +46,67 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
       {/* Call to Action Section */}
-      <div className="py-20">
+      <div className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white mb-16">
-            <h2 className="text-4xl font-bold mb-6">Ready to Make Your Mark?</h2>
-            <p className="text-white/90 text-xl mb-8 max-w-3xl mx-auto">
+          <div className="text-center text-white mb-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Make Your Mark?</h2>
+            <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
               Join hundreds of volunteers who are already transforming lives across Africa. 
               Your journey of impact starts with a single step.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 onClick={handleVolunteerClick}
-                className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300"
-                size="lg"
+                className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 font-semibold hover:scale-105 transition-all duration-300"
               >
-                Join Our Team Today <ArrowRight size={20} className="ml-2" />
+                Join Our Team Today <ArrowRight size={18} className="ml-2" />
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6 h-auto font-semibold transition-all duration-300" 
-                size="lg" 
+                className="border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 font-semibold transition-all duration-300" 
                 asChild
               >
                 <a href="/contact">
-                  Have Questions? <Mail size={20} className="ml-2" />
+                  Have Questions? <Mail size={18} className="ml-2" />
                 </a>
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/90 mb-16">
-              <div className="flex items-center justify-center gap-3">
-                <CheckCircle size={24} className="text-green-300" />
-                <span className="text-lg">Flexible Commitment</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white/90">
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle size={20} className="text-green-300" />
+                <span>Flexible Commitment</span>
               </div>
-              <div className="flex items-center justify-center gap-3">
-                <CheckCircle size={24} className="text-green-300" />
-                <span className="text-lg">Skill Development</span>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle size={20} className="text-green-300" />
+                <span>Skill Development</span>
               </div>
-              <div className="flex items-center justify-center gap-3">
-                <CheckCircle size={24} className="text-green-300" />
-                <span className="text-lg">Global Impact</span>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle size={20} className="text-green-300" />
+                <span>Global Impact</span>
               </div>
             </div>
           </div>
 
           {/* Footer Content */}
-          <div className="border-t border-white/20 pt-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="border-t border-white/20 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               {/* About Section */}
-              <div className="space-y-4 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-white">Diamond Foundation</h3>
-                <p className="text-white/80">
+              <div className="space-y-3 text-center md:text-left">
+                <h3 className="text-lg font-semibold text-white">Diamond Foundation</h3>
+                <p className="text-white/80 text-sm">
                   Transforming lives through love, compassion, and empowerment.
                 </p>
-                <p className="text-white/80 text-sm">
+                <p className="text-white/70 text-xs">
                   Our Certificate of Incorporation Name is THE DIAMOND CHILDREN FOUNDATION INITIATIVE and Registration Number is 8324538
                 </p>
               </div>
 
               {/* Quick Links */}
-              <div className="space-y-4 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-white">Quick Links</h3>
-                <ul className="space-y-2">
+              <div className="space-y-3 text-center md:text-left">
+                <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+                <ul className="space-y-1 text-sm">
                   <li><a href="/about" className="text-white/80 hover:text-white transition-colors">About Us</a></li>
                   <li><a href="/impact" className="text-white/80 hover:text-white transition-colors">Our Impact</a></li>
                   <li><a href="/volunteer" className="text-white/80 hover:text-white transition-colors">Volunteer</a></li>
@@ -117,34 +115,34 @@ const Footer = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-4 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-white">Contact Us</h3>
-                <p className="text-white/80">
+              <div className="space-y-3 text-center md:text-left">
+                <h3 className="text-lg font-semibold text-white">Contact Us</h3>
+                <p className="text-white/80 text-sm">
                   Ilorin Kwara state Nigeria<br />
                   thediamondfoundation2020@gmail.com
                 </p>
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center space-x-6 mb-8">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon size={24} />
-                </a>
-              ))}
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center text-white/80 border-t border-white/10 pt-8">
-              <p>© {new Date().getFullYear()} Diamond Foundation. All rights reserved.</p>
+            {/* Social Links & Copyright */}
+            <div className="flex flex-col items-center space-y-4 border-t border-white/10 pt-6">
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-white transition-colors"
+                    aria-label={social.label}
+                  >
+                    <social.icon size={20} />
+                  </a>
+                ))}
+              </div>
+              <p className="text-center text-white/70 text-sm">
+                © {new Date().getFullYear()} Diamond Foundation. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
