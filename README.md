@@ -1,4 +1,4 @@
-# Diamond Foundation Project
+# Diamond Foundation Official Website
 
 A modern web application foundation built with cutting-edge technologies, providing a robust starting point for React-based applications.
 
