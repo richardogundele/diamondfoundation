@@ -32,17 +32,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-      {/* Call to Action Text */}
-      <div className="text-center text-white py-8">
-        <h2 className="text-2xl font-bold mb-2">Ready to Make Your Mark?</h2>
-        <p className="text-white/90 text-base max-w-2xl mx-auto">
-          Join hundreds of volunteers who are already transforming lives across Africa. 
-          Your journey of impact starts with a single step.
-        </p>
-      </div>
-
       {/* Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
           {/* About Section */}
           <div className="text-center md:text-left">
