@@ -1,6 +1,6 @@
-
 import Navbar from "../components/Navbar";
 import Impact from "../components/Impact";
+import Footer from "../components/Footer";
 import { GraduationCap, Heart, BookOpen, Users, Target, Globe, ArrowDown, Sparkles, Award, TrendingUp, Star, Zap, Shield, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -299,50 +299,7 @@ const ImpactPage = () => {
         </div>
       </div>
       
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-              <Star className="text-white" size={24} />
-              <span className="text-white font-semibold text-lg">Join the Impact</span>
-            </div>
-            
-            <h2 className="text-4xl font-bold text-white mb-6">Be Part of This Transformation</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-              Your support doesn't just change numbers—it changes lives. Join us in creating lasting impact across Africa.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
-                <a href="/donate">Donate Now</a>
-              </Button>
-              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 text-lg px-8 py-6 h-auto font-semibold transition-all duration-300" size="lg" asChild>
-                <a href="/volunteer">Volunteer With Us</a>
-              </Button>
-            </div>
-
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-white/90">
-              <div className="flex items-center justify-center gap-3">
-                <Shield size={24} className="text-green-300" />
-                <span className="text-lg">Verified Impact</span>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <Zap size={24} className="text-yellow-300" />
-                <span className="text-lg">Direct Action</span>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <Calendar size={24} className="text-blue-300" />
-                <span className="text-lg">Regular Updates</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
