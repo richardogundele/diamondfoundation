@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
@@ -140,12 +139,6 @@ const Team = () => {
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
               Meet the passionate individuals who dedicate their time, skills, and hearts to transforming lives across Africa through love and compassion.
             </p>
-
-            <Button className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
-              <a href="/volunteer">
-                Join Our Team <Users size={20} className="ml-2" />
-              </a>
-            </Button>
           </motion.div>
         </div>
       </div>
