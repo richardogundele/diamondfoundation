@@ -1,6 +1,6 @@
+
 import Navbar from "../components/Navbar";
 import Impact from "../components/Impact";
-import Footer from "../components/Footer";
 import { GraduationCap, Heart, BookOpen, Users, Target, Globe, ArrowDown, Sparkles, Award, TrendingUp, Star, Zap, Shield, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -298,8 +298,6 @@ const ImpactPage = () => {
           </div>
         </div>
       </div>
-      
-      <Footer />
     </div>
   );
 };
