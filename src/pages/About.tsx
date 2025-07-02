@@ -1,6 +1,4 @@
-
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { Heart, Users, Globe, Target, Award, CheckCircle, Star, Lightbulb, HandHeart, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -299,8 +297,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };
