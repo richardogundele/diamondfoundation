@@ -1,106 +1,78 @@
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Users, Calendar } from "lucide-react";
+import { Heart, Users, Globe, Sparkles, ArrowRight, Star, Award, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const VolunteerHero = () => {
-  const { toast } = useToast();
-  const volunteerImagePath = "/lovable-uploads/0e8e87f4-a80c-4066-b2a2-f333c416a9bd.png";
-  const volunteerFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeR9DNBg8o8yabMU7r8P0UUhEEgZG5H9pllyRmurXZwIf2wGw/viewform?usp=header";
-
-  const handleVolunteerClick = () => {
-    // Open the Google Form in a new tab
-    window.open(volunteerFormLink, "_blank");
-    
-    toast({
-      title: "Opening application form",
-      description: "You're being redirected to our volunteer application form.",
-    });
-  };
-
-  const stats = [
-    { icon: Heart, value: "1,200+", label: "Lives Impacted" },
-    { icon: Users, value: "150+", label: "Active Volunteers" },
-    { icon: Calendar, value: "24+", label: "Annual Events" },
-  ];
-
   return (
-    <div className="mb-20">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="relative rounded-2xl overflow-hidden mb-8 shadow-xl fade-in-section"
-      >
-        <img 
-          src={volunteerImagePath} 
-          alt="Volunteer" 
-          className="w-full h-[500px] object-cover" 
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-600/70 to-transparent flex items-center">
-          <div className="text-white p-12 max-w-xl">
-            <motion.h2 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-4xl font-bold mb-4"
-            >
-              Join Our Mission
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-white/90 text-lg mb-8"
-            >
-              Volunteering with Diamond Foundation means joining a community dedicated to 
-              uplifting underprivileged children and communities across Africa. Your time and 
-              skills can make a real difference.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              <Button 
-                onClick={handleVolunteerClick}
-                className="bg-white text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 text-lg px-6 py-6 h-auto font-semibold"
-              >
-                Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
+    <div className="pt-32 pb-24 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-20 w-80 h-80 rounded-full bg-white/20 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/30 blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full bg-pink-300/30 blur-3xl animate-pulse"></div>
+      </div>
 
-      {/* Stats Section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
-      >
-        {stats.map((stat, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
-            className="bg-white rounded-xl shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-4 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 mb-8 shadow-lg"
           >
-            <div className="p-3 bg-blue-100 rounded-full text-blue-600">
-              <stat.icon size={24} />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-blue-600">{stat.value}</p>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
+            <Sparkles className="text-white" size={28} />
+            <span className="text-white font-bold text-xl">Join Our Mission</span>
           </motion.div>
-        ))}
-      </motion.div>
+
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+            Be the Change 
+            <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-orange-300 bg-clip-text text-transparent mt-4">
+              Africa Needs
+            </span>
+          </h1>
+          <p className="text-2xl md:text-3xl text-white/95 max-w-5xl mx-auto mb-16 leading-relaxed font-light">
+            Join thousands of passionate volunteers making a real difference in communities across Africa. Your skills, time, and heart can transform lives.
+          </p>
+
+          {/* Volunteer impact stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {[
+              { icon: Users, number: "500+", label: "Active Volunteers" },
+              { icon: Globe, number: "15+", label: "Countries" },
+              { icon: Heart, number: "10K+", label: "Lives Touched" },
+              { icon: Award, number: "50+", label: "Projects Completed" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
+                  <stat.icon className="text-white" size={32} />
+                </div>
+                <div className="text-4xl font-black text-white mb-2">{stat.number}</div>
+                <div className="text-white/90 font-medium text-lg">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg">
+              Start Volunteering <Heart size={24} className="ml-3" />
+            </Button>
+            <Button variant="outline" className="border-white border-2 text-white hover:bg-white hover:text-blue-800 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg">
+              Watch Impact Stories <ArrowRight size={24} className="ml-3" />
+            </Button>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };
