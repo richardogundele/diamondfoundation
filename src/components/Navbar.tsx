@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2 sm:py-3' : 'bg-transparent py-3 sm:py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <motion.div 
@@ -48,17 +48,17 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
-              <img src="/lovable-uploads/7d53621f-7c4c-42e4-8365-472adf38f92e.png" alt="Diamond Foundation Logo" className="h-10 w-10" />
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity">
+              <img src="/lovable-uploads/7d53621f-7c4c-42e4-8365-472adf38f92e.png" alt="Diamond Foundation Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
               <div className="flex flex-col">
-                <span className="text-lg font-bold text-gray-800 leading-tight">THE DIAMOND</span>
-                <span className="text-lg font-bold text-primary leading-tight">FOUNDATION</span>
+                <span className="text-sm sm:text-lg font-bold text-gray-800 leading-tight">THE DIAMOND</span>
+                <span className="text-sm sm:text-lg font-bold text-primary leading-tight">FOUNDATION</span>
               </div>
             </Link>
           </motion.div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -68,7 +68,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className={`text-textPrimary hover:text-blue-600 font-medium relative group ${isActive(item.path) ? 'text-blue-600' : ''}`}
+                  className={`text-textPrimary hover:text-blue-600 font-medium relative group text-sm xl:text-base ${isActive(item.path) ? 'text-blue-600' : ''}`}
                 >
                   {item.name}
                   <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -81,18 +81,18 @@ const Navbar = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Link to="/donate">
-                <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-700 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300">
+                <button className="bg-primary text-white px-4 sm:px-6 py-2 rounded-full hover:bg-blue-700 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 text-sm xl:text-base">
                   Donate
                 </button>
               </Link>
             </motion.div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile/Tablet menu button */}
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-textPrimary hover:text-primary"
+              className="text-textPrimary hover:text-primary p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,10 +100,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu with enhanced hover effects */}
+        {/* Mobile/Tablet menu */}
         {isOpen && (
           <motion.div 
-            className="md:hidden absolute left-0 right-0 bg-white shadow-lg mt-4 rounded-b-lg overflow-hidden"
+            className="lg:hidden absolute left-0 right-0 bg-white shadow-lg mt-4 rounded-b-lg overflow-hidden mx-4"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-4 py-3 text-lg rounded-lg transition-all duration-300 ${
+                  className={`block px-4 py-3 text-base sm:text-lg rounded-lg transition-all duration-300 ${
                     isActive(item.path) 
                       ? 'bg-blue-50 text-blue-600 font-medium' 
                       : 'text-textPrimary hover:text-blue-600 hover:bg-blue-50'
@@ -125,7 +125,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/donate" onClick={() => setIsOpen(false)}>
-                <button className="w-full mt-4 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 text-lg font-medium">
+                <button className="w-full mt-4 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 text-base sm:text-lg font-medium">
                   Donate
                 </button>
               </Link>
