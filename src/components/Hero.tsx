@@ -1,122 +1,220 @@
 
+import { ArrowRight, Heart, Users, Globe } from "lucide-react";
+import Carousel from "./Carousel";
+import Counter from "./Counter";
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Heart, Star, Globe, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import image1 from "../images/1.png";
+import image2 from "../images/2.png";
 
 const Hero = () => {
-  const stats = [
-    { icon: Heart, number: "2,500+", label: "Lives Transformed" },
-    { icon: Globe, number: "50+", label: "Communities" },
-    { icon: Users, number: "100+", label: "Volunteers" },
-    { icon: Star, number: "5+", label: "Years Impact" }
-  ];
+  const carouselImages = [image1, image2];
+  
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-10, 10, -10],
+      transition: {
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800">
-      {/* Enhanced background effects */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-10 left-4 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full bg-white/20 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-4 sm:bottom-20 sm:right-20 w-56 h-56 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full bg-yellow-300/30 blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full bg-pink-300/20 blur-3xl animate-pulse"></div>
+    <div className="relative overflow-hidden">
+      {/* Background with improved gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-blue-400/10 to-purple-600/20"></div>
+      
+      {/* Floating background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          variants={floatingVariants}
+          animate="animate"
+          className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl"
+        />
+        <motion.div
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "2s" }}
+          className="absolute top-40 right-20 w-24 h-24 bg-purple-200/20 rounded-full blur-xl"
+        />
+        <motion.div
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "4s" }}
+          className="absolute bottom-32 left-1/4 w-20 h-20 bg-green-200/20 rounded-full blur-xl"
+        />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-6 sm:mb-8"
+      <div className="relative bg-gradient-to-b from-transparent to-white/50 pt-24 pb-16">
+        <Carousel images={carouselImages} />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
+            {/* Mission badge */}
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 sm:px-6 sm:py-3 mb-6 sm:mb-8 shadow-lg"
+              variants={itemVariants}
+              className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-lg border border-blue-100"
             >
-              <Star className="text-white" size={20} />
-              <span className="text-white font-semibold text-sm sm:text-base lg:text-lg">Transforming Lives Since 2020</span>
+              <Heart className="w-5 h-5 text-red-500" />
+              <span className="text-sm font-semibold text-gray-800">Transforming Lives Since 2020</span>
+            </motion.div>
+
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold text-gray-800 mb-8 leading-tight"
+              variants={itemVariants}
+            >
+              Every Child Deserves
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-400 bg-clip-text text-transparent hover:from-blue-500 hover:to-purple-500 transition-all duration-500">
+                Hope, Love & Opportunity
+              </span>
+            </motion.h1>
+
+            <motion.p
+              className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-10 leading-relaxed"
+              variants={itemVariants}
+            >
+              Join us in creating lasting change across Africa. Through education, healthcare, and community empowerment, 
+              we're building a brighter future for underprivileged children and their families.
+            </motion.p>
+
+            {/* Enhanced CTA buttons */}
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center gap-6 mb-16"
+              variants={itemVariants}
+            >
+              <Link to="/donate">
+                <button className="group relative bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-full hover:from-blue-700 hover:to-blue-800 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 text-lg font-semibold min-w-[200px] overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  <Heart className="w-5 h-5" />
+                  Make a Donation
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </Link>
+              <Link to="/volunteer">
+                <button className="group bg-white/90 backdrop-blur-sm border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-full hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 text-lg font-semibold min-w-[200px]">
+                  <Users className="w-5 h-5" />
+                  Join Our Mission
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
 
-          <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Building Hope Through
-            <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-orange-300 bg-clip-text text-transparent mt-2 sm:mt-4">
-              Love & Compassion
-            </span>
-          </motion.h1>
-
-          <motion.p 
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 max-w-4xl mx-auto mb-8 sm:mb-12 lg:mb-16 leading-relaxed font-light px-4 sm:px-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            Join us in transforming lives across Africa. Every child deserves a chance to dream, learn, and thrive in a community filled with love and opportunity.
-          </motion.p>
-
+          {/* Enhanced Impact Statistics */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0"
-            initial={{ opacity: 0, y: 20 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
           >
-            <Button className="w-full sm:w-auto bg-white text-blue-800 hover:bg-blue-50 text-base sm:text-lg lg:text-xl px-6 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg" asChild>
-              <Link to="/donate">
-                Donate Now <Heart size={20} className="ml-2 sm:ml-3" />
-              </Link>
-            </Button>
-            <Button variant="outline" className="w-full sm:w-auto border-white border-2 text-white hover:bg-white hover:text-blue-800 text-base sm:text-lg lg:text-xl px-6 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg" asChild>
-              <Link to="/about">
-                Our Story <ArrowRight size={20} className="ml-2 sm:ml-3" />
-              </Link>
-            </Button>
+            <motion.div 
+              className="relative bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-white/20"
+              whileHover={{ y: -5 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl"></div>
+              <div className="relative">
+                <Heart className="w-8 h-8 text-red-500 mx-auto mb-3" />
+                <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-2">
+                  <Counter end={500} suffix="+" duration={2500} />
+                </h3>
+                <p className="text-base md:text-lg font-semibold text-gray-800">Lives Transformed</p>
+                <p className="text-sm text-gray-600 mt-1">Children & Families</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="relative bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-white/20"
+              whileHover={{ y: -5 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-2xl"></div>
+              <div className="relative">
+                <Globe className="w-8 h-8 text-green-500 mx-auto mb-3" />
+                <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-2">
+                  <Counter end={10} suffix="+" duration={2000} />
+                </h3>
+                <p className="text-base md:text-lg font-semibold text-gray-800">States Reached</p>
+                <p className="text-sm text-gray-600 mt-1">Across Nigeria</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="relative bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-white/20"
+              whileHover={{ y: -5 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl"></div>
+              <div className="relative">
+                <Users className="w-8 h-8 text-purple-500 mx-auto mb-3" />
+                <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-2">
+                  <Counter end={7} suffix="+" duration={1500} />
+                </h3>
+                <p className="text-base md:text-lg font-semibold text-gray-800">Core Programs</p>
+                <p className="text-sm text-gray-600 mt-1">Holistic Development</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="relative bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-white/20"
+              whileHover={{ y: -5 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl"></div>
+              <div className="relative">
+                <Globe className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+                <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-2">
+                  <Counter end={6} suffix="+" duration={1500} />
+                </h3>
+                <p className="text-base md:text-lg font-semibold text-gray-800">Countries</p>
+                <p className="text-sm text-gray-600 mt-1">Expanding Impact</p>
+              </div>
+            </motion.div>
           </motion.div>
 
-          {/* Impact Stats - Mobile optimized */}
-          <motion.div 
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4 sm:px-0"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
+          {/* Trust indicators */}
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.6 }}
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <stat.icon className="text-white" size={16} />
-                </div>
-                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
-                <div className="text-white/90 font-medium text-xs sm:text-sm lg:text-base">{stat.label}</div>
-              </motion.div>
-            ))}
+            <p className="text-gray-600 mb-4">Trusted by communities across Africa</p>
+            <div className="flex justify-center items-center space-x-8 opacity-60">
+              <div className="text-sm font-semibold text-gray-500">Nigeria</div>
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="text-sm font-semibold text-gray-500">Ghana</div>
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="text-sm font-semibold text-gray-500">Kenya</div>
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="text-sm font-semibold text-gray-500">Uganda</div>
+            </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-      >
-        <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-2 sm:w-1.5 sm:h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
-        </div>
-      </motion.div>
-    </section>
+    </div>
   );
 };
 
