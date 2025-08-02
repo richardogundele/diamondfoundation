@@ -30,7 +30,6 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Team", path: "/team" },
     { name: "Impact", path: "/impact" },
-    { name: "Project 2025", path: "/project-2025" },
     { name: "Volunteer", path: "/volunteer" },
   ];
 
@@ -48,11 +47,11 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity">
-              <img src="/lovable-uploads/7d53621f-7c4c-42e4-8365-472adf38f92e.png" alt="Diamond Foundation Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
+            <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
+              <img src="/lovable-uploads/7d53621f-7c4c-42e4-8365-472adf38f92e.png" alt="Diamond Foundation Logo" className="h-6 w-6 sm:h-8 sm:w-8" />
               <div className="flex flex-col">
-                <span className="text-sm sm:text-lg font-bold text-gray-800 leading-tight">THE DIAMOND</span>
-                <span className="text-sm sm:text-lg font-bold text-primary leading-tight">FOUNDATION</span>
+                <span className="text-xs sm:text-sm font-bold text-gray-800 leading-tight">THE DIAMOND</span>
+                <span className="text-xs sm:text-sm font-bold text-primary leading-tight">FOUNDATION</span>
               </div>
             </Link>
           </motion.div>

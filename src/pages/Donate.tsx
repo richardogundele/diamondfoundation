@@ -319,7 +319,7 @@ const Donate = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </div>
   );
 };

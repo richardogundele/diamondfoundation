@@ -52,7 +52,7 @@ const OpenPositionsSection = () => {
       className="mb-16 fade-in-section"
     >
       <div className="bg-blue-50 rounded-xl p-8">
-        <h2 className="text-2xl font-semibold text-primary text-center mb-4">Open Positions</h2>
+        <h2 className="text-2xl font-semibold text-primary text-center mb-4">Volunteer Opportunities</h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
         <p className="text-center text-textSecondary mb-8">
           We are currently looking for dedicated individuals to fill these important roles:

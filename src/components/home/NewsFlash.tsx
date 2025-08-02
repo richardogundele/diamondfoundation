@@ -49,11 +49,11 @@ const NewsFlash = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
                     <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                      Rebuild 10:
+                      Educational Excellence:
                     </span>
                     <br />
                     <span className="text-white">
-                      Our Most Ambitious Mission
+                      Transforming Lives Through Education
                     </span>
                   </motion.h2>
                   
@@ -64,9 +64,9 @@ const NewsFlash = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                   >
-                    We're launching the most comprehensive school restoration project in Nigeria's history. 
-                    Join us in rebuilding hope, restoring dignity, and transforming the educational landscape 
-                    for thousands of children across 10 underserved communities.
+                    We're committed to providing quality education and support to underserved communities. 
+                    Join us in creating lasting change, empowering children, and building a brighter future 
+                    for communities across Africa.
                   </motion.p>
 
                   {/* Enhanced Quick Stats */}
@@ -80,8 +80,8 @@ const NewsFlash = () => {
                     <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
                       <School className="w-6 h-6 text-yellow-300" />
                       <div>
-                        <div className="font-bold text-lg">10 Schools</div>
-                        <div className="text-white/70 text-sm">Complete Rebuild</div>
+                        <div className="font-bold text-lg">50+ Schools</div>
+                        <div className="text-white/70 text-sm">Supported</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -94,8 +94,8 @@ const NewsFlash = () => {
                     <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
                       <MapPin className="w-6 h-6 text-blue-300" />
                       <div>
-                        <div className="font-bold text-lg">10 States</div>
-                        <div className="text-white/70 text-sm">Across Nigeria</div>
+                        <div className="font-bold text-lg">15+ Cities</div>
+                        <div className="text-white/70 text-sm">Across Africa</div>
                       </div>
                     </div>
                   </motion.div>
@@ -106,10 +106,10 @@ const NewsFlash = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                   >
-                    <Link to="/project-2025">
+                    <Link to="/impact">
                       <Button className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold px-10 py-6 h-auto text-xl group transition-all duration-300 hover:scale-105 shadow-2xl">
                         <span className="flex items-center gap-3">
-                          Discover Project 2025
+                          See Our Impact
                           <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                         </span>
                       </Button>
@@ -125,14 +125,14 @@ const NewsFlash = () => {
                   >
                     <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl">
                       <div className="text-center mb-6">
-                        <div className="text-3xl font-bold text-white mb-2">₦50,000,000</div>
-                        <div className="text-white/80">Fundraising Goal</div>
+                        <div className="text-3xl font-bold text-white mb-2">$500,000</div>
+                        <div className="text-white/80">Annual Impact Goal</div>
                       </div>
                       
                       <div className="space-y-4">
                         <div className="bg-white/10 rounded-2xl p-6 text-center">
-                          <div className="text-2xl font-bold text-yellow-300 mb-1">August 2025</div>
-                          <div className="text-white/80 text-sm">Launch Date</div>
+                          <div className="text-2xl font-bold text-yellow-300 mb-1">2024</div>
+                          <div className="text-white/80 text-sm">Active Year</div>
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
@@ -141,14 +141,14 @@ const NewsFlash = () => {
                             <div className="text-white/70 text-xs">Students</div>
                           </div>
                           <div className="bg-white/10 rounded-xl p-4 text-center">
-                            <div className="text-xl font-bold text-blue-300">50+</div>
-                            <div className="text-white/70 text-xs">Classrooms</div>
+                            <div className="text-xl font-bold text-blue-300">25+</div>
+                            <div className="text-white/70 text-xs">Programs</div>
                           </div>
                         </div>
                         
                         <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl p-4 text-center border border-green-400/30">
-                          <div className="text-lg font-bold text-white">Complete Transformation</div>
-                          <div className="text-white/80 text-sm">Infrastructure • Furniture • Technology</div>
+                          <div className="text-lg font-bold text-white">Community Impact</div>
+                          <div className="text-white/80 text-sm">Education • Healthcare • Empowerment</div>
                         </div>
                       </div>
                     </div>
