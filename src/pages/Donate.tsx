@@ -291,6 +291,66 @@ const Donate = () => {
         </div>
       </div>
       
+      {/* Bank Account Details */}
+      <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Bank Transfer Details</h2>
+            <p className="text-lg text-gray-600">You can also donate directly to our bank account</p>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Card className="bg-white shadow-lg border-none max-w-2xl mx-auto">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center space-y-6">
+                  <div className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-lg p-4">
+                    <img 
+                      src="/src/assets/access-bank-logo.png" 
+                      alt="Access Bank Nigeria" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  <div className="space-y-4 w-full">
+                    <div className="border-b border-gray-200 pb-4">
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Account Name</h3>
+                      <p className="text-xl font-semibold text-gray-800">The Diamond Children Foundation</p>
+                    </div>
+                    
+                    <div className="border-b border-gray-200 pb-4">
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Account Number</h3>
+                      <p className="text-2xl font-bold text-blue-600 font-mono">1944110639</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Bank</h3>
+                      <p className="text-xl font-semibold text-gray-800">Access Bank Nigeria</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-blue-50 rounded-lg p-4 w-full">
+                    <p className="text-sm text-blue-800">
+                      <strong>Note:</strong> Please use your name or reference when making transfers to help us track your donation.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
+
       {/* Contact Information */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
