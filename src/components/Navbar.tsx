@@ -50,7 +50,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
               <img src="/lovable-uploads/7d53621f-7c4c-42e4-8365-472adf38f92e.png" alt="Diamond Foundation Logo" className="h-6 w-6 sm:h-8 sm:w-8" />
               <div className="flex flex-col">
-                <span className="text-xs sm:text-sm font-bold text-gray-800 leading-tight">THE DIAMOND</span>
+                <span className="text-xs sm:text-sm font-bold text-foreground leading-tight">THE DIAMOND</span>
                 <span className="text-xs sm:text-sm font-bold text-primary leading-tight">FOUNDATION</span>
               </div>
             </Link>
@@ -67,10 +67,10 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className={`text-textPrimary hover:text-blue-600 font-medium relative group text-sm xl:text-base ${isActive(item.path) ? 'text-blue-600' : ''}`}
+                  className={`text-foreground hover:text-primary font-medium relative group text-sm xl:text-base ${isActive(item.path) ? 'text-primary' : ''}`}
                 >
                   {item.name}
-                  <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </Link>
               </motion.div>
             ))}
@@ -80,7 +80,7 @@ const Navbar = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Link to="/donate">
-                <button className="bg-primary text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full hover:bg-blue-700 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 text-sm xl:text-base">
+                <button className="bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-2 rounded-full hover:bg-primary/90 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 text-sm xl:text-base">
                   Donate
                 </button>
               </Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-textPrimary hover:text-primary p-2"
+              className="text-foreground hover:text-primary p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -102,7 +102,7 @@ const Navbar = () => {
         {/* Mobile menu with enhanced hover effects */}
         {isOpen && (
           <motion.div 
-            className="lg:hidden absolute left-0 right-0 bg-white shadow-lg mt-2 sm:mt-4 rounded-b-lg overflow-hidden"
+            className="lg:hidden absolute left-0 right-0 bg-background shadow-lg mt-2 sm:mt-4 rounded-b-lg overflow-hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -115,8 +115,8 @@ const Navbar = () => {
                   to={item.path}
                   className={`block px-4 py-3 text-base sm:text-lg rounded-lg transition-all duration-300 ${
                     isActive(item.path) 
-                      ? 'bg-blue-50 text-blue-600 font-medium' 
-                      : 'text-textPrimary hover:text-blue-600 hover:bg-blue-50'
+                      ? 'bg-primary/10 text-primary font-medium' 
+                      : 'text-foreground hover:text-primary hover:bg-primary/10'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -124,7 +124,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/donate" onClick={() => setIsOpen(false)}>
-                <button className="w-full mt-4 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 text-base sm:text-lg font-medium">
+                <button className="w-full mt-4 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 text-base sm:text-lg font-medium">
                   Donate
                 </button>
               </Link>
