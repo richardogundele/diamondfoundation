@@ -68,9 +68,7 @@ const About = () => {
 
   const achievements = [
     { number: "2,500+", label: "Lives Transformed", icon: Heart },
-    { number: "50+", label: "Communities", icon: Globe },
-    { number: "₦100M+", label: "Resources Mobilized", icon: Trophy },
-    { number: "15+", label: "Awards Received", icon: Shield }
+    { number: "50+", label: "Communities", icon: Globe }
   ];
 
   const containerVariants = {

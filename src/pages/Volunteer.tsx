@@ -24,10 +24,10 @@ const Volunteer = () => {
       </div>
 
       <Navbar />
+      <OutreachHostSection />
       <VolunteerHero />
       <OpportunitiesSection />
       <OpenPositionsSection />
-      <OutreachHostSection />
       <VolunteerCTA />
     </motion.div>
   );
