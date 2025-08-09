@@ -27,7 +27,7 @@ const VolunteerCTA = () => {
     >
       <Button 
         onClick={handleVolunteerClick}
-        className="bg-primary text-white px-8 py-6 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors animated-button"
+        className="px-8 py-6 rounded-full text-lg font-semibold"
       >
         Join Our Team Today
       </Button>

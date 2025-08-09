@@ -41,7 +41,7 @@ const OpportunitiesSection = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mb-20 fade-in-section"
+      className="fade-in-section"
     >
       <h2 className="text-3xl font-semibold text-primary text-center mb-8">How You Can Help</h2>
       <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>

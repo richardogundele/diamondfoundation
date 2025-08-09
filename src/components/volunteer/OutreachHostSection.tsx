@@ -39,7 +39,6 @@ const OutreachHostSection = () => {
             </p>
             <Button 
               onClick={handleOutreachClick}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
             >
               Apply to Host an Outreach
             </Button>

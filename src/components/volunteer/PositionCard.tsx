@@ -2,6 +2,7 @@
 import { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
 
 interface PositionCardProps {
   title: string;
@@ -46,12 +47,12 @@ const PositionCard = ({ title, skills, icon: Icon, color, index }: PositionCardP
           </span>
         ))}
       </div>
-      <button 
+      <Button 
         onClick={handleVolunteerClick}
-        className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors animated-button"
+        className="w-full"
       >
         Apply
-      </button>
+      </Button>
     </motion.div>
   );
 };
