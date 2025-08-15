@@ -9,37 +9,37 @@ const OpenPositionsSection = () => {
       title: "Content Creator",
       skills: ["Writing", "Design", "Social Media"],
       icon: Zap,
-      color: "bg-blue-600"
+      color: "bg-primary"
     },
     {
       title: "Fundraising Manager",
       skills: ["Fundraising", "Communication", "Networking"],
       icon: Star,
-      color: "bg-green-500"
+      color: "bg-primary"
     },
     {
       title: "Head of Education",
       skills: ["Teaching", "Curriculum Development", "Leadership"],
       icon: BookOpen,
-      color: "bg-red-500"
+      color: "bg-primary"
     },
     {
       title: "Website Manager",
       skills: ["Web Development", "Design", "Content Management"],
       icon: Award,
-      color: "bg-purple-500"
+      color: "bg-primary"
     },
     {
       title: "Project Manager",
       skills: ["Organization", "Leadership", "Strategic Planning"],
       icon: Settings,
-      color: "bg-amber-500"
+      color: "bg-primary"
     },
     {
       title: "Country Representative",
       skills: ["Local Knowledge", "Communication", "Community Engagement"],
       icon: Globe,
-      color: "bg-teal-500"
+      color: "bg-primary"
     },
   ];
 
@@ -51,7 +51,7 @@ const OpenPositionsSection = () => {
       transition={{ duration: 0.6 }}
       className="mb-16 fade-in-section"
     >
-      <div className="bg-blue-50 rounded-xl p-8">
+      <div className="bg-secondary rounded-xl p-8">
         <h2 className="text-2xl font-semibold text-primary text-center mb-4">Volunteer Opportunities</h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
         <p className="text-center text-textSecondary mb-8">

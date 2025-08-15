@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 
 const VolunteerHero = () => {
   return (
-    <div className="pt-32 pb-24 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-80 h-80 rounded-full bg-white/20 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/30 blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full bg-pink-300/30 blur-3xl animate-pulse"></div>
+    <div className="pt-32 pb-24 bg-primary relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-20 w-80 h-80 rounded-full bg-background blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-background blur-3xl animate-pulse"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -31,7 +30,7 @@ const VolunteerHero = () => {
 
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             Be the Change 
-            <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-orange-300 bg-clip-text text-transparent mt-4">
+            <span className="block text-primary-foreground mt-4">
               Africa Needs
             </span>
           </h1>
@@ -64,10 +63,10 @@ const VolunteerHero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg">
+            <Button className="bg-background text-primary hover:bg-secondary text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300" size="lg">
               Start Volunteering <Heart size={24} className="ml-3" />
             </Button>
-            <Button variant="outline" className="border-white border-2 text-white hover:bg-white hover:text-blue-800 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg">
+            <Button variant="outline" className="border-primary-foreground border-2 text-primary-foreground hover:bg-background hover:text-primary text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg">
               Watch Impact Stories <ArrowRight size={24} className="ml-3" />
             </Button>
           </div>
