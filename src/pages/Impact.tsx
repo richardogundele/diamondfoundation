@@ -59,10 +59,10 @@ const ImpactPage = () => {
   ];
 
   const impactStats = [
-    { number: "2,500+", label: "Lives Transformed", icon: Heart, color: "from-red-500 to-rose-600" },
-    { number: "100+", label: "Communities Reached", icon: Globe, color: "from-blue-500 to-cyan-600" },
-    { number: "₦75M", label: "Resources Mobilized", icon: TrendingUp, color: "from-green-500 to-emerald-600" },
-    { number: "25+", label: "Partner Organizations", icon: Award, color: "from-purple-500 to-violet-600" }
+    { number: "500+", label: "Lives Transformed", icon: Heart, color: "from-red-500 to-rose-600" },
+    { number: "7", label: "Communities Reached", icon: Globe, color: "from-blue-500 to-cyan-600" },
+    { number: "3M", label: "Resources Mobilized", icon: TrendingUp, color: "from-green-500 to-emerald-600" },
+    { number: "5", label: "Partner Organizations", icon: Award, color: "from-purple-500 to-violet-600" }
   ];
 
   const testimonials = [
@@ -274,19 +274,6 @@ const ImpactPage = () => {
                     <h3 className="text-xl font-bold text-gray-800 mb-4">{initiative.title}</h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">{initiative.description}</p>
                     
-                    <div className="bg-gray-50 rounded-lg p-4 mb-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className={`text-2xl font-bold bg-gradient-to-r ${initiative.color} bg-clip-text text-transparent`}>
-                            {initiative.stats.primary}
-                          </div>
-                          <div className="text-sm text-gray-600">{initiative.stats.secondary}</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-sm font-medium text-gray-800">{initiative.stats.tertiary}</div>
-                        </div>
-                      </div>
-                    </div>
                     
                     <div className={`text-sm font-semibold text-white bg-gradient-to-r ${initiative.color} px-4 py-2 rounded-full text-center`}>
                       {initiative.impact}

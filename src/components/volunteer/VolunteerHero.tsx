@@ -41,10 +41,10 @@ const VolunteerHero = () => {
           {/* Volunteer impact stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Users, number: "500+", label: "Active Volunteers" },
-              { icon: Globe, number: "15+", label: "Countries" },
-              { icon: Heart, number: "10K+", label: "Lives Touched" },
-              { icon: Award, number: "50+", label: "Projects Completed" }
+              { icon: Users, number: "50+", label: "Active Volunteers" },
+              { icon: Globe, number: "3+", label: "Countries" },
+              { icon: Heart, number: "500+", label: "Lives Touched" },
+              { icon: Award, number: "10+", label: "Projects Completed" }
             ].map((stat, index) => (
               <motion.div
                 key={index}

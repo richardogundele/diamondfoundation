@@ -67,10 +67,9 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className={`text-foreground hover:text-primary font-medium relative group text-sm xl:text-base ${isActive(item.path) ? 'text-primary' : ''}`}
+                  className={`text-foreground hover:text-primary font-medium text-sm xl:text-base transition-colors duration-300 ${isActive(item.path) ? 'text-primary' : ''}`}
                 >
                   {item.name}
-                  <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive(item.path) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </Link>
               </motion.div>
             ))}

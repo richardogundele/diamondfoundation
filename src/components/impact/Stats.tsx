@@ -44,31 +44,31 @@ const StatItem = ({ icon: Icon, number, label, description, color, index }: Stat
 export const stats = [
   {
     icon: Users,
-    number: "100,000+",
-    label: "Children Expected",
-    description: "To be impacted over the next 10 years",
-    color: "bg-blue-500"
-  },
-  {
-    icon: Heart,
-    number: "7",
-    label: "Core Objectives",
-    description: "Focused on holistic development",
-    color: "bg-red-500"
+    number: "500+",
+    label: "Lives Transformed",
+    description: "Directly impacted individuals",
+    color: "bg-primary"
   },
   {
     icon: Globe,
-    number: "20",
-    label: "Countries",
-    description: "Expected to reach in 5 years",
-    color: "bg-purple-500"
+    number: "7",
+    label: "Communities Reached",
+    description: "Across different regions",
+    color: "bg-primary"
   },
   {
     icon: Trophy,
-    number: "100+",
-    label: "Success Stories",
-    description: "Lives transformed",
-    color: "bg-amber-500"
+    number: "3M",
+    label: "Resources Mobilized",
+    description: "Total value of support provided",
+    color: "bg-primary"
+  },
+  {
+    icon: Target,
+    number: "5",
+    label: "Partner Organizations",
+    description: "Collaborative partnerships",
+    color: "bg-primary"
   },
   {
     icon: Target,
