@@ -38,7 +38,7 @@ const NewsFlash = () => {
                       <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                       <Star className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-white text-sm font-bold tracking-wide">BREAKING: PROJECT 2025</span>
+                    <span className="text-white text-sm font-bold tracking-wide">TRANSFORMING LIVES</span>
                   </motion.div>
 
                   <motion.h2 
