@@ -194,24 +194,6 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Trust indicators */}
-          <motion.div
-            className="mt-12 sm:mt-16 text-center px-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-          >
-            <p className="text-gray-600 mb-4 text-sm sm:text-base">Trusted by communities across Africa</p>
-            <div className="flex justify-center items-center space-x-4 sm:space-x-8 opacity-60 flex-wrap">
-              <div className="text-xs sm:text-sm font-semibold text-gray-500">Nigeria</div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="text-xs sm:text-sm font-semibold text-gray-500">Ghana</div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="text-xs sm:text-sm font-semibold text-gray-500">Kenya</div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="text-xs sm:text-sm font-semibold text-gray-500">Uganda</div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </div>
