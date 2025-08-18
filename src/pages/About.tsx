@@ -36,40 +36,30 @@ const About = () => {
   const milestones = [
     {
       year: "2020",
-      title: "Foundation Established",
-      description: "Diamond Foundation was born with a vision to transform lives through love and compassion.",
-      icon: Star
-    },
-    {
-      year: "2021",
       title: "First Outreach",
-      description: "Our inaugural community outreach program reached over 500 children in rural Nigeria.",
-      icon: HandHeart
+      description: "Our inaugural community outreach program reached over 50 children in south west Nigeria.",
+      icon: Star
     },
     {
       year: "2022",
       title: "Educational Initiative",
-      description: "Launched our scholarship program, providing education opportunities to underprivileged youth.",
+      description: "Launched our scholarship program, providing education opportunities to over 10 underprivileged youth",
       icon: BookOpen
     },
     {
-      year: "2023",
+      year: "2024",
       title: "Regional Expansion",
-      description: "Extended our reach across West Africa, impacting thousands of lives through various programs.",
+      description: "Extended our reach across all the geopolitical zones in Nigeria, impacting thousands of lives through various programs.",
       icon: Globe
     },
     {
-      year: "2024",
-      title: "Global Recognition",
-      description: "Received international recognition for our innovative approach to community development.",
+      year: "2025",
+      title: "Community Host Program",
+      description: "Launched the \"Host an Outreach In Your Community\" Program",
       icon: Award
     }
   ];
 
-  const achievements = [
-    { number: "2,500+", label: "Lives Transformed", icon: Heart },
-    { number: "50+", label: "Communities", icon: Globe }
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -148,29 +138,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Achievement Stats */}
-      <div className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-                  <achievement.icon className="text-white" size={40} />
-                </div>
-                <div className="text-5xl font-black text-blue-600 mb-3">{achievement.number}</div>
-                <div className="text-gray-600 font-semibold text-lg">{achievement.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Mission & Vision - Enhanced */}
       <div className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative">

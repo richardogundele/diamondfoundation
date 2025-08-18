@@ -39,29 +39,6 @@ const TeamHero = () => {
             Meet the passionate individuals who dedicate their time, skills, and hearts to transforming lives across Africa through love and compassion.
           </p>
 
-          {/* Team stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            {[
-              { icon: Users, number: "50+", label: "Volunteers" },
-              { icon: Heart, number: "10+", label: "Core Team" },
-              { icon: Star, number: "25+", label: "Departments" },
-              { icon: Award, number: "5+", label: "Years Experience" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <stat.icon className="text-white" size={24} />
-                </div>
-                <div className="text-3xl font-black text-white mb-2">{stat.number}</div>
-                <div className="text-white/90 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
 
           <Button className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg" asChild>
             <a href="/volunteer">

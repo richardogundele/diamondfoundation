@@ -67,7 +67,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className={`text-foreground hover:text-primary font-medium text-sm xl:text-base transition-colors duration-300 ${isActive(item.path) ? 'text-primary' : ''}`}
+                  className={`text-foreground font-medium text-sm xl:text-base ${isActive(item.path) ? 'text-primary' : ''}`}
                 >
                   {item.name}
                 </Link>
@@ -112,10 +112,10 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-4 py-3 text-base sm:text-lg rounded-lg transition-all duration-300 ${
+                  className={`block px-4 py-3 text-base sm:text-lg rounded-lg ${
                     isActive(item.path) 
                       ? 'bg-primary/10 text-primary font-medium' 
-                      : 'text-foreground hover:text-primary hover:bg-primary/10'
+                      : 'text-foreground'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
