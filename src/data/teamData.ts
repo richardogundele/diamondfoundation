@@ -12,10 +12,10 @@ export const organizationData = {
   directors: [
     {
       title: "Director, Africa",
-      name: "Kehinde Afolabi",
+      name: "To be appointed",
       description: "Handles operations and initiatives across Africa",
-      avatar: "KA",
-      color: "from-green-500 to-teal-600"
+      avatar: "?",
+      color: "from-gray-400 to-gray-600"
     },
     {
       title: "Director, Asia",
@@ -29,9 +29,9 @@ export const organizationData = {
     {
       head: {
         title: "Head of Social Media/Publicity",
-        name: "Ololade Gbadamosi",
+        name: "Oluwasanmi Makinde",
         description: "Promotes the foundation's work through digital channels",
-        avatar: "OG",
+        avatar: "OM",
         color: "from-pink-500 to-rose-600",
         icon: Globe
       },
@@ -40,9 +40,9 @@ export const organizationData = {
     {
       head: {
         title: "Head of Volunteers",
-        name: "Blessing Adeoye",
+        name: "Kehinde Afolabi",
         description: "Manages recruitment, training, and engagement of volunteers",
-        avatar: "BA",
+        avatar: "KA",
         color: "from-amber-500 to-orange-600",
         icon: Users
       },
@@ -73,9 +73,9 @@ export const organizationData = {
     {
       head: {
         title: "Head of Finances",
-        name: "To be appointed",
+        name: "Blessing Adeoye",
         description: "Manages financial planning and resource allocation",
-        avatar: "?",
+        avatar: "BA",
         color: "from-emerald-500 to-green-600",
         icon: Target
       },
