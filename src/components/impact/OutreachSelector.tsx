@@ -17,6 +17,7 @@ interface OutreachSelectorProps {
 const outreachOptions = [
   "December Outreach 2024",
   "Mega Outreach 2024",
+  "May 2025 Outreach",
   "November Outreach 2023",
   "November Outreach 2022",
   "November Outreach 2020"

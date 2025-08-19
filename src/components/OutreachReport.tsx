@@ -6,6 +6,7 @@ import UpcomingOutreach from './outreach/UpcomingOutreach';
 import OutreachStats from './outreach/OutreachStats';
 import OutreachDetailTabs from './outreach/OutreachDetailTabs';
 import FirstOutreach from './outreach/FirstOutreach';
+import May2025Outreach from './outreach/May2025Outreach';
 
 interface OutreachReportProps {
   selectedOutreach: string;
@@ -55,6 +56,10 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
   
   if (selectedOutreach === "November Outreach 2020") {
     return <FirstOutreach title={selectedOutreach} imageSrc={firstOutreachImage} />;
+  }
+  
+  if (selectedOutreach === "May 2025 Outreach") {
+    return <May2025Outreach title={selectedOutreach} />;
   }
   
   if (selectedOutreach !== "December Outreach 2024") {
