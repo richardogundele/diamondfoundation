@@ -11,18 +11,11 @@ export const organizationData = {
   },
   directors: [
     {
-      title: "Director, Africa",
-      name: "To be appointed",
-      description: "Handles operations and initiatives across Africa",
-      avatar: "?",
-      color: "from-gray-400 to-gray-600"
-    },
-    {
-      title: "Director, Asia",
-      name: "To be appointed",
-      description: "Oversees expansion and operations in Asia",
-      avatar: "?",
-      color: "from-gray-400 to-gray-600"
+      title: "Director & COO",
+      name: "Kehinde Afolabi",
+      description: "Oversees operations and strategic initiatives across Africa",
+      avatar: "KA",
+      color: "from-emerald-500 to-green-600"
     }
   ],
   departments: [
@@ -40,10 +33,10 @@ export const organizationData = {
     {
       head: {
         title: "Head of Volunteers",
-        name: "Kehinde Afolabi",
+        name: "To be appointed",
         description: "Manages recruitment, training, and engagement of volunteers",
-        avatar: "KA",
-        color: "from-amber-500 to-orange-600",
+        avatar: "?",
+        color: "from-gray-400 to-gray-600",
         icon: Users
       },
       team: ["Volunteer Coordinators", "Training Specialists"]
