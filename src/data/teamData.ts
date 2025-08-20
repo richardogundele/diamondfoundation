@@ -29,9 +29,9 @@ export const organizationData = {
     {
       head: {
         title: "Head of Social Media/Publicity",
-        name: "Oluwasanmi Makinde",
+        name: "Adeosun Samuel",
         description: "Promotes the foundation's work through digital channels",
-        avatar: "OM",
+        avatar: "AS",
         color: "from-pink-500 to-rose-600",
         icon: Globe
       },
