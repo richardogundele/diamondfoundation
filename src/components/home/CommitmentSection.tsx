@@ -1,5 +1,5 @@
 
-import { ExternalLink, Heart, Users, Globe, BookOpen, Stethoscope, Home } from "lucide-react";
+import { ExternalLink, Heart, Users, Globe, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,20 +9,20 @@ const CommitmentSection = () => {
   const commitments = [
     {
       icon: BookOpen,
-      title: "Quality Education",
-      description: "Ensuring every child has access to world-class learning opportunities",
+      title: "Education + Digital Skills",
+      description: "School renovations, scholarships, and tech training for future-ready children",
       color: "text-blue-500"
     },
     {
-      icon: Stethoscope,
-      title: "Healthcare Access",
-      description: "Providing essential medical care and health education to communities",
+      icon: Globe,
+      title: "Enterprise Pathways",
+      description: "Freelancing, entrepreneurship support, and job readiness programs",
       color: "text-green-500"
     },
     {
-      icon: Home,
-      title: "Community Development",
-      description: "Building sustainable infrastructure that transforms entire communities",
+      icon: Heart,
+      title: "Faith in Action",
+      description: "Christian love and compassion reflected through sustainable community impact",
       color: "text-purple-500"
     }
   ];
@@ -55,11 +55,11 @@ const CommitmentSection = () => {
           </motion.div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-            Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Commitment</span>
+            Beyond Charity. <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Building Futures.</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We believe in the power of love, compassion, and collective action to create lasting change
+            We go beyond charity by combining immediate impact with sustainable solutions that empower children to thrive in the digital age
           </p>
         </motion.div>
         
@@ -116,14 +116,14 @@ const CommitmentSection = () => {
           >
             <div className="space-y-6">
               <h3 className="text-4xl font-bold text-gray-800 leading-tight">
-                Transforming Lives Through 
-                <span className="block text-blue-600">Love & Compassion</span>
+                Empowering Children Through 
+                <span className="block text-blue-600">Education & Enterprise</span>
               </h3>
               
               <p className="text-lg text-gray-600 leading-relaxed">
-                At Diamond Foundation, we believe that every child deserves access to quality education, 
-                healthcare, and opportunities to thrive. Our commitment extends beyond immediate aid—we're 
-                building sustainable change that empowers communities for generations to come.
+                The Diamond Foundation creates sustainable solutions that enable children to break free from poverty 
+                and thrive in the digital age. Through education, digital skills, and enterprise pathways, we build 
+                systems that transform lives while reflecting the love of Jesus Christ through tangible impact.
               </p>
             </div>
 

@@ -25,7 +25,7 @@ const Footer = () => {
     },
     { 
       icon: Mail, 
-      href: "mailto:thediamondfoundation2020@gmail.com", 
+      href: "mailto:admin@thediamondfoundation.org", 
       label: "Email" 
     }
   ];
@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold text-white mb-3">Diamond Foundation</h3>
             <p className="text-white/80 text-sm mb-2">
-              Transforming lives through love, compassion, and empowerment.
+              Beyond Charity. Building Futures through education, digital literacy, and enterprise pathways.
             </p>
             <p className="text-white/70 text-xs">
               Our Certificate of Incorporation Name is THE DIAMOND CHILDREN FOUNDATION INITIATIVE and Registration Number is 8324538
@@ -62,7 +62,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-3">Contact Us</h3>
             <p className="text-white/80 text-sm">
               Ilorin Kwara state Nigeria<br />
-              thediamondfoundation2020@gmail.com
+              admin@thediamondfoundation.org<br />
+              Website: thediamondfoundation.org
             </p>
           </div>
         </div>

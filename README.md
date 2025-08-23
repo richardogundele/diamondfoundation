@@ -1,67 +1,174 @@
-# Diamond Foundation Official Website
+# 💎 Diamond Foundation Official Website
 
-A modern web application foundation built with cutting-edge technologies, providing a robust starting point for React-based applications.
+**Beyond Charity. Building Futures.**
 
-## Project Overview
+The official website for Diamond Foundation - a registered nonprofit dedicated to transforming lives through education, digital literacy, and enterprise opportunities across Africa.
 
-This is a foundational project template that combines several powerful modern web technologies:
+## 🌟 About Diamond Foundation
 
-- **Vite**: A next-generation frontend tooling that offers extremely fast development server and build capabilities
-- **TypeScript**: Adds static typing to JavaScript, enhancing code quality and developer experience
-- **React**: A popular JavaScript library for building user interfaces
-- **shadcn-ui**: A collection of re-usable components built with Radix UI and Tailwind CSS
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development
+**Our Mission:** To provide underprivileged children and communities in Africa with access to quality education, digital skills, and enterprise pathways, while reflecting the love of Jesus Christ through tangible impact.
 
-## Getting Started
+**Our Vision:** A world where every child, regardless of background, has access to quality education, digital skills, and opportunities that empower them to break the cycle of poverty, thrive in the digital age, and create lasting, sustainable impact in their communities and beyond.
 
-1. Clone the repository:
-```sh
-git clone <YOUR_GIT_URL>
+### 🎯 What Makes Us Different
+
+- **🤝 Charity + Enterprise:** We don't just give aid — we build systems that enable children to rise above dependency
+- **📚 Education First:** Renovating schools, funding exam fees, and rewarding excellence
+- **💻 Digital Transformation:** Equipping children with future-ready skills through sponsored tech courses
+- **🚀 Pathways to Opportunity:** Creating scholarships, entrepreneurship support, and links to jobs
+- **✝️ Faith in Action:** Impact rooted in Christian love, dignity, and compassion
+
+## 🏗️ Technical Stack
+
+This modern React application is built with cutting-edge technologies:
+
+- **⚛️ React 18.3.1**: Modern component-based UI library
+- **🔧 TypeScript**: Type-safe development with enhanced code quality
+- **⚡ Vite**: Lightning-fast build tool and development server
+- **🎨 Tailwind CSS**: Utility-first CSS framework for rapid styling
+- **🧩 shadcn/ui**: Accessible, modern UI components built on Radix UI
+- **🎪 Framer Motion**: Smooth animations and transitions
+- **🧭 React Router**: Client-side routing for seamless navigation
+
+## 📊 Our 5 Impact Pillars
+
+1. **🎓 Education Access & Equity**
+   - School renovations and infrastructure development
+   - Scholarships and learning materials
+   - Exam fee sponsorship and academic excellence rewards
+
+2. **💻 Digital Literacy & Innovation**
+   - Tech training and digital skills courses
+   - Digital literacy hubs in communities
+   - Future-ready skill development programs
+
+3. **🚀 Enterprise Pathways**
+   - Freelancing and entrepreneurship training
+   - Job readiness and career development programs
+   - Links to employment and income opportunities
+
+4. **✝️ Faith in Action**
+   - Christian love reflected through service
+   - Spiritual mentorship and community building
+   - Values-based character development
+
+5. **🌱 Sustainability & Growth**
+   - Strong community partnerships
+   - Transparent governance and accountability
+   - Enterprise-linked sustainable models
+
+## 🌍 Our Impact
+
+- **500+** Lives Transformed
+- **10+** States Reached across Nigeria
+- **6+** Countries with expanding international impact
+- **7+** Core Programs running simultaneously
+- **Active since 2020** with continuous growth
+
+## 🚀 Getting Started (Development)
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-org/diamondfoundation.git
+cd diamondfoundation
 ```
 
-2. Navigate to project directory:
-```sh
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies:**
+```bash
+npm install
+# or
+yarn install
 ```
 
-3. Install dependencies:
-```sh
-npm i
-```
-
-4. Start development server:
-```sh
+3. **Start development server:**
+```bash
 npm run dev
+# or
+yarn dev
 ```
 
-## Development Options
+4. **Build for production:**
+```bash
+npm run build
+# or
+yarn build
+```
 
-### GitHub Integration
-You can work with this project directly through GitHub:
+### Available Scripts
 
-1. **Direct File Editing**
-   - Navigate to any file
-   - Use the pencil icon to edit
-   - Commit changes directly in the browser
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build optimized production bundle
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality checks
 
-2. **GitHub Codespaces**
-   - Access from the "Code" button
-   - Launch a new Codespace for a full development environment
-   - Edit, commit, and push changes in an integrated environment
+## 🏗️ Project Structure
 
-## Deployment
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── home/           # Home page specific components
+│   ├── impact/         # Impact page components
+│   ├── team/           # Team page components
+│   └── volunteer/      # Volunteer page components
+├── pages/              # Main application pages
+├── data/               # Static data and configurations
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions and helpers
+└── styles/             # Global styles and CSS
 
+```
 
-### Custom Domain Deployment
-- Currently, direct custom domain support is not available
-- For custom domain deployment, use Netlify
-- Refer to [Custom domains documentation](https://docs.lovable.dev/tips-tricks/custom-domain/) for detailed instructions
+## 🎨 Design Features
 
-## Architecture
+- **Modern UI/UX**: Clean, professional design with intuitive navigation
+- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
+- **Smooth Animations**: Framer Motion powered transitions and micro-interactions
+- **Accessibility**: WCAG compliant components with keyboard navigation
+- **Performance**: Optimized images, lazy loading, and efficient code splitting
 
-This project follows modern web development best practices with:
-- Type-safe development using TypeScript
-- Component-based architecture with React
-- Utility-first styling approach with Tailwind CSS
-- Pre-built, accessible UI components from shadcn-ui
-- Fast development experience powered by Vite
+## 📞 Contact & Support
+
+- **Website**: [thediamondfoundation.org](https://thediamondfoundation.org)
+- **Email**: admin@thediamondfoundation.org
+- **Location**: Ilorin, Kwara State, Nigeria
+
+### Social Media
+- [Facebook](https://www.facebook.com/tdiamondfoundation)
+- [Twitter](https://x.com/tdfoundation_)
+- [Instagram](https://www.instagram.com/diamondfoundation_/)
+- [LinkedIn](https://www.linkedin.com/company/diamond-foundation/)
+
+## 🤝 Contributing
+
+We welcome contributions to improve our website and digital presence. Whether you're fixing bugs, adding features, or improving documentation, your help makes a difference.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with love by the Diamond Foundation development team
+- Special thanks to all contributors and supporters
+- Powered by modern web technologies for maximum impact
+
+---
+
+**"Partner, sponsor, or volunteer with us to redefine impact together."**
+
+✨ **Beyond Charity. Building Futures.** ✨

@@ -8,28 +8,28 @@ import { Card, CardContent } from "@/components/ui/card";
 const About = () => {
   const values = [
     {
-      icon: Heart,
-      title: "Love & Compassion",
-      description: "We believe in the transformative power of love and compassion to heal communities and create lasting change.",
-      color: "from-red-500 to-pink-600"
-    },
-    {
-      icon: Users,
-      title: "Community First",
-      description: "Every initiative is designed with the community at its heart, ensuring sustainable and meaningful impact.",
+      icon: Target,
+      title: "Charity + Enterprise",
+      description: "We don't just give aid — we build systems that enable children to rise above dependency and create sustainable futures.",
       color: "from-blue-500 to-cyan-600"
     },
     {
-      icon: Globe,
-      title: "Global Vision",
-      description: "While we start locally, our vision extends globally, connecting hearts and minds across continents.",
+      icon: BookOpen,
+      title: "Education First",
+      description: "Renovating schools, funding exam fees, rewarding excellence, and providing digital literacy for future-ready skills.",
       color: "from-green-500 to-emerald-600"
     },
     {
-      icon: Target,
-      title: "Purpose-Driven",
-      description: "Every action we take is guided by our mission to uplift and empower the next generation.",
+      icon: Globe,
+      title: "Digital Transformation",
+      description: "Equipping children with future-ready skills through sponsored tech courses and digital literacy hubs.",
       color: "from-purple-500 to-indigo-600"
+    },
+    {
+      icon: Heart,
+      title: "Faith in Action",
+      description: "Impact rooted in Christian love, dignity, and compassion — making Jesus visible through service and love.",
+      color: "from-red-500 to-pink-600"
     }
   ];
 
@@ -113,13 +113,13 @@ const About = () => {
             </motion.div>
 
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-              Transforming Lives Through 
+              Beyond Charity. 
               <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-orange-300 bg-clip-text text-transparent mt-4">
-                Love & Compassion
+                Building Futures.
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-white/95 max-w-5xl mx-auto mb-16 leading-relaxed font-light">
-              Diamond Foundation is more than an organization—we're a movement of hearts united by the belief that every child deserves a chance to shine, dream, and thrive.
+              The Diamond Foundation is a registered nonprofit dedicated to transforming lives through education, digital literacy, and enterprise opportunities. We go beyond charity by combining immediate impact with sustainable solutions that empower children and communities to thrive.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -172,7 +172,7 @@ const About = () => {
                     <h3 className="text-3xl font-black text-gray-800">Our Mission</h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed text-xl font-medium">
-                    To uplift and empower underprivileged children and communities across Africa through comprehensive programs in education, healthcare, and community development, fostering hope and creating pathways to a brighter future.
+                    To provide underprivileged children and communities in Africa with access to quality education, digital skills, and enterprise pathways, while reflecting the love of Jesus Christ through tangible impact.
                   </p>
                 </CardContent>
               </Card>
@@ -193,7 +193,7 @@ const About = () => {
                     <h3 className="text-3xl font-black text-gray-800">Our Vision</h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed text-xl font-medium">
-                    To create a world where every child, regardless of their circumstances, has access to quality education, healthcare, and opportunities to reach their full potential, building thriving communities across Africa and beyond.
+                    A world where every child, regardless of background, has access to quality education, digital skills, and opportunities that empower them to break the cycle of poverty, thrive in the digital age, and create lasting, sustainable impact in their communities and beyond.
                   </p>
                 </CardContent>
               </Card>
@@ -213,10 +213,10 @@ const About = () => {
             className="text-center mb-20"
           >
             <h2 className="text-5xl font-black text-gray-800 mb-8">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Values</span>
+              What Makes Us <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Different</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-medium">
-              These core values guide everything we do and shape how we approach our mission of transformation
+              We believe charity alone cannot create lasting change. By merging compassion with innovation, we create spaces where children can learn, dream, and lead their communities into the future.
             </p>
             <div className="w-40 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8 rounded-full"></div>
           </motion.div>

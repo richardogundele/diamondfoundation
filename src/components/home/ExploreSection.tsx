@@ -17,7 +17,7 @@ const ExploreSection = () => {
   const sections = [
     {
       title: "About Us",
-      description: "Learn about our mission, vision, and the impact we're making in communities across Africa.",
+      description: "Discover our mission to transform lives through education, digital literacy, and enterprise pathways.",
       link: "/about",
       image: dpImage
     },
@@ -29,7 +29,7 @@ const ExploreSection = () => {
     },
     {
       title: "Our Impact",
-      description: "Discover how we're making a difference in education, healthcare, and community development.",
+      description: "See our 5 Impact Pillars in action: Education Access, Digital Literacy, Enterprise Pathways, Faith in Action, and Sustainability.",
       link: "/impact",
       image: projectImage
     },
@@ -41,7 +41,7 @@ const ExploreSection = () => {
     },
     {
       title: "Donate",
-      description: "Support our cause and help us continue our mission of transforming lives through love and compassion.",
+      description: "Partner, sponsor, or volunteer with us to redefine impact together. Beyond charity, building futures.",
       link: "/donate",
       image: dpImage
     },

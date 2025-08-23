@@ -89,9 +89,9 @@ const Hero = () => {
               className="text-3xl sm:text-5xl md:text-7xl font-bold text-gray-800 mb-6 sm:mb-8 leading-tight px-2"
               variants={itemVariants}
             >
-              Every Child Deserves
+              Beyond Charity.
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-400 bg-clip-text text-transparent hover:from-blue-500 hover:to-purple-500 transition-all duration-500">
-                Hope, Love & Opportunity
+                Building Futures.
               </span>
             </motion.h1>
 
@@ -99,8 +99,8 @@ const Hero = () => {
               className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4"
               variants={itemVariants}
             >
-              Join us in creating lasting change across Africa. Through education, healthcare, and community empowerment, 
-              we're building a brighter future for underprivileged children and their families.
+              We transform lives through education, digital literacy, and enterprise opportunities. 
+              Combining immediate impact with sustainable solutions that empower children and communities to thrive in the digital age.
             </motion.p>
 
             {/* Enhanced CTA buttons */}

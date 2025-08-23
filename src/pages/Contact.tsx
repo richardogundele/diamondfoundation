@@ -11,8 +11,8 @@ const Contact = () => {
       icon: Mail,
       title: "Email Us",
       description: "Get in touch via email",
-      contact: "thediamondfoundation2020@gmail.com",
-      action: "mailto:thediamondfoundation2020@gmail.com"
+      contact: "admin@thediamondfoundation.org",
+      action: "mailto:admin@thediamondfoundation.org"
     },
     {
       icon: Phone,
@@ -218,7 +218,7 @@ const Contact = () => {
               size="lg"
               asChild
             >
-              <a href="mailto:thediamondfoundation2020@gmail.com">
+              <a href="mailto:admin@thediamondfoundation.org">
                 Send Us a Message <Send className="ml-2 h-5 w-5" />
               </a>
             </Button>

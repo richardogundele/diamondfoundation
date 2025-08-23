@@ -10,52 +10,44 @@ const ImpactPage = () => {
   const initiatives = [
     {
       icon: GraduationCap,
-      title: "Educational Support",
-      description: "Providing scholarships, learning materials, and digital skills training to empower the next generation.",
+      title: "Education Access & Equity",
+      description: "School renovations, scholarships, learning materials, exam sponsorship, and creating pathways to quality education for all children.",
       impact: "500+ Students Supported",
       color: "from-blue-500 to-cyan-600",
-      stats: { primary: "500+", secondary: "Students", tertiary: "Scholarships Given" }
-    },
-    {
-      icon: BookOpen,
-      title: "Spiritual Growth",
-      description: "Offering faith-based mentorship, prayer sessions, and community outreach programs.",
-      impact: "200+ Lives Touched",
-      color: "from-purple-500 to-violet-600",
-      stats: { primary: "200+", secondary: "Lives", tertiary: "Spiritual Mentorship" }
-    },
-    {
-      icon: Users,
-      title: "Empowerment Programs",
-      description: "Facilitating life skills training, mentorship, and leadership development initiatives.",
-      impact: "300+ Youth Empowered",
-      color: "from-amber-500 to-orange-600",
-      stats: { primary: "300+", secondary: "Youth", tertiary: "Skills Training" }
+      stats: { primary: "500+", secondary: "Students", tertiary: "Education Access" }
     },
     {
       icon: Globe,
-      title: "Sustainable Development",
-      description: "Implementing long-term strategies to ensure lasting community impact and growth.",
-      impact: "50+ Communities",
-      color: "from-green-500 to-emerald-600",
-      stats: { primary: "50+", secondary: "Communities", tertiary: "Development Projects" }
-    },
-    {
-      icon: Heart,
-      title: "Health & Wellbeing",
-      description: "Supporting physical and mental health through medical outreach and wellness programs.",
-      impact: "1000+ Beneficiaries",
-      color: "from-rose-500 to-pink-600",
-      stats: { primary: "1000+", secondary: "People", tertiary: "Health Support" }
+      title: "Digital Literacy & Innovation",
+      description: "Tech training, digital hubs, future-ready courses, and equipping children with skills for the digital economy.",
+      impact: "300+ Digital Skills Trained",
+      color: "from-purple-500 to-violet-600",
+      stats: { primary: "300+", secondary: "Youth", tertiary: "Digital Skills" }
     },
     {
       icon: Target,
-      title: "Community Building",
-      description: "Creating safe spaces where children can thrive and develop meaningful relationships.",
-      impact: "25+ Safe Spaces Created",
-      color: "from-teal-500 to-cyan-600",
-      stats: { primary: "25+", secondary: "Spaces", tertiary: "Community Centers" }
+      title: "Enterprise Pathways",
+      description: "Freelancing opportunities, entrepreneurship support, job readiness programs, and creating sustainable income streams.",
+      impact: "150+ Enterprise Ready",
+      color: "from-amber-500 to-orange-600",
+      stats: { primary: "150+", secondary: "Youth", tertiary: "Enterprise Skills" }
     },
+    {
+      icon: Heart,
+      title: "Faith in Action",
+      description: "Making Jesus visible through service and love, providing spiritual mentorship, and reflecting Christian values in all our work.",
+      impact: "200+ Lives Touched",
+      color: "from-rose-500 to-pink-600",
+      stats: { primary: "200+", secondary: "Lives", tertiary: "Faith Impact" }
+    },
+    {
+      icon: Users,
+      title: "Sustainability & Growth",
+      description: "Strong partnerships, transparent governance, enterprise-linked models, and building systems for long-term impact.",
+      impact: "50+ Partnerships Built",
+      color: "from-green-500 to-emerald-600",
+      stats: { primary: "50+", secondary: "Partners", tertiary: "Sustainable Growth" }
+    }
   ];
 
   const impactStats = [
@@ -123,10 +115,10 @@ const ImpactPage = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Lives Transformed, <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Communities Empowered</span>
+              Beyond Charity, <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Building Futures</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Every number tells a story of hope, transformation, and lasting change. See how your support creates ripple effects across communities.
+              Through our 5 Impact Pillars, we create sustainable solutions that empower children to break free from poverty and thrive in the digital age.
             </p>
 
             <Button 
@@ -248,11 +240,11 @@ const ImpactPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-800 mb-6">
-              Our Key <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Initiatives</span>
+              Our 5 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Impact Pillars</span>
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive programs designed to create lasting change in communities across Africa
+              Strategic pillars that combine immediate impact with sustainable solutions, empowering children to break free from poverty and thrive in the digital age
             </p>
           </motion.div>
           

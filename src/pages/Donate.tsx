@@ -305,17 +305,18 @@ const Donate = () => {
             <p className="text-lg text-gray-600">You can also donate directly to our bank account</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Naira Account */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="bg-white shadow-lg border-none">
+              <Card className="bg-white shadow-lg border-none h-full">
                 <CardContent className="p-8">
-                  <div className="flex flex-col items-center text-center space-y-6">
-                    <div className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-lg p-4">
+                  <div className="flex flex-col items-center text-center space-y-5">
+                    <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
                       <img 
                         src="/src/assets/access-bank-logo.png" 
                         alt="Access Bank Nigeria" 
@@ -326,17 +327,17 @@ const Donate = () => {
                     <div className="space-y-4 w-full">
                       <div className="border-b border-gray-200 pb-4">
                         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Account Name</h3>
-                        <p className="text-xl font-semibold text-gray-800">The Diamond Children Foundation</p>
+                        <p className="text-lg font-semibold text-gray-800">The Diamond Children Foundation</p>
                       </div>
                       
                       <div className="border-b border-gray-200 pb-4">
-                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Naira Account Number</h3>
-                        <p className="text-2xl font-bold text-blue-600 font-mono">1944110639</p>
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Naira (₦) Account</h3>
+                        <p className="text-xl font-bold text-blue-600 font-mono">1944110639</p>
                       </div>
                       
                       <div>
                         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Bank</h3>
-                        <p className="text-xl font-semibold text-gray-800">Access Bank Nigeria</p>
+                        <p className="text-lg font-semibold text-gray-800">Access Bank Nigeria</p>
                       </div>
                     </div>
                   </div>
@@ -344,16 +345,17 @@ const Donate = () => {
               </Card>
             </motion.div>
 
+            {/* Pounds Account */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Card className="bg-white shadow-lg border-none">
+              <Card className="bg-white shadow-lg border-none h-full">
                 <CardContent className="p-8">
-                  <div className="flex flex-col items-center text-center space-y-6">
-                    <div className="flex items-center justify-center w-24 h-24 bg-gray-100 rounded-lg p-4">
+                  <div className="flex flex-col items-center text-center space-y-5">
+                    <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
                       <img 
                         src="/src/assets/access-bank-logo.png" 
                         alt="Access Bank Nigeria" 
@@ -364,17 +366,95 @@ const Donate = () => {
                     <div className="space-y-4 w-full">
                       <div className="border-b border-gray-200 pb-4">
                         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Account Name</h3>
-                        <p className="text-xl font-semibold text-gray-800">The Diamond Children Foundation</p>
+                        <p className="text-lg font-semibold text-gray-800">The Diamond Children Foundation</p>
                       </div>
                       
                       <div className="border-b border-gray-200 pb-4">
-                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Pounds (£) Account Number</h3>
-                        <p className="text-2xl font-bold text-blue-600 font-mono">1946956840</p>
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Pounds (£) Account</h3>
+                        <p className="text-xl font-bold text-blue-600 font-mono">1946956840</p>
                       </div>
                       
                       <div>
                         <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Bank</h3>
-                        <p className="text-xl font-semibold text-gray-800">Access Bank Nigeria</p>
+                        <p className="text-lg font-semibold text-gray-800">Access Bank Nigeria</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Euro Account */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <Card className="bg-white shadow-lg border-none h-full">
+                <CardContent className="p-8">
+                  <div className="flex flex-col items-center text-center space-y-5">
+                    <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
+                      <img 
+                        src="/src/assets/access-bank-logo.png" 
+                        alt="Access Bank Nigeria" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    
+                    <div className="space-y-4 w-full">
+                      <div className="border-b border-gray-200 pb-4">
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Account Name</h3>
+                        <p className="text-lg font-semibold text-gray-800">The Diamond Children Foundation</p>
+                      </div>
+                      
+                      <div className="border-b border-gray-200 pb-4">
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Euro (€) Account</h3>
+                        <p className="text-xl font-bold text-blue-600 font-mono">1947149940</p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Bank</h3>
+                        <p className="text-lg font-semibold text-gray-800">Access Bank Nigeria</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Dollar Account */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <Card className="bg-white shadow-lg border-none h-full">
+                <CardContent className="p-8">
+                  <div className="flex flex-col items-center text-center space-y-5">
+                    <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
+                      <img 
+                        src="/src/assets/access-bank-logo.png" 
+                        alt="Access Bank Nigeria" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    
+                    <div className="space-y-4 w-full">
+                      <div className="border-b border-gray-200 pb-4">
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Account Name</h3>
+                        <p className="text-lg font-semibold text-gray-800">The Diamond Children Foundation</p>
+                      </div>
+                      
+                      <div className="border-b border-gray-200 pb-4">
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Dollar ($) Account</h3>
+                        <p className="text-xl font-bold text-blue-600 font-mono">1947228612</p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Bank</h3>
+                        <p className="text-lg font-semibold text-gray-800">Access Bank Nigeria</p>
                       </div>
                     </div>
                   </div>
@@ -387,7 +467,7 @@ const Donate = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
             className="mt-8 max-w-2xl mx-auto"
           >
             <div className="bg-blue-50 rounded-lg p-4 w-full">
@@ -410,8 +490,8 @@ const Donate = () => {
           >
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
               For corporate donations, partnership opportunities, or other inquiries, please contact us at{" "}
-              <a href="mailto:thediamondfoundation2020@gmail.com" className="text-blue-600 hover:underline font-medium">
-                thediamondfoundation2020@gmail.com
+              <a href="mailto:admin@thediamondfoundation.org" className="text-blue-600 hover:underline font-medium">
+                admin@thediamondfoundation.org
               </a>
             </p>
             
