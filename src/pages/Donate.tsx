@@ -106,8 +106,10 @@ const Donate = () => {
               Your donation helps us continue our mission to transform lives through love and compassion in communities across Africa. Every contribution makes a real difference.
             </p>
 
-            <Button className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" onClick={() => document.getElementById('donation-options')?.scrollIntoView({ behavior: 'smooth' })}>
-              Start Donating <ArrowRight size={20} className="ml-2" />
+            <Button className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
+              <a href="https://gofund.me/abc92f4a" target="_blank" rel="noopener noreferrer">
+                Start Donating <ArrowRight size={20} className="ml-2" />
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -261,8 +263,11 @@ const Donate = () => {
                     <Button 
                       onClick={() => handleDonateClick(option.amount, index)}
                       className={`w-full py-6 h-auto text-lg font-medium bg-gradient-to-r ${option.color} hover:opacity-90 transition-all duration-300 text-white`}
+                      asChild
                     >
-                      Donate Now <ArrowRight className="ml-2 h-5 w-5" />
+                      <a href="https://gofund.me/abc92f4a" target="_blank" rel="noopener noreferrer">
+                        Donate Now <ArrowRight className="ml-2 h-5 w-5" />
+                      </a>
                     </Button>
                   </CardContent>
                 </Card>
@@ -318,7 +323,7 @@ const Donate = () => {
                   <div className="flex flex-col items-center text-center space-y-5">
                     <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
                       <img 
-                        src="/src/assets/access-bank-logo.png" 
+                        src="/access-bank-logo.png" 
                         alt="Access Bank Nigeria" 
                         className="w-full h-full object-contain"
                       />
@@ -357,7 +362,7 @@ const Donate = () => {
                   <div className="flex flex-col items-center text-center space-y-5">
                     <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
                       <img 
-                        src="/src/assets/access-bank-logo.png" 
+                        src="/access-bank-logo.png" 
                         alt="Access Bank Nigeria" 
                         className="w-full h-full object-contain"
                       />
@@ -396,7 +401,7 @@ const Donate = () => {
                   <div className="flex flex-col items-center text-center space-y-5">
                     <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
                       <img 
-                        src="/src/assets/access-bank-logo.png" 
+                        src="/access-bank-logo.png" 
                         alt="Access Bank Nigeria" 
                         className="w-full h-full object-contain"
                       />
@@ -435,7 +440,7 @@ const Donate = () => {
                   <div className="flex flex-col items-center text-center space-y-5">
                     <div className="flex items-center justify-center w-20 h-20 bg-gray-100 rounded-lg p-4">
                       <img 
-                        src="/src/assets/access-bank-logo.png" 
+                        src="/access-bank-logo.png" 
                         alt="Access Bank Nigeria" 
                         className="w-full h-full object-contain"
                       />
