@@ -1,7 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
-import { Heart, Users, Globe, Target, Award, CheckCircle, Star, Lightbulb, HandHeart, BookOpen, Sparkles, ArrowRight, Trophy, Shield } from "lucide-react";
+import { Heart, Users, Globe, Target, Award, CheckCircle, Star, Lightbulb, HandHeart, BookOpen, Sparkles, ArrowRight, Trophy, Shield, GraduationCap, Monitor, Building, TrendingUp, Zap, Home, School, Laptop, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -10,13 +10,13 @@ const About = () => {
     {
       icon: Target,
       title: "Charity + Enterprise",
-      description: "We don't just give aid — we build systems that enable children to rise above dependency and create sustainable futures.",
+      description: "We don't just give aid — we build systems that enable children to rise above dependency.",
       color: "from-blue-500 to-cyan-600"
     },
     {
       icon: BookOpen,
       title: "Education First",
-      description: "Renovating schools, funding exam fees, rewarding excellence, and providing digital literacy for future-ready skills.",
+      description: "Renovating schools, funding exam fees, and rewarding excellence.",
       color: "from-green-500 to-emerald-600"
     },
     {
@@ -26,37 +26,61 @@ const About = () => {
       color: "from-purple-500 to-indigo-600"
     },
     {
+      icon: Users,
+      title: "Pathways to Opportunity",
+      description: "Creating scholarships, entrepreneurship support, and links to jobs or freelancing.",
+      color: "from-amber-500 to-orange-600"
+    },
+    {
       icon: Heart,
       title: "Faith in Action",
-      description: "Impact rooted in Christian love, dignity, and compassion — making Jesus visible through service and love.",
+      description: "Impact rooted in Christian love, dignity, and compassion.",
       color: "from-red-500 to-pink-600"
     }
   ];
 
   const milestones = [
     {
-      year: "2020",
-      title: "First Outreach",
-      description: "Our inaugural community outreach program reached over 50 children in south west Nigeria.",
+      year: "2020-2022",
+      title: "Foundation & Growth",
+      description: "Our inaugural community outreach program reached over 50 children in southwest Nigeria, followed by launching our scholarship program providing education opportunities to over 10 underprivileged youth.",
       icon: Star
     },
     {
-      year: "2022",
-      title: "Educational Initiative",
-      description: "Launched our scholarship program, providing education opportunities to over 10 underprivileged youth",
-      icon: BookOpen
-    },
-    {
-      year: "2024",
+      year: "2023-2024",
       title: "Regional Expansion",
-      description: "Extended our reach across all the geopolitical zones in Nigeria, impacting thousands of lives through various programs.",
+      description: "Extended our reach across all the geopolitical zones in Nigeria, impacting thousands of lives through various programs and establishing our presence nationwide.",
       icon: Globe
     },
     {
       year: "2025",
-      title: "Community Host Program",
-      description: "Launched the \"Host an Outreach In Your Community\" Program",
+      title: "Community Host Program & Tech Support",
+      description: "Launch of Host an Outreach in Your Community Program and PC Donations to Orphanages pilot tech support project.",
       icon: Award
+    },
+    {
+      year: "2026",
+      title: "Educational Infrastructure & Digital Access",
+      description: "Renovate 5 schools, pay exam fees for 200 students, distribute materials to 1,000 children, and donate 50 PCs/laptops to orphanages and partner schools.",
+      icon: Building
+    },
+    {
+      year: "2027",
+      title: "Scaling Impact & Digital Literacy",
+      description: "Renovate 10 more schools, pay exam fees for 500 students, launch 1st Digital Literacy Hub serving 100 students, and expand school kits distribution to 2,000 children.",
+      icon: Laptop
+    },
+    {
+      year: "2028",
+      title: "Expanding Digital Infrastructure",
+      description: "Renovate 10 more schools, support 1,000 students with tuition/exam fees, and add 2 more Digital Literacy Hubs bringing our total to 3 hubs.",
+      icon: School
+    },
+    {
+      year: "2029-2030",
+      title: "Sustainable Growth & Enterprise",
+      description: "Renovate 25 more schools (50 total), reach 10,000 supported students, operate 5 Digital Literacy Hubs across Africa, and generate 30% of yearly income through our enterprise arm.",
+      icon: BarChart3
     }
   ];
 
@@ -172,7 +196,7 @@ const About = () => {
                     <h3 className="text-3xl font-black text-gray-800">Our Mission</h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed text-xl font-medium">
-                    To provide underprivileged children and communities in Africa with access to quality education, digital skills, and enterprise pathways, while reflecting the love of Jesus Christ through tangible impact.
+                    To transform lives through education, digital literacy, and enterprise pathways — meeting immediate needs while building long-term solutions that empower children and communities to thrive.
                   </p>
                 </CardContent>
               </Card>
@@ -193,7 +217,7 @@ const About = () => {
                     <h3 className="text-3xl font-black text-gray-800">Our Vision</h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed text-xl font-medium">
-                    A world where every child, regardless of background, has access to quality education, digital skills, and opportunities that empower them to break the cycle of poverty, thrive in the digital age, and create lasting, sustainable impact in their communities and beyond.
+                    A future where every child has the knowledge, confidence, and opportunities to break free from poverty, thrive in the digital age, and create lasting change for their communities.
                   </p>
                 </CardContent>
               </Card>
@@ -226,7 +250,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"
           >
             {values.map((value, index) => (
               <motion.div

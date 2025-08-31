@@ -59,7 +59,7 @@ const CommitmentSection = () => {
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We go beyond charity by combining immediate impact with sustainable solutions that empower children to thrive in the digital age
+            We believe charity alone cannot create lasting change. By merging compassion with innovation, we create spaces where children can learn, dream, and lead their communities into the future.
           </p>
         </motion.div>
         

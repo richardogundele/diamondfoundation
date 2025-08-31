@@ -17,7 +17,7 @@ const ExploreSection = () => {
   const sections = [
     {
       title: "About Us",
-      description: "Discover our mission to transform lives through education, digital literacy, and enterprise pathways.",
+      description: "Discover our mission to transform lives through education, digital literacy, and enterprise pathways — meeting immediate needs while building long-term solutions.",
       link: "/about",
       image: dpImage
     },
@@ -29,7 +29,7 @@ const ExploreSection = () => {
     },
     {
       title: "Our Impact",
-      description: "See our 5 Impact Pillars in action: Education Access, Digital Literacy, Enterprise Pathways, Faith in Action, and Sustainability.",
+      description: "See our 5 Impact Pillars in action: Education Access & Equity, Digital Literacy & Innovation, Enterprise Pathways, Faith in Action, and Sustainability & Growth.",
       link: "/impact",
       image: projectImage
     },

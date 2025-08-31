@@ -6,16 +6,16 @@ The official website for Diamond Foundation - a registered nonprofit dedicated t
 
 ## 🌟 About Diamond Foundation
 
-**Our Mission:** To provide underprivileged children and communities in Africa with access to quality education, digital skills, and enterprise pathways, while reflecting the love of Jesus Christ through tangible impact.
+**Our Mission:** To transform lives through education, digital literacy, and enterprise pathways — meeting immediate needs while building long-term solutions that empower children and communities to thrive.
 
-**Our Vision:** A world where every child, regardless of background, has access to quality education, digital skills, and opportunities that empower them to break the cycle of poverty, thrive in the digital age, and create lasting, sustainable impact in their communities and beyond.
+**Our Vision:** A future where every child has the knowledge, confidence, and opportunities to break free from poverty, thrive in the digital age, and create lasting change for their communities.
 
 ### 🎯 What Makes Us Different
 
 - **🤝 Charity + Enterprise:** We don't just give aid — we build systems that enable children to rise above dependency
 - **📚 Education First:** Renovating schools, funding exam fees, and rewarding excellence
-- **💻 Digital Transformation:** Equipping children with future-ready skills through sponsored tech courses
-- **🚀 Pathways to Opportunity:** Creating scholarships, entrepreneurship support, and links to jobs
+- **💻 Digital Transformation:** Equipping children with future-ready skills through sponsored tech courses and digital literacy hubs
+- **🚀 Pathways to Opportunity:** Creating scholarships, entrepreneurship support, and links to jobs or freelancing
 - **✝️ Faith in Action:** Impact rooted in Christian love, dignity, and compassion
 
 ## 🏗️ Technical Stack
@@ -33,29 +33,19 @@ This modern React application is built with cutting-edge technologies:
 ## 📊 Our 5 Impact Pillars
 
 1. **🎓 Education Access & Equity**
-   - School renovations and infrastructure development
-   - Scholarships and learning materials
-   - Exam fee sponsorship and academic excellence rewards
+   - School renovations, scholarships, materials, exam sponsorship
 
 2. **💻 Digital Literacy & Innovation**
-   - Tech training and digital skills courses
-   - Digital literacy hubs in communities
-   - Future-ready skill development programs
+   - Tech training, digital hubs, future-ready courses
 
 3. **🚀 Enterprise Pathways**
-   - Freelancing and entrepreneurship training
-   - Job readiness and career development programs
-   - Links to employment and income opportunities
+   - Freelancing, entrepreneurship, and job readiness programs
 
 4. **✝️ Faith in Action**
-   - Christian love reflected through service
-   - Spiritual mentorship and community building
-   - Values-based character development
+   - Making Jesus visible through service and love
 
 5. **🌱 Sustainability & Growth**
-   - Strong community partnerships
-   - Transparent governance and accountability
-   - Enterprise-linked sustainable models
+   - Strong partnerships, transparent governance, and enterprise-linked models
 
 ## 🌍 Our Impact
 
@@ -138,6 +128,15 @@ src/
 - **Website**: [thediamondfoundation.org](https://thediamondfoundation.org)
 - **Email**: admin@thediamondfoundation.org
 - **Location**: Ilorin, Kwara State, Nigeria
+
+## 🎯 Our Call to Action
+
+We believe charity alone cannot create lasting change. By merging compassion with innovation, we create spaces where children can learn, dream, and lead their communities into the future.
+
+👉 **Partner, sponsor, or volunteer with us to redefine impact together.**
+
+📍 **Website**: thediamondfoundation.org
+📧 **Email**: admin@thediamondfoundation.org
 
 ### Social Media
 - [Facebook](https://www.facebook.com/tdiamondfoundation)

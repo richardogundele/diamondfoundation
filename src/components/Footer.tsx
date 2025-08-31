@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold text-white mb-3">Diamond Foundation</h3>
             <p className="text-white/80 text-sm mb-2">
-              Beyond Charity. Building Futures through education, digital literacy, and enterprise pathways.
+              The Diamond Foundation is a registered nonprofit dedicated to transforming lives through education, digital literacy, and enterprise opportunities. We go beyond charity by combining immediate impact with sustainable solutions that empower children and communities to thrive.
             </p>
             <p className="text-white/70 text-xs">
               Our Certificate of Incorporation Name is THE DIAMOND CHILDREN FOUNDATION INITIATIVE and Registration Number is 8324538
