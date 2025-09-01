@@ -31,26 +31,47 @@ const OpenPositionsSection = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mb-16 fade-in-section"
+      className="fade-in-section"
     >
-      <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl font-semibold text-primary text-center mb-4">Volunteer Opportunities</h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-        <p className="text-center text-textSecondary mb-8">
-          We are currently looking for dedicated individuals to fill these important roles:
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {volunteerPositions.map((position, index) => (
-            <PositionCard
-              key={index}
-              index={index}
-              title={position.title}
-              skills={position.skills}
-              icon={position.icon}
-              color={position.color}
-            />
-          ))}
-        </div>
+      <div className="text-center mb-16">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl font-bold text-gray-800 mb-6"
+        >
+          Open <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Leadership Positions</span>
+        </motion.h2>
+        <motion.div 
+          initial={{ width: 0 }}
+          whileInView={{ width: 128 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"
+        ></motion.div>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+        >
+          Ready to take on a leadership role? We're looking for passionate individuals to join our core team and drive meaningful change.
+        </motion.p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {volunteerPositions.map((position, index) => (
+          <PositionCard
+            key={index}
+            index={index}
+            title={position.title}
+            skills={position.skills}
+            icon={position.icon}
+            color={position.color}
+          />
+        ))}
       </div>
     </motion.div>
   );
