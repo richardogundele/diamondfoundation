@@ -12,12 +12,6 @@ const OpenPositionsSection = () => {
       color: "bg-primary"
     },
     {
-      title: "Head of Education",
-      skills: ["Teaching", "Curriculum Development", "Leadership"],
-      icon: BookOpen,
-      color: "bg-primary"
-    },
-    {
       title: "Project Manager",
       skills: ["Organization", "Leadership", "Strategic Planning"],
       icon: Settings,
