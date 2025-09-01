@@ -95,12 +95,6 @@ const Hero = () => {
               </span>
             </motion.h1>
 
-            <motion.p
-              className="text-base sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4"
-              variants={itemVariants}
-            >
-              The Diamond Foundation is a registered nonprofit dedicated to transforming lives through education, digital literacy, and enterprise opportunities. We go beyond charity by combining immediate impact with sustainable solutions that empower children and communities to thrive.
-            </motion.p>
 
             {/* Enhanced CTA buttons */}
             <motion.div 
