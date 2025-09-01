@@ -1,32 +1,20 @@
 
-import { BookOpen, Star, Award, Zap, Settings, Globe } from "lucide-react";
+import { BookOpen, Users, Settings, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import PositionCard from "./PositionCard";
 
 const OpenPositionsSection = () => {
   const volunteerPositions = [
     {
-      title: "Content Creator",
-      skills: ["Writing", "Design", "Social Media"],
-      icon: Zap,
-      color: "bg-primary"
-    },
-    {
-      title: "Fundraising Manager",
-      skills: ["Fundraising", "Communication", "Networking"],
-      icon: Star,
+      title: "Head of Volunteers",
+      skills: ["Leadership", "Team Management", "Volunteer Coordination"],
+      icon: Users,
       color: "bg-primary"
     },
     {
       title: "Head of Education",
       skills: ["Teaching", "Curriculum Development", "Leadership"],
       icon: BookOpen,
-      color: "bg-primary"
-    },
-    {
-      title: "Website Manager",
-      skills: ["Web Development", "Design", "Content Management"],
-      icon: Award,
       color: "bg-primary"
     },
     {
