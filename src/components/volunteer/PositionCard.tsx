@@ -32,29 +32,26 @@ const PositionCard = ({ title, skills, icon: Icon, color, index }: PositionCardP
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group h-full flex flex-col"
+      className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
     >
-      <div className="flex items-center mb-6">
-        <div className={`w-16 h-16 rounded-2xl ${color} text-white flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-          <Icon size={24} />
+      <div className="flex items-center mb-4">
+        <div className={`w-10 h-10 rounded-full ${color} text-white flex items-center justify-center mr-3`}>
+          <Icon size={20} />
         </div>
-        <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+        <h3 className="text-lg font-semibold text-primary">{title}</h3>
       </div>
-      
-      <div className="flex flex-wrap gap-3 mb-6 flex-grow">
+      <div className="flex flex-wrap gap-2 mb-4">
         {skills.map((skill, i) => (
-          <span key={i} className="px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 text-sm rounded-full font-medium border border-blue-100">
+          <span key={i} className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
             {skill}
           </span>
         ))}
       </div>
-      
       <Button 
         onClick={handleVolunteerClick}
-        className="w-full py-6 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+        className="w-full"
       >
-        Apply Now
+        Apply
       </Button>
     </motion.div>
   );
