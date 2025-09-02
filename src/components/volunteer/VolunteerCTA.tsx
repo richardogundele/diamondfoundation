@@ -2,13 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import { Heart, ArrowRight } from "lucide-react";
 
 const VolunteerCTA = () => {
   const { toast } = useToast();
   const volunteerFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeR9DNBg8o8yabMU7r8P0UUhEEgZG5H9pllyRmurXZwIf2wGw/viewform?usp=header";
 
   const handleVolunteerClick = () => {
-    // Open the Google Form in a new tab
     window.open(volunteerFormLink, "_blank");
     
     toast({
@@ -23,13 +23,21 @@ const VolunteerCTA = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="text-center fade-in-section"
+      className="flex flex-col sm:flex-row gap-6 justify-center"
     >
       <Button 
         onClick={handleVolunteerClick}
-        className="px-8 py-6 rounded-full text-lg font-semibold"
+        className="bg-white text-blue-600 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300"
+        size="lg"
       >
-        Join Our Team Today
+        Join Our Team Today <Heart size={24} className="ml-3" />
+      </Button>
+      <Button 
+        variant="outline"
+        className="border-white border-2 text-white hover:bg-white hover:text-blue-600 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent"
+        size="lg"
+      >
+        Learn More <ArrowRight size={24} className="ml-3" />
       </Button>
     </motion.div>
   );
