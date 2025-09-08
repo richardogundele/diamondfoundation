@@ -1,0 +1,27 @@
+{
+  "name": "The Diamond Foundation Initiative",
+  "short_name": "Diamond Foundation",
+  "description": "Empowering communities across Africa through education, healthcare, and development",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/lovable-uploads/bbb3f42f-f463-4987-b7e5-2dad9d5b19d0.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/lovable-uploads/bbb3f42f-f463-4987-b7e5-2dad9d5b19d0.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["social", "lifestyle", "education"],
+  "lang": "en",
+  "dir": "ltr"
+}

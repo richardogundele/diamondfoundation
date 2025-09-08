@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import BackToTop from "./components/ui/back-to-top";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -40,6 +41,7 @@ const App = () => (
             </Routes>
           </div>
           <Footer />
+          <BackToTop />
         </div>
       </BrowserRouter>
     </TooltipProvider>

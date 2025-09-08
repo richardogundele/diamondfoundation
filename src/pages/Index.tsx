@@ -4,8 +4,11 @@ import Hero from "../components/Hero";
 import ExploreSection from "../components/home/ExploreSection";
 import CommitmentSection from "../components/home/CommitmentSection";
 import AnimationObserver from "../components/home/AnimationObserver";
-
 import TestimonialSection from "../components/home/TestimonialSection";
+import InstagramSection from "../components/InstagramSection";
+import NewsletterSection from "../components/NewsletterSection";
+import FAQSection from "../components/FAQSection";
+import BackToTop from "../components/ui/back-to-top";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -30,6 +33,10 @@ const Index = () => {
       <ExploreSection />
       <TestimonialSection />
       <CommitmentSection />
+      <InstagramSection />
+      <NewsletterSection />
+      <FAQSection />
+      <BackToTop />
     </motion.div>
   );
 };
