@@ -1,9 +1,9 @@
 # 💎 Diamond Foundation Website - Requirements & Dependencies
 # Beyond Charity. Building Futures.
 
-# =============================================================================
+# ==========================================================================
 # PRODUCTION DEPENDENCIES
-# =============================================================================
+# ===================================================================
 
 # Core React Framework
 react==18.3.1                    # Modern component-based UI library
