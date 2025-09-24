@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Heart, Users, Globe, Target, Award, CheckCircle, Star, Lightbulb, HandHeart, BookOpen, Sparkles, ArrowRight, Trophy, Shield, GraduationCap, Monitor, Building, TrendingUp, Zap, Home, School, Laptop, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const values = [
@@ -148,14 +149,14 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg" asChild>
-                <a href="/volunteer">
+                <Link to="/volunteer">
                   Join Our Mission <Heart size={24} className="ml-3" />
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" className="border-white border-2 text-white hover:bg-white hover:text-blue-800 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg" asChild>
-                <a href="/donate">
+                <Link to="/donate">
                   Make Impact <ArrowRight size={24} className="ml-3" />
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

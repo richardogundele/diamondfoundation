@@ -1,4 +1,7 @@
+import React from "react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -121,14 +124,13 @@ const FAQSection = () => {
             Still have questions? We'd love to hear from you!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
-              href="/contact"
+            <motion.div
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Us
-            </motion.a>
+              <Link to="/contact">Contact Us</Link>
+            </motion.div>
             <motion.a
               href="mailto:info@diamondfoundation.org"
               className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"

@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Donate = () => {
   const { toast } = useToast();
@@ -567,10 +568,10 @@ const Donate = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50" asChild>
-                <a href="/contact">Contact Us</a>
+                <Link to="/contact">Contact Us</Link>
               </Button>
               <Button variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50" asChild>
-                <a href="/impact">View Our Impact</a>
+                <Link to="/impact">View Our Impact</Link>
               </Button>
             </div>
           </motion.div>

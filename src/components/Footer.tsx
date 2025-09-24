@@ -1,5 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
@@ -50,10 +51,10 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
             <ul className="space-y-1 text-sm">
-              <li><a href="/about" className="text-white/80 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/impact" className="text-white/80 hover:text-white transition-colors">Our Impact</a></li>
-              <li><a href="/volunteer" className="text-white/80 hover:text-white transition-colors">Volunteer</a></li>
-              <li><a href="/team" className="text-white/80 hover:text-white transition-colors">Our Team</a></li>
+              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/impact" className="text-white/80 hover:text-white transition-colors">Our Impact</Link></li>
+              <li><Link to="/volunteer" className="text-white/80 hover:text-white transition-colors">Volunteer</Link></li>
+              <li><Link to="/team" className="text-white/80 hover:text-white transition-colors">Our Team</Link></li>
             </ul>
           </div>
 
