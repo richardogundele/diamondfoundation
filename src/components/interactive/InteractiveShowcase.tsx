@@ -3,60 +3,67 @@ import { motion } from 'framer-motion';
 import { Card } from '../ui/card';
 import { Button } from '../ui/button';
 import ProgressBar from '../ui/progress-bar';
-import InteractiveMap from '../ui/interactive-map';
 import PhotoGallery from '../ui/photo-gallery';
-import { MapPin, Camera, TrendingUp, Heart, Users, Target } from 'lucide-react';
+import { Camera, TrendingUp, Heart, Users, Target } from 'lucide-react';
 
 const InteractiveShowcase: React.FC = () => {
-  // Sample photos for gallery
-  const samplePhotos = [
+  // Photos from impact outreach programs
+  const impactPhotos = [
     {
       id: '1',
-      src: '/public/lovable-uploads/1677421e-6072-4f0d-8e68-bbbdda9002dc.png',
-      alt: 'Community outreach program',
-      title: 'Educational Support Program',
-      description: 'Teaching underprivileged children in Lagos community',
-      category: 'education'
+      src: '/lovable-uploads/ee2f541f-04ca-4f47-95a8-639911395629.png',
+      alt: 'December 2024 outreach program',
+      title: 'December Outreach 2024',
+      description: 'Reaching children across 6 geopolitical zones in Nigeria',
+      category: 'outreach'
     },
     {
       id: '2',
-      src: '/public/lovable-uploads/2259d445-c196-4b42-98b7-e5a0a2d02aee.png',
-      alt: 'Healthcare initiative',
-      title: 'Free Medical Checkups',
-      description: 'Providing healthcare services to rural communities',
-      category: 'healthcare'
+      src: '/lovable-uploads/a58379e3-1bb5-43b3-a5ba-4dfa05a5a62c.png',
+      alt: 'Community education initiative',
+      title: 'Educational Support Program',
+      description: 'Providing learning materials and educational resources',
+      category: 'education'
     },
     {
       id: '3',
-      src: '/public/lovable-uploads/5157c3be-67c1-416b-b8a7-09aa555ab73c.png',
-      alt: 'Skills development workshop',
-      title: 'Youth Empowerment Workshop',
-      description: 'Vocational training for sustainable livelihoods',
-      category: 'skills'
+      src: '/lovable-uploads/2db47a69-8efb-4a10-9470-d1cd1e723988.png',
+      alt: 'Children empowerment program',
+      title: 'Child Empowerment Initiative',
+      description: 'Empowering children with skills and opportunities',
+      category: 'empowerment'
     },
     {
       id: '4',
-      src: '/public/lovable-uploads/7857c809-6a1f-4223-9a63-2568304b72dc.png',
-      alt: 'Community gathering',
-      title: 'Community Engagement',
-      description: 'Building stronger communities together',
-      category: 'community'
+      src: '/lovable-uploads/a3208aad-45ff-4f26-8956-f840a9408f3b.png',
+      alt: 'Bayelsa state outreach',
+      title: 'South South Outreach',
+      description: 'Reaching communities in Bayelsa state',
+      category: 'outreach'
     },
     {
       id: '5',
-      src: '/public/lovable-uploads/8d3d1c7a-227e-4b33-8b22-23fee6ca4d5c.png',
-      alt: 'Food distribution',
-      title: 'Food Security Program',
-      description: 'Ensuring no child goes to bed hungry',
-      category: 'nutrition'
+      src: '/lovable-uploads/9217d915-9380-4892-a5c8-89c86e2f12cc.png',
+      alt: 'Ilorin outreach program',
+      title: 'North Central Outreach',
+      description: 'Community impact in Kwara state',
+      category: 'outreach'
     },
     {
       id: '6',
-      src: '/public/lovable-uploads/9217d915-9380-4892-a5c8-89c86e2f12cc.png',
-      alt: 'Water project',
-      title: 'Clean Water Initiative',
-      description: 'Providing access to clean drinking water',
-      category: 'water'
+      src: '/lovable-uploads/7fa8b40c-d370-4fb9-9665-0d98c125ae91.png',
+      alt: 'Mega outreach 2024',
+      title: 'Mega Outreach 2024',
+      description: 'Our largest community impact program',
+      category: 'mega-outreach'
+    },
+    {
+      id: '7',
+      src: '/lovable-uploads/5157c3be-67c1-416b-b8a7-09aa555ab73c.png',
+      alt: 'First outreach program',
+      title: 'November Outreach 2020',
+      description: 'Where it all began - our first outreach program',
+      category: 'first-outreach'
     }
   ];
 
@@ -143,30 +150,12 @@ const InteractiveShowcase: React.FC = () => {
           </Card>
         </motion.div>
 
-        {/* Interactive Map Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
-        >
-          <Card className="p-8 hover-lift">
-            <div className="flex items-center gap-3 mb-6">
-              <MapPin className="h-6 w-6 text-primary" />
-              <h3 className="text-2xl font-bold">Our Outreach Locations</h3>
-            </div>
-            <p className="text-muted-foreground mb-6">
-              Explore our active outreach locations across Nigeria. Click on markers to see details about each program.
-            </p>
-            <InteractiveMap />
-          </Card>
-        </motion.div>
 
         {/* Photo Gallery Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-16"
         >
           <Card className="p-8 hover-lift">
@@ -177,7 +166,7 @@ const InteractiveShowcase: React.FC = () => {
             <p className="text-muted-foreground mb-6">
               Visual stories from our community outreach programs. Click any image for a closer look.
             </p>
-            <PhotoGallery photos={samplePhotos} columns={3} />
+            <PhotoGallery photos={impactPhotos} columns={3} />
           </Card>
         </motion.div>
 
@@ -185,7 +174,7 @@ const InteractiveShowcase: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="grid md:grid-cols-3 gap-6"
         >
           <Card className="p-6 text-center hover-lift hover-glow group">
