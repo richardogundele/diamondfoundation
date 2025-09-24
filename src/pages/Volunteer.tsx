@@ -1,6 +1,5 @@
 
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import VolunteerHero from "../components/volunteer/VolunteerHero";
 import OpportunitiesSection from "../components/volunteer/OpportunitiesSection";
 import OpenPositionsSection from "../components/volunteer/OpenPositionsSection";
@@ -96,7 +95,7 @@ const Volunteer = () => {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   );
 };
