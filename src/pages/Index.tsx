@@ -5,7 +5,6 @@ import ExploreSection from "../components/home/ExploreSection";
 import CommitmentSection from "../components/home/CommitmentSection";
 import AnimationObserver from "../components/home/AnimationObserver";
 import TestimonialSection from "../components/home/TestimonialSection";
-import NewsletterSection from "../components/NewsletterSection";
 import FAQSection from "../components/FAQSection";
 import InteractiveShowcase from "../components/interactive/InteractiveShowcase";
 import BackToTop from "../components/ui/back-to-top";
@@ -34,7 +33,6 @@ const Index = () => {
       <TestimonialSection />
       <CommitmentSection />
       <InteractiveShowcase />
-      <NewsletterSection />
       <FAQSection />
       <BackToTop />
     </motion.div>
