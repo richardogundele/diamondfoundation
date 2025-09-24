@@ -170,43 +170,6 @@ const InteractiveShowcase: React.FC = () => {
           </Card>
         </motion.div>
 
-        {/* Interactive Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid md:grid-cols-3 gap-6"
-        >
-          <Card className="p-6 text-center hover-lift hover-glow group">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4 group-hover:animate-bounce-in">
-              <Heart className="h-6 w-6 text-primary" />
-            </div>
-            <h4 className="text-2xl font-bold mb-2">Real-time Impact</h4>
-            <p className="text-muted-foreground">
-              Track our progress with live updates on donations, volunteer activities, and community reach
-            </p>
-          </Card>
-
-          <Card className="p-6 text-center hover-lift hover-glow group">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4 group-hover:animate-bounce-in">
-              <Users className="h-6 w-6 text-primary" />
-            </div>
-            <h4 className="text-2xl font-bold mb-2">Community Stories</h4>
-            <p className="text-muted-foreground">
-              Explore authentic stories and photos from the communities we serve across Nigeria
-            </p>
-          </Card>
-
-          <Card className="p-6 text-center hover-lift hover-glow group">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4 group-hover:animate-bounce-in">
-              <Target className="h-6 w-6 text-primary" />
-            </div>
-            <h4 className="text-2xl font-bold mb-2">Goal Tracking</h4>
-            <p className="text-muted-foreground">
-              Visual progress bars show how close we are to achieving our annual impact goals
-            </p>
-          </Card>
-        </motion.div>
       </div>
     </div>
   );

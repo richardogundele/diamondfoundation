@@ -5,7 +5,6 @@ import ExploreSection from "../components/home/ExploreSection";
 import CommitmentSection from "../components/home/CommitmentSection";
 import AnimationObserver from "../components/home/AnimationObserver";
 import TestimonialSection from "../components/home/TestimonialSection";
-import InstagramSection from "../components/InstagramSection";
 import NewsletterSection from "../components/NewsletterSection";
 import FAQSection from "../components/FAQSection";
 import InteractiveShowcase from "../components/interactive/InteractiveShowcase";
@@ -35,7 +34,6 @@ const Index = () => {
       <TestimonialSection />
       <CommitmentSection />
       <InteractiveShowcase />
-      <InstagramSection />
       <NewsletterSection />
       <FAQSection />
       <BackToTop />
