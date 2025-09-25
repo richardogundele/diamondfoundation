@@ -6,7 +6,7 @@ import CommitmentSection from "../components/home/CommitmentSection";
 import AnimationObserver from "../components/home/AnimationObserver";
 import TestimonialSection from "../components/home/TestimonialSection";
 import FAQSection from "../components/FAQSection";
-import InteractiveShowcase from "../components/interactive/InteractiveShowcase";
+
 import BackToTop from "../components/ui/back-to-top";
 import { motion } from "framer-motion";
 
@@ -32,7 +32,6 @@ const Index = () => {
       <ExploreSection />
       <TestimonialSection />
       <CommitmentSection />
-      <InteractiveShowcase />
       <FAQSection />
       <BackToTop />
     </motion.div>
