@@ -108,7 +108,7 @@ const Donate = () => {
             </p>
 
             <Button className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold hover:scale-105 transition-all duration-300" size="lg" asChild>
-              <a href="https://gofund.me/abc92f4a" target="_blank" rel="noopener noreferrer">
+              <a href="https://gofund.me/a8778af7" target="_blank" rel="noopener noreferrer">
                 Start Donating <ArrowRight size={20} className="ml-2" />
               </a>
             </Button>
@@ -266,7 +266,7 @@ const Donate = () => {
                       className={`w-full py-6 h-auto text-lg font-medium bg-gradient-to-r ${option.color} hover:opacity-90 transition-all duration-300 text-white`}
                       asChild
                     >
-                      <a href="https://gofund.me/abc92f4a" target="_blank" rel="noopener noreferrer">
+                      <a href="https://gofund.me/a8778af7" target="_blank" rel="noopener noreferrer">
                         Donate Now <ArrowRight className="ml-2 h-5 w-5" />
                       </a>
                     </Button>
