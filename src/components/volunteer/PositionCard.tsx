@@ -14,15 +14,14 @@ interface PositionCardProps {
 
 const PositionCard = ({ title, skills, icon: Icon, color, index }: PositionCardProps) => {
   const { toast } = useToast();
-  const volunteerFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeR9DNBg8o8yabMU7r8P0UUhEEgZG5H9pllyRmurXZwIf2wGw/viewform?usp=header";
+  // Switch to email application. We keep a toast for quick feedback.
+  const mailtoHref = `mailto:admin@thediamondfoundation.org?subject=Internship%20Application%20-%20${encodeURIComponent(title)}&body=Please%20attach%20your%20CV%20and%20cover%20letter.`;
 
   const handleVolunteerClick = () => {
-    // Open the Google Form in a new tab
-    window.open(volunteerFormLink, "_blank");
-    
+    window.location.href = mailtoHref;
     toast({
-      title: "Opening application form",
-      description: `You're applying for the ${title} position.`,
+      title: "Opening email to apply",
+      description: `You're applying for the ${title} internship.`,
     });
   };
 
@@ -51,7 +50,7 @@ const PositionCard = ({ title, skills, icon: Icon, color, index }: PositionCardP
         onClick={handleVolunteerClick}
         className="w-full"
       >
-        Apply
+        Apply by Email
       </Button>
     </motion.div>
   );

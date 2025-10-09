@@ -34,9 +34,9 @@ const ExploreSection = () => {
       image: projectImage
     },
     {
-      title: "Volunteer",
-      description: "Join our mission and help make a difference in the lives of those who need it most.",
-      link: "/volunteer",
+      title: "Careers",
+      description: "Explore unpaid internship opportunities and start your impact journey with us.",
+      link: "/careers",
       image: projectImage
     },
     {

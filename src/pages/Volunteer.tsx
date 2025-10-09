@@ -39,7 +39,7 @@ const Volunteer = () => {
               </h2>
               <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from various volunteering opportunities that match your skills and passion
+                Explore unpaid internship opportunities that match your skills and passion
               </p>
             </motion.div>
             <OpportunitiesSection />
@@ -87,7 +87,7 @@ const Volunteer = () => {
                 Ready to Make a <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Difference?</span>
               </h2>
               <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-                Join our community of passionate volunteers dedicated to transforming lives across Africa. Your journey of impact starts here.
+                Apply for our unpaid internships by emailing your CV and cover letter to admin@thediamondfoundation.org. Your journey of impact starts here.
               </p>
               <VolunteerCTA />
             </motion.div>

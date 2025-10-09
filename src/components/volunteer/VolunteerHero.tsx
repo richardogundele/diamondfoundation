@@ -25,23 +25,27 @@ const VolunteerHero = () => {
             className="inline-flex items-center gap-4 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 mb-8 shadow-lg"
           >
             <Sparkles className="text-white" size={28} />
-            <span className="text-white font-bold text-xl">Join Our Mission</span>
+            {/* Update ribbon label to reflect internships */}
+            <span className="text-white font-bold text-xl">Launch Your Career</span>
           </motion.div>
 
+          {/* Change headline to internships theme */}
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-            Be the Change 
+            Unpaid Internships
             <span className="block text-primary-foreground mt-4">
-              Africa Needs
+              Build Skills. Create Impact.
             </span>
           </h1>
+          {/* Update subtext to internships and skill-building */}
           <p className="text-2xl md:text-3xl text-white/95 max-w-5xl mx-auto mb-16 leading-relaxed font-light">
-            Join thousands of passionate volunteers making a real difference in communities across Africa. Your skills, time, and heart can transform lives.
+            Explore meaningful unpaid internships that develop real-world skills while contributing to our mission across Africa. Gain experience, mentorship, and purpose.
           </p>
 
-          {/* Volunteer impact stats */}
+          {/* Internship impact stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Users, number: "50+", label: "Active Volunteers" },
+              // Rename stat label from Volunteers to Interns
+              { icon: Users, number: "50+", label: "Active Interns" },
               { icon: Globe, number: "3+", label: "Countries" },
               { icon: Heart, number: "500+", label: "Lives Touched" },
               { icon: Award, number: "10+", label: "Projects Completed" }
@@ -63,8 +67,11 @@ const VolunteerHero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button className="bg-background text-primary hover:bg-secondary text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300" size="lg">
-              Start Volunteering <Heart size={24} className="ml-3" />
+            {/* Primary CTA: mailto to submit CV and cover letter */}
+            <Button className="bg-background text-primary hover:bg-secondary text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300" size="lg" asChild>
+              <a href="mailto:admin@thediamondfoundation.org?subject=Internship%20Application&body=Please%20attach%20your%20CV%20and%20cover%20letter.">
+                Apply by Email <Heart size={24} className="ml-3" />
+              </a>
             </Button>
             <Button variant="outline" className="border-primary-foreground border-2 text-primary-foreground hover:bg-background hover:text-primary text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg">
               Watch Impact Stories <ArrowRight size={24} className="ml-3" />
