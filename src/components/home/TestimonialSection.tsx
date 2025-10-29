@@ -95,9 +95,12 @@ const TestimonialSection = () => {
                 
                 {/* Author */}
                 <div className="flex items-center gap-3 sm:gap-4">
+                  {/* Avatar images are non-critical; lazy-load to reduce initial bandwidth on mobile */}
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-4 border-white shadow-lg"
                   />
                   <div>

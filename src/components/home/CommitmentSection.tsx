@@ -72,9 +72,12 @@ const CommitmentSection = () => {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+              {/* Large decorative image is non-critical; lazy-load to improve mobile performance */}
               <img 
                 src={logoImagePath} 
                 alt="Diamond Foundation" 
+                loading="lazy"
+                decoding="async"
                 className="w-full object-cover h-[500px] transform hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>

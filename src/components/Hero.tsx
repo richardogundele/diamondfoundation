@@ -120,8 +120,9 @@ const Hero = () => {
           </motion.div>
 
           {/* Enhanced Impact Statistics */}
+          {/* On very small screens, render stats in a single column for readability */}
           <motion.div 
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 px-2"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 px-2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}

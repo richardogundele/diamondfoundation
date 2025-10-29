@@ -11,7 +11,9 @@
 body {
   background-color: #ffffff;
   font-family: var(--font-primary);
-  overflow-x: hidden;
+  /* Avoid hiding horizontal overflow globally to prevent masking layout issues on mobile.
+     If a specific section overflows, scope overflow control to that container instead. */
+  /* overflow-x: hidden; */
 }
 
 h1, h2, h3, h4, h5, h6 {

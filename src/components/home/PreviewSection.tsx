@@ -20,9 +20,12 @@ const PreviewSection = ({ title, description, link, image, index }: PreviewSecti
     transition={{ delay: index * 0.1, duration: 0.5 }}
   >
     <div className="relative group h-32 sm:h-48 overflow-hidden">
+      {/* Lazy-load non-hero images to speed up initial paint on mobile */}
       <img 
         src={image} 
         alt={title} 
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
       />
       <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-all duration-300"></div>
