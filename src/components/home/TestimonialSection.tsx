@@ -28,37 +28,36 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <div className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-      {/* Background elements */}
+    <div className="section-padding bg-muted/20 relative overflow-hidden">
+      {/* Single decorative element */}
       <div className="absolute inset-0">
-        <div className="absolute top-40 left-20 w-48 h-48 sm:w-72 sm:h-72 bg-blue-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-64 h-64 sm:w-96 sm:h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
-          className="text-center mb-16 sm:mb-20"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 sm:px-6 sm:py-3 mb-6 shadow-lg"
+            className="inline-flex items-center gap-2 bg-card rounded-full px-6 py-3 mb-6 shadow-sm border border-border"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
-            <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" />
-            <span className="text-gray-800 font-semibold text-sm sm:text-base">Stories of Hope</span>
+            <Heart className="w-5 h-5 text-destructive" />
+            <span className="text-foreground font-semibold">Stories of Hope</span>
           </motion.div>
           
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-            Voices from Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Community</span>
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">
+            Voices from Our <span className="text-gradient">Community</span>
           </h2>
-          <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+          <div className="w-32 h-1 gradient-primary mx-auto mb-6"></div>
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Real stories from the families and communities we've had the privilege to serve
           </p>
         </motion.div>

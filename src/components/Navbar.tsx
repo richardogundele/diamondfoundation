@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     // Add safe-area top padding to avoid notched iOS status bar overlap on mobile
-    <nav className={`fixed w-full z-50 transition-all duration-300 pt-[env(safe-area-inset-top)] ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2 sm:py-3' : 'bg-transparent py-3 sm:py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-200 pt-[env(safe-area-inset-top)] ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <motion.div 
@@ -64,7 +64,7 @@ const Navbar = () => {
                 key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
               >
                 <Link
                   to={item.path}
@@ -77,10 +77,10 @@ const Navbar = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
             >
               <Link to="/donate">
-                <button className="bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-2 rounded-full hover:bg-primary/90 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 text-sm xl:text-base">
+                <button className="gradient-primary text-primary-foreground px-6 py-2 rounded-full hover:opacity-90 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-200 text-sm xl:text-base">
                   Donate
                 </button>
               </Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/donate" onClick={() => setIsOpen(false)}>
-                <button className="w-full mt-4 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 text-base sm:text-lg font-medium">
+                <button className="w-full mt-4 gradient-primary text-primary-foreground px-6 py-3 rounded-lg hover:opacity-90 hover:scale-[1.02] transition-all duration-200 text-base sm:text-lg font-medium">
                   Donate
                 </button>
               </Link>

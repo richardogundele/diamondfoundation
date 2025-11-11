@@ -96,18 +96,18 @@ const ExploreSection = () => {
   }, [isHovering, maxIndex]);
 
   return (
-    <div className="py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50">
+    <div className="section-padding bg-muted/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-textPrimary mb-4">Explore Our Work</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 mb-6"></div>
-          <p className="text-base sm:text-lg text-textSecondary max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">Explore Our Work</h2>
+          <div className="w-24 h-1 gradient-primary mx-auto mt-4 mb-6"></div>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
             Discover how Diamond Foundation is making a meaningful impact through various initiatives and programs.
           </p>
         </motion.div>

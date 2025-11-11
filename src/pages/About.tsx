@@ -103,21 +103,17 @@ const About = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Enhanced background */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-pink-50/50"></div>
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-pink-400/10 to-orange-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+      {/* Simplified background */}
+      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-muted/30 via-background to-muted/20">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       </div>
 
       <Navbar />
       
-      {/* Enhanced Hero Section */}
-      <div className="pt-32 pb-20 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-white/20 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/30 blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full bg-pink-300/30 blur-3xl animate-pulse"></div>
+      {/* Hero Section */}
+      <div className="pt-32 pb-20 gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-96 h-96 rounded-full bg-white blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -130,32 +126,32 @@ const About = () => {
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 mb-8 shadow-lg"
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-8 py-3 mb-8 shadow-lg"
             >
-              <Sparkles className="text-white" size={28} />
-              <span className="text-white font-bold text-xl">Our Story</span>
+              <Sparkles className="text-white" size={24} />
+              <span className="text-white font-bold text-lg">Our Story</span>
             </motion.div>
 
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 leading-tight">
               Beyond Charity. 
-              <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-orange-300 bg-clip-text text-transparent mt-4">
+              <span className="block text-yellow-300 mt-4">
                 Building Futures.
               </span>
             </h1>
-            <p className="text-2xl md:text-3xl text-white/95 max-w-5xl mx-auto mb-16 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-white/95 max-w-5xl mx-auto mb-12 leading-relaxed">
               The Diamond Foundation is a registered nonprofit dedicated to transforming lives through education, digital literacy, and enterprise opportunities. We go beyond charity by combining immediate impact with sustainable solutions that empower children and communities to thrive.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg" asChild>
+              <Button className="bg-white text-primary hover:bg-white/90 text-lg px-12 py-6 h-auto font-bold hover:scale-[1.02] transition-all duration-200" size="lg" asChild>
                 <Link to="/volunteer">
-                  Join Our Mission <Heart size={24} className="ml-3" />
+                  Join Our Mission <Heart size={20} className="ml-3" />
                 </Link>
               </Button>
-              <Button variant="outline" className="border-white border-2 text-white hover:bg-white hover:text-blue-800 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg" asChild>
+              <Button variant="outline" className="border-white border-2 text-white hover:bg-white hover:text-primary text-lg px-12 py-6 h-auto font-bold hover:scale-[1.02] transition-all duration-200 bg-transparent" size="lg" asChild>
                 <Link to="/donate">
-                  Make Impact <ArrowRight size={24} className="ml-3" />
+                  Make Impact <ArrowRight size={20} className="ml-3" />
                 </Link>
               </Button>
             </div>
@@ -164,21 +160,20 @@ const About = () => {
       </div>
 
 
-      {/* Mission & Vision - Enhanced */}
-      <div className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-purple-100/20"></div>
+      {/* Mission & Vision */}
+      <div className="section-padding bg-muted/30 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-5xl font-black text-gray-800 mb-8">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Purpose</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+              Our <span className="text-gradient">Purpose</span>
             </h2>
-            <div className="w-40 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            <div className="w-32 h-1 gradient-primary mx-auto rounded-full"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -186,17 +181,17 @@ const About = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
             >
-              <Card className="bg-white/90 backdrop-blur-sm shadow-2xl border-none h-full hover:scale-105 transition-all duration-300">
-                <CardContent className="p-12">
-                  <div className="flex items-center mb-8">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-6 shadow-xl">
-                      <Target className="text-white" size={36} />
+              <Card className="card-elevated h-full hover-lift">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center mr-4 shadow-lg">
+                      <Target className="text-white" size={28} />
                     </div>
-                    <h3 className="text-3xl font-black text-gray-800">Our Mission</h3>
+                    <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
                   </div>
-                  <p className="text-gray-600 leading-relaxed text-xl font-medium">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
                     To transform lives through education, digital literacy, and enterprise pathways — meeting immediate needs while building long-term solutions that empower children and communities to thrive.
                   </p>
                 </CardContent>
@@ -207,17 +202,17 @@ const About = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
             >
-              <Card className="bg-white/90 backdrop-blur-sm shadow-2xl border-none h-full hover:scale-105 transition-all duration-300">
-                <CardContent className="p-12">
-                  <div className="flex items-center mb-8">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center mr-6 shadow-xl">
-                      <Lightbulb className="text-white" size={36} />
+              <Card className="card-elevated h-full hover-lift">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mr-4 shadow-lg">
+                      <Lightbulb className="text-white" size={28} />
                     </div>
-                    <h3 className="text-3xl font-black text-gray-800">Our Vision</h3>
+                    <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
                   </div>
-                  <p className="text-gray-600 leading-relaxed text-xl font-medium">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
                     A future where every child has the knowledge, confidence, and opportunities to break free from poverty, thrive in the digital age, and create lasting change for their communities.
                   </p>
                 </CardContent>
@@ -227,23 +222,23 @@ const About = () => {
         </div>
       </div>
 
-      {/* Values Section - Enhanced */}
-      <div className="py-24 bg-white relative">
+      {/* Values Section */}
+      <div className="section-padding bg-background relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-5xl font-black text-gray-800 mb-8">
-              What Makes Us <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Different</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+              What Makes Us <span className="text-gradient">Different</span>
             </h2>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-medium">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               We believe charity alone cannot create lasting change. By merging compassion with innovation, we create spaces where children can learn, dream, and lead their communities into the future.
             </p>
-            <div className="w-40 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8 rounded-full"></div>
+            <div className="w-32 h-1 gradient-primary mx-auto mt-6 rounded-full"></div>
           </motion.div>
 
           <motion.div
@@ -275,9 +270,8 @@ const About = () => {
         </div>
       </div>
 
-      {/* Journey Timeline - Enhanced */}
-      <div className="py-24 bg-gradient-to-br from-blue-50 to-purple-50 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-blue-100/20"></div>
+      {/* Journey Timeline */}
+      <div className="section-padding bg-muted/30 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -13,16 +13,12 @@ const Index = () => {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.4 }}
       className="min-h-screen relative overflow-hidden"
     >
-      {/* Background decorative elements
-         - Reduce blur and size on very small screens to prevent jank and overflow
-         - Use heavier blur/animation only from `sm` and above */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-xl sm:w-96 sm:h-96 sm:blur-3xl sm:animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-br from-pink-400/20 to-orange-400/20 rounded-full blur-xl sm:w-96 sm:h-96 sm:blur-3xl sm:animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-xl sm:w-64 sm:h-64 sm:blur-3xl sm:animate-pulse" style={{ animationDelay: '4s' }}></div>
+      {/* Simplified background - single decorative element */}
+      <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       </div>
       
       <Hero />
