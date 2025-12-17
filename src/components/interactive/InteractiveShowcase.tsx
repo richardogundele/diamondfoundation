@@ -95,7 +95,7 @@ const InteractiveShowcase: React.FC = () => {
           <Card className="p-8 hover-lift">
             <div className="flex items-center gap-3 mb-6">
               <TrendingUp className="h-6 w-6 text-primary" />
-              <h3 className="text-2xl font-bold">2024 Impact Goals</h3>
+              <h3 className="text-2xl font-bold">2025 Impact Goals</h3>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
