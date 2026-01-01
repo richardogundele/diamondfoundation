@@ -1,12 +1,12 @@
 import { Calendar, MapPin, Users, Heart, Target } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface May2025OutreachProps {
+interface May2026OutreachProps {
   title: string;
   imageSrc?: string;
 }
 
-const May2025Outreach = ({ title }: May2025OutreachProps) => {
+const May2026Outreach = ({ title }: May2026OutreachProps) => {
   const outreachStats = [
     { icon: Users, label: "Children Reached", value: "TBD", color: "from-blue-500 to-cyan-600" },
     { icon: MapPin, label: "Locations", value: "TBD", color: "from-green-500 to-emerald-600" },
@@ -24,7 +24,7 @@ const May2025Outreach = ({ title }: May2025OutreachProps) => {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">{title}</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Join us for our upcoming May 2025 outreach as we continue our mission to transform lives and bring hope to communities across Nigeria.
+          Join us for our upcoming May 2026 outreach as we continue our mission to transform lives and bring hope to communities across Nigeria.
         </p>
       </div>
 
@@ -37,7 +37,7 @@ const May2025Outreach = ({ title }: May2025OutreachProps) => {
               <div className="text-center text-gray-500">
                 <Calendar size={64} className="mx-auto mb-4 text-blue-400" />
                 <p className="text-lg">Outreach Image Coming Soon</p>
-                <p className="text-sm mt-2">May 2025</p>
+                <p className="text-sm mt-2">May 2026</p>
               </div>
             </div>
           </Card>
@@ -49,7 +49,7 @@ const May2025Outreach = ({ title }: May2025OutreachProps) => {
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Outreach Overview</h2>
             <div className="space-y-4 text-gray-600">
               <p className="text-lg leading-relaxed">
-                Our May 2025 outreach represents our continued commitment to reaching underserved communities with love, support, and essential resources.
+                Our May 2026 outreach represents our continued commitment to reaching underserved communities with love, support, and essential resources.
               </p>
               <p className="text-lg leading-relaxed">
                 This outreach will focus on providing educational materials, healthcare support, and spiritual encouragement to children and families in need.
@@ -123,4 +123,4 @@ const May2025Outreach = ({ title }: May2025OutreachProps) => {
   );
 };
 
-export default May2025Outreach;
+export default May2026Outreach;

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
-const Project2025 = () => {
+const Project2026 = () => {
   const goals = [
     {
       icon: Users,
@@ -18,7 +18,7 @@ const Project2025 = () => {
     {
       icon: Globe,
       title: "15 New Countries",
-      description: "Establish presence in 15 additional African countries by end of 2025",
+      description: "Establish presence in 15 additional African countries by end of 2026",
       progress: 60,
       color: "from-green-500 to-emerald-600"
     },
@@ -42,7 +42,7 @@ const Project2025 = () => {
     {
       title: "Digital Education Hub",
       description: "Establishing tech-enabled learning centers in rural communities",
-      timeline: "Q1-Q2 2025",
+      timeline: "Q1-Q2 2026",
       budget: "₦50M",
       beneficiaries: "2,000 students",
       status: "In Progress",
@@ -51,7 +51,7 @@ const Project2025 = () => {
     {
       title: "Healthcare Mobile Clinics",
       description: "Deploying mobile health units to underserved areas",
-      timeline: "Q2-Q3 2025",
+      timeline: "Q2-Q3 2026",
       budget: "₦75M",
       beneficiaries: "5,000 people",
       status: "Planning",
@@ -60,7 +60,7 @@ const Project2025 = () => {
     {
       title: "Youth Empowerment Centers",
       description: "Creating skill development and entrepreneurship hubs",
-      timeline: "Q3-Q4 2025",
+      timeline: "Q3-Q4 2026",
       budget: "₦60M",
       beneficiaries: "1,500 youth",
       status: "Fundraising",
@@ -69,7 +69,7 @@ const Project2025 = () => {
     {
       title: "Clean Water Projects",
       description: "Installing solar-powered water systems in 50 communities",
-      timeline: "Q1-Q4 2025",
+      timeline: "Q1-Q4 2026",
       budget: "₦100M",
       beneficiaries: "25,000 people",
       status: "Approved",
@@ -84,7 +84,7 @@ const Project2025 = () => {
     { month: "Jul", event: "Water Project Phase 1", completed: false },
     { month: "Sep", event: "Partnership Summit", completed: false },
     { month: "Nov", event: "Impact Assessment", completed: false },
-    { month: "Dec", event: "2025 Goals Review", completed: false }
+    { month: "Dec", event: "2026 Goals Review", completed: false }
   ];
 
   return (
@@ -119,7 +119,7 @@ const Project2025 = () => {
               className="inline-flex items-center gap-4 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 mb-8 shadow-lg"
             >
               <Sparkles className="text-white" size={28} />
-              <span className="text-white font-bold text-xl">Project 2025</span>
+              <span className="text-white font-bold text-xl">Project 2026</span>
             </motion.div>
 
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
@@ -135,7 +135,7 @@ const Project2025 = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 shadow-2xl" size="lg" asChild>
                 <Link to="/donate">
-                  Fund Project 2025 <Heart size={24} className="ml-3" />
+                  Fund Project 2026 <Heart size={24} className="ml-3" />
                 </Link>
               </Button>
               <Button variant="outline" className="border-white border-2 text-white hover:bg-white hover:text-blue-800 text-xl px-12 py-8 h-auto font-bold hover:scale-105 transition-all duration-300 bg-transparent" size="lg">
@@ -157,7 +157,7 @@ const Project2025 = () => {
             className="text-center mb-20"
           >
             <h2 className="text-5xl font-black text-gray-800 mb-8">
-              2025 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Goals Progress</span>
+              2026 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Goals Progress</span>
             </h2>
             <div className="w-40 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
           </motion.div>
@@ -282,7 +282,7 @@ const Project2025 = () => {
             className="text-center mb-20"
           >
             <h2 className="text-5xl font-black text-gray-800 mb-8">
-              2025 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Timeline</span>
+              2026 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Timeline</span>
             </h2>
             <div className="w-40 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
           </motion.div>
@@ -333,4 +333,4 @@ const Project2025 = () => {
   );
 };
 
-export default Project2025;
+export default Project2026;
