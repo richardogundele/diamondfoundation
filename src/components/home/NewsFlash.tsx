@@ -131,7 +131,7 @@ const NewsFlash = () => {
                       
                       <div className="space-y-4">
                         <div className="bg-white/10 rounded-2xl p-6 text-center">
-                          <div className="text-2xl font-bold text-yellow-300 mb-1">2025</div>
+                          <div className="text-2xl font-bold text-yellow-300 mb-1">2026</div>
                           <div className="text-white/80 text-sm">Active Year</div>
                         </div>
                         

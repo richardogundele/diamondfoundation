@@ -6,7 +6,7 @@ import UpcomingOutreach from './outreach/UpcomingOutreach';
 import OutreachStats from './outreach/OutreachStats';
 import OutreachDetailTabs from './outreach/OutreachDetailTabs';
 import FirstOutreach from './outreach/FirstOutreach';
-import May2025Outreach from './outreach/May2025Outreach';
+import May2026Outreach from './outreach/May2026Outreach';
 
 interface OutreachReportProps {
   selectedOutreach: string;
@@ -50,7 +50,7 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
     { name: 'Raised', value: financialData.raised },
   ];
   
-  if (selectedOutreach === "Mega Outreach 2024") {
+  if (selectedOutreach === "Mega Outreach 2025") {
     return <MegaOutreach title={selectedOutreach} imageSrc={megaOutreachImage} />;
   }
   
@@ -58,11 +58,11 @@ const OutreachReport = ({ selectedOutreach }: OutreachReportProps) => {
     return <FirstOutreach title={selectedOutreach} imageSrc={firstOutreachImage} />;
   }
   
-  if (selectedOutreach === "May 2025 Outreach") {
-    return <May2025Outreach title={selectedOutreach} />;
+  if (selectedOutreach === "May 2026 Outreach") {
+    return <May2026Outreach title={selectedOutreach} />;
   }
   
-  if (selectedOutreach !== "December Outreach 2024") {
+  if (selectedOutreach !== "December Outreach 2025") {
     return <UpcomingOutreach title={selectedOutreach} />;
   }
   

@@ -15,12 +15,12 @@ interface OutreachSelectorProps {
 }
 
 const outreachOptions = [
-  "December Outreach 2024",
-  "Mega Outreach 2024",
-  "May 2025 Outreach",
+  "December Outreach 2025",
+  "Mega Outreach 2025",
+  "May 2026 Outreach",
+  "November Outreach 2024",
   "November Outreach 2023",
-  "November Outreach 2022",
-  "November Outreach 2020"
+  "November Outreach 2022"
 ];
 
 const OutreachSelector = ({ selectedOutreach, setSelectedOutreach }: OutreachSelectorProps) => {

@@ -28,7 +28,7 @@ const FAQSection = () => {
       id: "item-3",
       icon: Globe,
       question: "Which countries do you operate in?",
-      answer: "We currently have active programs in Nigeria, Ghana, Kenya, Uganda, and Tanzania, with plans to expand to 5 more African countries by 2025. Our work focuses on underserved communities in both rural and urban areas, with projects tailored to each region's specific needs and challenges."
+      answer: "We currently have active programs in Nigeria, Ghana, Kenya, Uganda, and Tanzania, with plans to expand to 5 more African countries by 2026. Our work focuses on underserved communities in both rural and urban areas, with projects tailored to each region's specific needs and challenges."
     },
     {
       id: "item-4",
