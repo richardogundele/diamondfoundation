@@ -1,7 +1,6 @@
-
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Sparkles } from "lucide-react";
 import PreviewSection from "./PreviewSection";
 import previewImage from "../../images/1.png";
 import dpImage from "../../images/DP.png";
@@ -11,7 +10,6 @@ const ExploreSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   
-  // Use consistent image paths to avoid import issues
   const logoImagePath = "/lovable-uploads/0e8e87f4-a80c-4066-b2a2-f333c416a9bd.png";
   
   const sections = [
@@ -53,12 +51,11 @@ const ExploreSection = () => {
     }
   ];
 
-  // Responsive items per view
   const getItemsPerView = () => {
     if (typeof window !== 'undefined') {
-      if (window.innerWidth < 640) return 1; // mobile
-      if (window.innerWidth < 1024) return 2; // tablet
-      return 3; // desktop
+      if (window.innerWidth < 640) return 1;
+      if (window.innerWidth < 1024) return 2;
+      return 3;
     }
     return 3;
   };
@@ -67,78 +64,83 @@ const ExploreSection = () => {
   const maxIndex = Math.max(0, sections.length - itemsPerView);
 
   useEffect(() => {
-    const handleResize = () => {
-      setItemsPerView(getItemsPerView());
-    };
-
+    const handleResize = () => setItemsPerView(getItemsPerView());
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex >= maxIndex ? 0 : prevIndex + 1
-    );
-  };
+  const nextSlide = () => setCurrentIndex((prev) => prev >= maxIndex ? 0 : prev + 1);
+  const prevSlide = () => setCurrentIndex((prev) => prev <= 0 ? maxIndex : prev - 1);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex <= 0 ? maxIndex : prevIndex - 1
-    );
-  };
-
-  // Auto-slide functionality
   useEffect(() => {
     if (!isHovering) {
-      const interval = setInterval(nextSlide, 4000);
+      const interval = setInterval(nextSlide, 5000);
       return () => clearInterval(interval);
     }
   }, [isHovering, maxIndex]);
 
   return (
-    <div className="section-padding bg-muted/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-background to-muted/30" />
+      <div className="absolute inset-0 mesh-gradient opacity-30" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">Explore Our Work</h2>
-          <div className="w-24 h-1 gradient-primary mx-auto mt-4 mb-6"></div>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+          <motion.div
+            className="inline-flex items-center gap-2 glass-card rounded-full px-6 py-3 mb-6"
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Sparkles className="w-4 h-4 text-accent" />
+            <span className="text-sm font-semibold text-foreground">Discover Our Work</span>
+          </motion.div>
+          
+          <h2 className="font-display font-bold text-foreground mb-4">
+            Explore Our <span className="text-gradient">Work</span>
+          </h2>
+          <div className="w-24 h-1.5 gradient-primary rounded-full mx-auto mb-6" />
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Discover how Diamond Foundation is making a meaningful impact through various initiatives and programs.
           </p>
         </motion.div>
         
         {/* Carousel Container */}
         <div 
-          className="relative overflow-hidden"
+          className="relative"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          {/* Navigation Arrows - Hidden on mobile */}
+          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 hidden sm:block"
+            className="absolute -left-4 sm:left-0 top-1/2 -translate-y-1/2 z-10 glass-card w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-primary-foreground hidden sm:flex"
             aria-label="Previous items"
           >
-            <ChevronLeft size={20} className="sm:w-6 sm:h-6 text-blue-600" />
+            <ChevronLeft size={24} />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 hidden sm:block"
+            className="absolute -right-4 sm:right-0 top-1/2 -translate-y-1/2 z-10 glass-card w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-primary-foreground hidden sm:flex"
             aria-label="Next items"
           >
-            <ChevronRight size={20} className="sm:w-6 sm:h-6 text-blue-600" />
+            <ChevronRight size={24} />
           </button>
 
           {/* Carousel Track */}
-          <div className="px-2 sm:px-12">
+          <div className="px-0 sm:px-16 overflow-hidden">
             <motion.div 
-              className="flex gap-4 sm:gap-8 transition-transform duration-500 ease-in-out"
+              className="flex gap-6 transition-transform duration-500 ease-out"
               style={{
                 transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`
               }}
@@ -165,15 +167,15 @@ const ExploreSection = () => {
           </div>
 
           {/* Indicators */}
-          <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
+          <div className="flex justify-center mt-10 gap-2">
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-blue-600 w-6 sm:w-8' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'w-8 gradient-primary' 
+                    : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -181,7 +183,7 @@ const ExploreSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
