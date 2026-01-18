@@ -80,7 +80,7 @@ const Donate = () => {
       <div className="pt-32 pb-20 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-white/10 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/20 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-cyan-300/20 blur-3xl animate-pulse"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -101,7 +101,7 @@ const Donate = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Transform Lives with <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Your Generosity</span>
+              Transform Lives with <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Your Generosity</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
               Your donation helps us continue our mission to transform lives through love and compassion in communities across Africa. Every contribution makes a real difference.
@@ -301,7 +301,7 @@ const Donate = () => {
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-white/20 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/30 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-cyan-300/30 blur-3xl animate-pulse"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -313,7 +313,7 @@ const Donate = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Direct Bank <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Transfer</span>
+              Direct Bank <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Transfer</span>
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Transfer directly to our secured bank accounts. All donations are tracked and acknowledged.
@@ -349,7 +349,7 @@ const Donate = () => {
                     <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 w-full border border-white/20">
                       <p className="text-white/70 text-xs uppercase tracking-wide mb-3">Account Number</p>
                       <div 
-                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-yellow-300 transition-colors duration-200 select-all"
+                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-cyan-300 transition-colors duration-200 select-all"
                         onClick={() => navigator.clipboard.writeText('1944110639')}
                         title="Click to copy"
                       >
@@ -402,7 +402,7 @@ const Donate = () => {
                     <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 w-full border border-white/20">
                       <p className="text-white/70 text-xs uppercase tracking-wide mb-3">Account Number</p>
                       <div 
-                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-yellow-300 transition-colors duration-200 select-all"
+                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-cyan-300 transition-colors duration-200 select-all"
                         onClick={() => navigator.clipboard.writeText('1946956840')}
                         title="Click to copy"
                       >
@@ -455,7 +455,7 @@ const Donate = () => {
                     <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 w-full border border-white/20">
                       <p className="text-white/70 text-xs uppercase tracking-wide mb-3">Account Number</p>
                       <div 
-                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-yellow-300 transition-colors duration-200 select-all"
+                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-cyan-300 transition-colors duration-200 select-all"
                         onClick={() => navigator.clipboard.writeText('1947149940')}
                         title="Click to copy"
                       >
@@ -508,7 +508,7 @@ const Donate = () => {
                     <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 w-full border border-white/20">
                       <p className="text-white/70 text-xs uppercase tracking-wide mb-3">Account Number</p>
                       <div 
-                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-yellow-300 transition-colors duration-200 select-all"
+                        className="text-3xl font-mono font-black text-white cursor-pointer hover:text-cyan-300 transition-colors duration-200 select-all"
                         onClick={() => navigator.clipboard.writeText('1947228612')}
                         title="Click to copy"
                       >

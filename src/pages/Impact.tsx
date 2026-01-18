@@ -1,6 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Impact from "../components/Impact";
+import PartnershipsSection from "../components/PartnershipsSection";
 import { GraduationCap, Heart, BookOpen, Users, Target, Globe, ArrowDown, Sparkles, Award, TrendingUp, Star, Zap, Shield, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -93,7 +94,7 @@ const ImpactPage = () => {
       <div className="pt-32 pb-20 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-white/10 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/20 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-cyan-300/20 blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full bg-pink-300/20 blur-3xl animate-pulse"></div>
         </div>
 
@@ -115,7 +116,7 @@ const ImpactPage = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Beyond Charity, <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">Building Futures</span>
+              Beyond Charity, <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Building Futures</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
               Through our 5 Impact Pillars, we create sustainable solutions that empower children to break free from poverty and thrive in the digital age.
@@ -221,6 +222,9 @@ const ImpactPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Partnerships Section */}
+      <PartnershipsSection />
 
       {/* Outreach Report */}
       <div id="outreach-report" className="py-16 bg-white">
