@@ -102,7 +102,7 @@ const Project2026 = () => {
       <div className="pt-32 pb-20 bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-80 h-80 rounded-full bg-white/20 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-yellow-300/30 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-cyan-300/30 blur-3xl animate-pulse"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -123,8 +123,8 @@ const Project2026 = () => {
             </motion.div>
 
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-              Transforming Africa 
-              <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-orange-300 bg-clip-text text-transparent mt-4">
+              Transforming Africa
+              <span className="block bg-gradient-to-r from-cyan-300 via-pink-300 to-purple-300 bg-clip-text text-transparent mt-4">
                 One Community at a Time
               </span>
             </h1>

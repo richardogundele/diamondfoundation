@@ -134,8 +134,8 @@ const About = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 leading-tight">
-              Beyond Charity. 
-              <span className="block text-yellow-300 mt-4">
+              Beyond Charity.
+              <span className="block text-cyan-300 mt-4">
                 Building Futures.
               </span>
             </h1>
